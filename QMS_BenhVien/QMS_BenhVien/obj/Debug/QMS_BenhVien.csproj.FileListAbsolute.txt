@@ -1,0 +1,263 @@
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.exe.config
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.exe
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.pdb
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Data.v18.1.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Utils.v18.1.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraBars.v18.1.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraLayout.v18.1.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\EntityFramework.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\EntityFramework.SqlServer.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\GPRO.Core.Hai.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\GPRO.Ultilities.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\Newtonsoft.Json.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_System.Data.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\SystemGPRO.Serial.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Data.v18.1.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Utils.v18.1.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraBars.v18.1.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraLayout.v18.1.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\EntityFramework.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\EntityFramework.SqlServer.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\Newtonsoft.Json.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.XtraLayout.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.XtraLayout.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.XtraLayout.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.XtraLayout.v18.1.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csprojAssemblyReference.cache
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Form1.resources
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.frmButtonStyle.resources
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmConfig.resources
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmDesignTicket.resources
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmMain.resources
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.frmSQLConnect.resources
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Properties.Resources.resources
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.GenerateResource.cache
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.exe.licenses
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.CoreCompileInputs.cache
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.CopyComplete
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.exe
+E:\Hai_GPRO\Git QMS\QMS_BenhVien\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.pdb
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.exe
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\Newtonsoft.Json.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_System.Data.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\EntityFramework.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.exe.config
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.pdb
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\GPRO.Core.Hai.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\GPRO.Ultilities.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Client.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Common.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.ContentModel.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Frameworks.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.Core.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.Core.Types.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Repositories.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.RuntimeModel.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Versioning.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\SystemGPRO.Serial.dll
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\Newtonsoft.Json.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Client.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Common.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.ContentModel.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Frameworks.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.Core.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.Core.Types.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Repositories.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.RuntimeModel.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Versioning.xml
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csprojResolveAssemblyReference.cache
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Form1.resources
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.frmButtonStyle.resources
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmConfig.resources
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmDesignTicket.resources
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmMain.resources
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.frmSQLConnect.resources
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Properties.Resources.resources
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.GenerateResource.Cache
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.exe.licenses
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\RdlCompile.cache
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\RdlCompile.compiled
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.exe
+D:\GPRO DATA 17_4_2020\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.pdb
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Form1.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.frmButtonStyle.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmConfig.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmDesignTicket.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmMain.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.frmSQLConnect.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Properties.Resources.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.GenerateResource.cache
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.exe.licenses
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.CoreCompileInputs.cache
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.exe
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.pdb
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.exe.config
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.exe
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.pdb
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Data.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Utils.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraBars.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraLayout.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\EntityFramework.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\GPRO.Core.Hai.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\GPRO.Ultilities.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Client.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Common.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.ContentModel.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Frameworks.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.Core.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.Core.Types.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Repositories.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.RuntimeModel.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Versioning.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_System.Data.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\SystemGPRO.Serial.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Data.v18.1.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Utils.v18.1.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraBars.v18.1.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraLayout.v18.1.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Client.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Common.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.ContentModel.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Frameworks.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.Core.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Packaging.Core.Types.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Repositories.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.RuntimeModel.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\NuGet.Versioning.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.XtraLayout.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.XtraLayout.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.XtraLayout.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.XtraLayout.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.CopyComplete
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Frmain_ver2.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Xpo.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Xpo.v18.1.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Xpo.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Xpo.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Xpo.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Xpo.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\EntityFramework.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmDongBo.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmMainCLS.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.ButtonControl.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csprojAssemblyReference.cache
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmMessagebox.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmConfirmbox.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraGrid.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraPrinting.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.RichEdit.v18.1.Core.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraTreeList.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Office.v18.1.Core.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Images.v18.1.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraGrid.v18.1.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraPrinting.v18.1.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.RichEdit.v18.1.Core.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.XtraTreeList.v18.1.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Office.v18.1.Core.xml
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.XtraGrid.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.XtraGrid.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.XtraGrid.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.XtraGrid.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.XtraPrinting.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.XtraPrinting.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.XtraPrinting.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.XtraPrinting.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.RichEdit.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.RichEdit.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.RichEdit.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.RichEdit.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.XtraTreeList.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.XtraTreeList.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.XtraTreeList.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.XtraTreeList.v18.1.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\de\DevExpress.Office.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\es\DevExpress.Office.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmSettingVP.resources
+C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_System.ThirdApp.dll

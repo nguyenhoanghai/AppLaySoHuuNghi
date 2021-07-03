@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HISService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:90/HISService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:90/HISService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:90/HISService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:90/HISService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LinkHIS.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHISService_Check_KhamBenhLanDau_InputMessage">
+    <wsdl:part name="parameters" element="tns:Check_KhamBenhLanDau" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_Check_KhamBenhLanDau_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Check_KhamBenhLanDauResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_DongBoDanhMuc_InputMessage">
+    <wsdl:part name="parameters" element="tns:DongBoDanhMuc" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_DongBoDanhMuc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DongBoDanhMucResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetAllChiDinhCLS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChiDinhCLS" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetAllChiDinhCLS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChiDinhCLSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_LayThongTinKhamTrongNgay_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayThongTinKhamTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_LayThongTinKhamTrongNgay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayThongTinKhamTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetThongTinTiepNhan_TrongNgay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThongTinTiepNhan_TrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetThongTinTiepNhan_TrongNgay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThongTinTiepNhan_TrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_NhanLichSuKCB_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhanLichSuKCB" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_NhanLichSuKCB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhanLichSuKCBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetBenhNhanInfo_ByMaBenhNhan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBenhNhanInfo_ByMaBenhNhan" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetBenhNhanInfo_ByMaBenhNhan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBenhNhanInfo_ByMaBenhNhanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_Check_ChuaRaVien_ByMaBenhNhan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Check_ChuaRaVien_ByMaBenhNhan" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_Check_ChuaRaVien_ByMaBenhNhan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Check_ChuaRaVien_ByMaBenhNhanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_Luu_TiepNhan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Luu_TiepNhan" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_Luu_TiepNhan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Luu_TiepNhanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetDanhMucKhoa_PK_DichVu_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDanhMucKhoa_PK_DichVu" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetDanhMucKhoa_PK_DichVu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDanhMucKhoa_PK_DichVuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetDanhMucKhoa_PK_DichVu_CLS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDanhMucKhoa_PK_DichVu_CLS" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_GetDanhMucKhoa_PK_DichVu_CLS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDanhMucKhoa_PK_DichVu_CLSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_SendSoThuTuToHIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSoThuTuToHIS" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_SendSoThuTuToHIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSoThuTuToHISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_LayDanhSachDatHenTrongNgay_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachDatHenTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_LayDanhSachDatHenTrongNgay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachDatHenTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_LayThongTinDatHen_ByMaBenhNhan_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayThongTinDatHen_ByMaBenhNhan" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_LayThongTinDatHen_ByMaBenhNhan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayThongTinDatHen_ByMaBenhNhanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_Valid_TiepNhan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Valid_TiepNhan" />
+  </wsdl:message>
+  <wsdl:message name="IHISService_Valid_TiepNhan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Valid_TiepNhanResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHISService">
+    <wsdl:operation name="Check_KhamBenhLanDau">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/Check_KhamBenhLanDau" message="tns:IHISService_Check_KhamBenhLanDau_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/Check_KhamBenhLanDauResponse" message="tns:IHISService_Check_KhamBenhLanDau_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DongBoDanhMuc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/DongBoDanhMuc" message="tns:IHISService_DongBoDanhMuc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/DongBoDanhMucResponse" message="tns:IHISService_DongBoDanhMuc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChiDinhCLS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/GetAllChiDinhCLS" message="tns:IHISService_GetAllChiDinhCLS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/GetAllChiDinhCLSResponse" message="tns:IHISService_GetAllChiDinhCLS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayThongTinKhamTrongNgay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/LayThongTinKhamTrongNgay" message="tns:IHISService_LayThongTinKhamTrongNgay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/LayThongTinKhamTrongNgayResponse" message="tns:IHISService_LayThongTinKhamTrongNgay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThongTinTiepNhan_TrongNgay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/GetThongTinTiepNhan_TrongNgay" message="tns:IHISService_GetThongTinTiepNhan_TrongNgay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/GetThongTinTiepNhan_TrongNgayResponse" message="tns:IHISService_GetThongTinTiepNhan_TrongNgay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhanLichSuKCB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/NhanLichSuKCB" message="tns:IHISService_NhanLichSuKCB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/NhanLichSuKCBResponse" message="tns:IHISService_NhanLichSuKCB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBenhNhanInfo_ByMaBenhNhan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/GetBenhNhanInfo_ByMaBenhNhan" message="tns:IHISService_GetBenhNhanInfo_ByMaBenhNhan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/GetBenhNhanInfo_ByMaBenhNhanResponse" message="tns:IHISService_GetBenhNhanInfo_ByMaBenhNhan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Check_ChuaRaVien_ByMaBenhNhan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/Check_ChuaRaVien_ByMaBenhNhan" message="tns:IHISService_Check_ChuaRaVien_ByMaBenhNhan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/Check_ChuaRaVien_ByMaBenhNhanResponse" message="tns:IHISService_Check_ChuaRaVien_ByMaBenhNhan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Luu_TiepNhan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/Luu_TiepNhan" message="tns:IHISService_Luu_TiepNhan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/Luu_TiepNhanResponse" message="tns:IHISService_Luu_TiepNhan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDanhMucKhoa_PK_DichVu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/GetDanhMucKhoa_PK_DichVu" message="tns:IHISService_GetDanhMucKhoa_PK_DichVu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/GetDanhMucKhoa_PK_DichVuResponse" message="tns:IHISService_GetDanhMucKhoa_PK_DichVu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDanhMucKhoa_PK_DichVu_CLS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/GetDanhMucKhoa_PK_DichVu_CLS" message="tns:IHISService_GetDanhMucKhoa_PK_DichVu_CLS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/GetDanhMucKhoa_PK_DichVu_CLSResponse" message="tns:IHISService_GetDanhMucKhoa_PK_DichVu_CLS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSoThuTuToHIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/SendSoThuTuToHIS" message="tns:IHISService_SendSoThuTuToHIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/SendSoThuTuToHISResponse" message="tns:IHISService_SendSoThuTuToHIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachDatHenTrongNgay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/LayDanhSachDatHenTrongNgay" message="tns:IHISService_LayDanhSachDatHenTrongNgay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/LayDanhSachDatHenTrongNgayResponse" message="tns:IHISService_LayDanhSachDatHenTrongNgay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayThongTinDatHen_ByMaBenhNhan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/LayThongTinDatHen_ByMaBenhNhan" message="tns:IHISService_LayThongTinDatHen_ByMaBenhNhan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/LayThongTinDatHen_ByMaBenhNhanResponse" message="tns:IHISService_LayThongTinDatHen_ByMaBenhNhan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Valid_TiepNhan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHISService/Valid_TiepNhan" message="tns:IHISService_Valid_TiepNhan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHISService/Valid_TiepNhanResponse" message="tns:IHISService_Valid_TiepNhan_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IHISService" type="tns:IHISService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Check_KhamBenhLanDau">
+      <soap:operation soapAction="http://tempuri.org/IHISService/Check_KhamBenhLanDau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DongBoDanhMuc">
+      <soap:operation soapAction="http://tempuri.org/IHISService/DongBoDanhMuc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChiDinhCLS">
+      <soap:operation soapAction="http://tempuri.org/IHISService/GetAllChiDinhCLS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayThongTinKhamTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/IHISService/LayThongTinKhamTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThongTinTiepNhan_TrongNgay">
+      <soap:operation soapAction="http://tempuri.org/IHISService/GetThongTinTiepNhan_TrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NhanLichSuKCB">
+      <soap:operation soapAction="http://tempuri.org/IHISService/NhanLichSuKCB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBenhNhanInfo_ByMaBenhNhan">
+      <soap:operation soapAction="http://tempuri.org/IHISService/GetBenhNhanInfo_ByMaBenhNhan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Check_ChuaRaVien_ByMaBenhNhan">
+      <soap:operation soapAction="http://tempuri.org/IHISService/Check_ChuaRaVien_ByMaBenhNhan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Luu_TiepNhan">
+      <soap:operation soapAction="http://tempuri.org/IHISService/Luu_TiepNhan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDanhMucKhoa_PK_DichVu">
+      <soap:operation soapAction="http://tempuri.org/IHISService/GetDanhMucKhoa_PK_DichVu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDanhMucKhoa_PK_DichVu_CLS">
+      <soap:operation soapAction="http://tempuri.org/IHISService/GetDanhMucKhoa_PK_DichVu_CLS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSoThuTuToHIS">
+      <soap:operation soapAction="http://tempuri.org/IHISService/SendSoThuTuToHIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachDatHenTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/IHISService/LayDanhSachDatHenTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayThongTinDatHen_ByMaBenhNhan">
+      <soap:operation soapAction="http://tempuri.org/IHISService/LayThongTinDatHen_ByMaBenhNhan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Valid_TiepNhan">
+      <soap:operation soapAction="http://tempuri.org/IHISService/Valid_TiepNhan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HISService">
+    <wsdl:port name="BasicHttpBinding_IHISService" binding="tns:BasicHttpBinding_IHISService">
+      <soap:address location="http://localhost:90/HISService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

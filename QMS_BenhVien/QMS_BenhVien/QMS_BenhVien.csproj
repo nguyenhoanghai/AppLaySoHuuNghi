@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{172B01A9-BA24-4871-BAEC-0BFF07E6DA1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QMS_BenhVien</RootNamespace>
+    <AssemblyName>QMS_BenhVien</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GPRO.Core.Hai">
+      <HintPath>..\Libs\GPRO.Core.Hai.dll</HintPath>
+    </Reference>
+    <Reference Include="GPRO.Ultilities">
+      <HintPath>..\Libs\GPRO.Ultilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Client">
+      <HintPath>..\packages\NuGet.Client.4.2.0\lib\net45\NuGet.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Common">
+      <HintPath>..\packages\NuGet.Common.4.2.0\lib\net45\NuGet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.ContentModel">
+      <HintPath>..\packages\NuGet.ContentModel.4.2.0\lib\net45\NuGet.ContentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Frameworks">
+      <HintPath>..\packages\NuGet.Frameworks.4.2.0\lib\net45\NuGet.Frameworks.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Packaging">
+      <HintPath>..\packages\NuGet.Packaging.4.2.0\lib\net45\NuGet.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Packaging.Core">
+      <HintPath>..\packages\NuGet.Packaging.Core.4.2.0\lib\net45\NuGet.Packaging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Packaging.Core.Types">
+      <HintPath>..\packages\NuGet.Packaging.Core.Types.4.2.0\lib\net45\NuGet.Packaging.Core.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Repositories">
+      <HintPath>..\packages\NuGet.Repositories.4.2.0\lib\net45\NuGet.Repositories.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.RuntimeModel">
+      <HintPath>..\packages\NuGet.RuntimeModel.4.2.0\lib\net45\NuGet.RuntimeModel.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Versioning">
+      <HintPath>..\packages\NuGet.Versioning.4.2.0\lib\net45\NuGet.Versioning.dll</HintPath>
+    </Reference>
+    <Reference Include="QMS_System.Data">
+      <HintPath>..\Libs\QMS_System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="QMS_System.ThirdApp">
+      <HintPath>..\Libs\QMS_System.ThirdApp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SystemGPRO.Serial">
+      <HintPath>..\Libs\SystemGPRO.Serial.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButtonControl.Designer.cs">
+      <DependentUpon>ButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\HISReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmain_ver2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmain_ver2.Designer.cs">
+      <DependentUpon>Frmain_ver2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfig.Designer.cs">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmButtonStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmButtonStyle.Designer.cs">
+      <DependentUpon>frmButtonStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfirmbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfirmbox.Designer.cs">
+      <DependentUpon>FrmConfirmbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDesignTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDesignTicket.Designer.cs">
+      <DependentUpon>FrmDesignTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDongBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDongBo.Designer.cs">
+      <DependentUpon>FrmDongBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainCLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainCLS.Designer.cs">
+      <DependentUpon>FrmMainCLS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMessagebox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMessagebox.Designer.cs">
+      <DependentUpon>FrmMessagebox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSettingVP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSettingVP.Designer.cs">
+      <DependentUpon>FrmSettingVP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSQLConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSQLConnect.Designer.cs">
+      <DependentUpon>frmSQLConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Model\DatHenModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="bin\Debug\RDLC_Template\Mau1.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButtonControl.resx">
+      <DependentUpon>ButtonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmain_ver2.resx">
+      <DependentUpon>Frmain_ver2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmButtonStyle.resx">
+      <DependentUpon>frmButtonStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfig.resx">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfirmBox.resx">
+      <DependentUpon>FrmConfirmbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDesignTicket.resx">
+      <DependentUpon>FrmDesignTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDongBo.resx">
+      <DependentUpon>FrmDongBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainCLS.resx">
+      <DependentUpon>FrmMainCLS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMessagebox.resx">
+      <DependentUpon>FrmMessagebox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSettingVP.resx">
+      <DependentUpon>FrmSettingVP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSQLConnect.resx">
+      <DependentUpon>frmSQLConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bin\Debug\QMS_BenhVien.exe.config" />
+    <None Include="Connected Services\HISReference\HISService.wsdl" />
+    <None Include="Connected Services\HISReference\HISService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HISReference\HISService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HISReference\HISService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HISReference\HISService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HISReference\QMS_BenhVien.HISReference.Check_KhamBenhLanDauResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HISReference\QMS_BenhVien.HISReference.DM_BENHNHANModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HISReference\QMS_BenhVien.HISReference.KQNhanLichSuKCBBS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HISReference\QMS_BenhVien.HISReference.NhanLichSuKCBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HISReference\QMS_BenhVien.HISReference.TIEPNHANModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HISReference\QMS_BenhVien.HISReference.Valid_TiepNhanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_search-70px_510861.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\Debug\QMS_BenhVien.exe" />
+    <Content Include="bin\Debug\QMS_BenhVien.pdb" />
+    <None Include="Resources\if_Synchronize_27883.png" />
+    <None Include="Resources\if_refresh22_216527.png" />
+    <None Include="Resources\question.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\iconfinder_ticket_54267 %281%29.png" />
+    <None Include="Resources\template.png" />
+    <None Include="Resources\x2.png" />
+    <None Include="Resources\x1.png" />
+    <None Include="Resources\x.png" />
+    <None Include="Resources\db2.png" />
+    <None Include="Resources\db1.png" />
+    <None Include="Resources\db.png" />
+    <None Include="Resources\server_connect.png" />
+    <None Include="Resources\iconfinder_Options_105206.png" />
+    <None Include="Resources\res.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\fullscreen-icon.png" />
+    <None Include="Resources\fullscreen_.png" />
+    <None Include="Resources\fullscreen1.png" />
+    <None Include="Resources\fullscreen.png" />
+    <None Include="Resources\minimazar.png" />
+    <None Include="Resources\maxi.png" />
+    <None Include="Resources\cerrar.png" />
+    <None Include="Connected Services\HISReference\HISService.disco" />
+    <None Include="Connected Services\HISReference\configuration91.svcinfo" />
+    <None Include="Connected Services\HISReference\configuration.svcinfo" />
+    <None Include="Connected Services\HISReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="icon.ico" />
+    <Content Include="Q.ico" />
+    <None Include="Resources\save 20.png" />
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\HISReference\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

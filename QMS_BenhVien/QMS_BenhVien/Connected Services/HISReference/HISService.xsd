@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:90/HISService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LinkHIS.Model" />
+  <xs:element name="Check_KhamBenhLanDau">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSoBHYT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTenBenhNhan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNamSinh" type="xs:int" />
+        <xs:element minOccurs="0" name="pGioiTinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Check_KhamBenhLanDauResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Check_KhamBenhLanDauResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DongBoDanhMuc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaDanhMuc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DongBoDanhMucResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DongBoDanhMucResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllChiDinhCLS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllChiDinhCLSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllChiDinhCLSResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayThongTinKhamTrongNgay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayThongTinKhamTrongNgayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayThongTinKhamTrongNgayResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThongTinTiepNhan_TrongNgay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThongTinTiepNhan_TrongNgayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LinkHIS.Model" minOccurs="0" name="GetThongTinTiepNhan_TrongNgayResult" nillable="true" type="q1:TIEPNHANModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NhanLichSuKCB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="soThe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hoten" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngaysinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maKQ" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NhanLichSuKCBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LinkHIS.Model" minOccurs="0" name="NhanLichSuKCBResult" nillable="true" type="q2:KQNhanLichSuKCBBS" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maKQ" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBenhNhanInfo_ByMaBenhNhan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBenhNhanInfo_ByMaBenhNhanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LinkHIS.Model" minOccurs="0" name="GetBenhNhanInfo_ByMaBenhNhanResult" nillable="true" type="q3:DM_BENHNHANModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Check_ChuaRaVien_ByMaBenhNhan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Check_ChuaRaVien_ByMaBenhNhanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Check_ChuaRaVien_ByMaBenhNhanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Luu_TiepNhan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNgaySinh" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pGioiTinh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSoTheBHYT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNgayHieuLuc" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pNgayHetHieuLuc" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pDichVu_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="pPhongKham_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="pBacSiChiDinh_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="pSoThuTu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Luu_TiepNhanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Luu_TiepNhanResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDanhMucKhoa_PK_DichVu">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDanhMucKhoa_PK_DichVuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDanhMucKhoa_PK_DichVuResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDanhMucKhoa_PK_DichVu_CLS">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDanhMucKhoa_PK_DichVu_CLSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDanhMucKhoa_PK_DichVu_CLSResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSoThuTuToHIS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLoaiCLS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSoThuTu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSoThuTuToHISResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSoThuTuToHISResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachDatHenTrongNgay">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachDatHenTrongNgayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayDanhSachDatHenTrongNgayResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayThongTinDatHen_ByMaBenhNhan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayThongTinDatHen_ByMaBenhNhanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayThongTinDatHen_ByMaBenhNhanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Valid_TiepNhan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaBenhNhan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Valid_TiepNhanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Valid_TiepNhanResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
