@@ -71,4 +71,12 @@ namespace QMS_BenhVien
             button.ForeColor = _foreColor;
         }
     }
+
+    public enum eMessageType
+    {
+        success = 1,
+        info =2,
+        warning=3,
+        error =4
+    }
 }

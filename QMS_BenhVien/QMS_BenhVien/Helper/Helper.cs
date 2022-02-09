@@ -53,6 +53,7 @@ namespace QMS_BenhVien.Helper
                 cf.startwithwindow = (string.IsNullOrEmpty(vl) ? false : (vl == "0" ? false : true));
                 cf.timeResetForm = Convert.ToInt32(elementsByTagName.Item(0).ChildNodes[16].InnerText);
                 cf.CTRoom = Convert.ToInt32(elementsByTagName.Item(0).ChildNodes[17].InnerText);
+                cf.COMName =  (elementsByTagName.Item(0).ChildNodes[18].InnerText); 
             }
             return cf;
         }
@@ -115,6 +116,12 @@ namespace QMS_BenhVien.Helper
         /// </summary>
         [DefaultValue(0)]
         public int CTRoom { get; set; }
+
+        /// <summary>
+        /// COM May in
+        /// </summary>
+        [DefaultValue(0)]
+        public string COMName { get; set; }
     }
 
     public class DMBenhVien

@@ -47,11 +47,17 @@
     <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EngineIoClientDotNet, Version=0.9.22.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EngineIoClientDotNet.0.9.22\lib\net45\EngineIoClientDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GPRO.Core">
+      <HintPath>..\Libs\GPRO.Core.dll</HintPath>
     </Reference>
     <Reference Include="GPRO.Core.Hai">
       <HintPath>..\Libs\GPRO.Core.Hai.dll</HintPath>
@@ -99,6 +105,9 @@
     <Reference Include="QMS_System.ThirdApp">
       <HintPath>..\Libs\QMS_System.ThirdApp.dll</HintPath>
     </Reference>
+    <Reference Include="SocketIoClientDotNet, Version=0.9.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SocketIoClientDotNet.0.9.13\lib\net45\SocketIoClientDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -107,6 +116,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -118,6 +128,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="SystemGPRO.Serial">
       <HintPath>..\Libs\SystemGPRO.Serial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocket4Net, Version=0.14.1.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocket4Net.0.14.1\lib\net45\WebSocket4Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +157,12 @@
     <Compile Include="Frmain_ver2.Designer.cs">
       <DependentUpon>Frmain_ver2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frmain_ver3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmain_ver3.Designer.cs">
+      <DependentUpon>Frmain_ver3.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +174,12 @@
     </Compile>
     <Compile Include="frmButtonStyle.Designer.cs">
       <DependentUpon>frmButtonStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfig_Ver3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfig_Ver3.Designer.cs">
+      <DependentUpon>FrmConfig_Ver3.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmConfirmbox.cs">
       <SubType>Form</SubType>
@@ -220,11 +245,17 @@
     <EmbeddedResource Include="Frmain_ver2.resx">
       <DependentUpon>Frmain_ver2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frmain_ver3.resx">
+      <DependentUpon>Frmain_ver3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmButtonStyle.resx">
       <DependentUpon>frmButtonStyle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConfig.resx">
       <DependentUpon>FrmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfig_Ver3.resx">
+      <DependentUpon>FrmConfig_Ver3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConfirmBox.resx">
       <DependentUpon>FrmConfirmbox.cs</DependentUpon>
@@ -320,6 +351,8 @@
   <ItemGroup>
     <Content Include="bin\Debug\QMS_BenhVien.exe" />
     <Content Include="bin\Debug\QMS_BenhVien.pdb" />
+    <None Include="Resources\iconfinder_printer-remote_30279.png" />
+    <None Include="Resources\iconfinder_printer_delete_36361.png" />
     <None Include="Resources\if_Synchronize_27883.png" />
     <None Include="Resources\if_refresh22_216527.png" />
     <None Include="Resources\question.png" />

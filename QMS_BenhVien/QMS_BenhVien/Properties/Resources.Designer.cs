@@ -173,6 +173,26 @@ namespace QMS_BenhVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_printer_delete_36361 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_printer_delete_36361", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_printer_remote_30279 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_printer-remote_30279", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_search_70px_510861 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_search-70px_510861", resourceCulture);

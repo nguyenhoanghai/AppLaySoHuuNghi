@@ -42,6 +42,7 @@
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pbPrintStatus = new System.Windows.Forms.PictureBox();
             this.lbStatus = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -110,6 +111,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrintStatus)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.pnVP_PT.SuspendLayout();
@@ -304,6 +306,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel6.Controls.Add(this.pbPrintStatus);
             this.panel6.Controls.Add(this.lbStatus);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 782);
@@ -312,12 +315,21 @@
             this.panel6.Size = new System.Drawing.Size(1275, 37);
             this.panel6.TabIndex = 2;
             // 
+            // pbPrintStatus
+            // 
+            this.pbPrintStatus.Image = global::QMS_BenhVien.Properties.Resources.iconfinder_printer_delete_36361;
+            this.pbPrintStatus.Location = new System.Drawing.Point(3, 2);
+            this.pbPrintStatus.Name = "pbPrintStatus";
+            this.pbPrintStatus.Size = new System.Drawing.Size(37, 32);
+            this.pbPrintStatus.TabIndex = 33;
+            this.pbPrintStatus.TabStop = false;
+            // 
             // lbStatus
             // 
             this.lbStatus.AutoSize = true;
             this.lbStatus.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.ForeColor = System.Drawing.Color.Pink;
-            this.lbStatus.Location = new System.Drawing.Point(3, 2);
+            this.lbStatus.Location = new System.Drawing.Point(43, 3);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.Size = new System.Drawing.Size(85, 29);
             this.lbStatus.TabIndex = 32;
@@ -1202,6 +1214,7 @@
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrintStatus)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.pnVP_PT.ResumeLayout(false);
@@ -1291,5 +1304,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtngaysinh;
         private System.Windows.Forms.TextBox txtthangsinh;
+        private System.Windows.Forms.PictureBox pbPrintStatus;
     }
 }

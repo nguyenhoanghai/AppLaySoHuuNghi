@@ -1,22 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Appsettings>
   <solien>1</solien>
-  <button_style>{"Height":100,"Width":240,"Margin":10,"fontStyle":"Microsoft Sans Serif, 15,75pt, style=Bold","BackColor":"#0000ff","ForeColor":"#ffffff","ButtonInRow":6}</button_style>
+  <button_style>{"Height":150,"Width":300,"Margin":10,"fontStyle":"Tahoma, 20.25pt","BackColor":"#0000ff","ForeColor":"#ffffff","ButtonInRow":4}</button_style>
   <permissions>0,3,5,8,13</permissions>
   <services>564,539,563,875,871,870,540,549,578,576,575,580,746,799,595,894,777,658,659,660,913,551,908,708,705,709,710,711,703,704,729,931,707,712,782,714,689,692,695,713,702,933,574,786,891</services>
   <laymau>6</laymau>
   <trakq>31</trakq>
   <xquang>1</xquang>
   <sieuam>2</sieuam>
-  <vienphi>3</vienphi>
-  <phatthuoc>5</phatthuoc>
-  <tieptan>37</tieptan>
+  <vienphi>5</vienphi>
+  <phatthuoc>37</phatthuoc>
+  <tieptan>1</tieptan>
   <_height>100</_height>
   <_width>1,2</_width>
   <imgsource>
   </imgsource>
-  <apptype>0</apptype>
+  <apptype>4</apptype>
   <startwithwindow>0</startwithwindow>
   <timeResetForm>5</timeResetForm>
   <CTRoom>5</CTRoom>
+  <COMName>COM7</COMName>
+  <Phatso>
+  </Phatso>
 </Appsettings>

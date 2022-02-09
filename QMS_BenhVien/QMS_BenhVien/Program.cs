@@ -42,9 +42,11 @@ namespace QMS_BenhVien
 
                         //  if (BaseCore.Instance.CONNECT_STATUS(Application.StartupPath + "\\DATA.XML"))
                         // Application.Run(new FrmMain());
-                        Application.Run(new Frmain_ver2());
-                    // else
-                    //   Application.Run(new frmSQLConnect());
+                        //  Application.Run(new Frmain_ver2());
+                        // else
+                        //   Application.Run(new frmSQLConnect());
+
+                        Application.Run(new Frmain_ver3());
                 }
                 catch (Exception ex)
                 {

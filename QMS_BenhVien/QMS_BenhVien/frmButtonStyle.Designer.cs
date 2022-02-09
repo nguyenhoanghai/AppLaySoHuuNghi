@@ -182,7 +182,6 @@
             0,
             0,
             0});
-            this.UpDownButtonHeight.Visible = false;
             this.UpDownButtonHeight.ValueChanged += new System.EventHandler(this.UpDownButtonHeight_ValueChanged);
             // 
             // UpDownButtonWidth
@@ -206,7 +205,6 @@
             0,
             0,
             0});
-            this.UpDownButtonWidth.Visible = false;
             this.UpDownButtonWidth.ValueChanged += new System.EventHandler(this.UpDownButtonWidth_ValueChanged);
             // 
             // label2
@@ -218,7 +216,6 @@
             this.label2.Size = new System.Drawing.Size(62, 15);
             this.label2.TabIndex = 13;
             this.label2.Text = "Chiều cao";
-            this.label2.Visible = false;
             // 
             // label1
             // 
@@ -229,7 +226,6 @@
             this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 12;
             this.label1.Text = "Chiều rộng";
-            this.label1.Visible = false;
             // 
             // label4
             // 
@@ -283,6 +279,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(512, 322);
+            this.MinimumSize = new System.Drawing.Size(512, 322);
             this.Name = "frmButtonStyle";
             this.Text = "Mẫu nút dịch vụ";
             this.Load += new System.EventHandler(this.frmButtonStyle_Load);

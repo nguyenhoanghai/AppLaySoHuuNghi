@@ -1,12 +1,9 @@
 ﻿using Newtonsoft.Json;
 using QMS_System.Data.Model;
 using System;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
-using System.Xml.Linq;
 
 namespace QMS_BenhVien
 {
@@ -20,10 +17,10 @@ namespace QMS_BenhVien
         string fontstr = "";
         string width = "";
         string heigth = "";
-        string space = ""; 
-        public frmButtonStyle( )
+        string space = "";
+        public frmButtonStyle()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         private void frmButtonStyle_Load(object sender, EventArgs e)
@@ -39,7 +36,12 @@ namespace QMS_BenhVien
             numButtonInRow.Value = btStyle.ButtonInRow;
 
             btnSampleButton.Size = new Size(int.Parse(UpDownButtonWidth.Value.ToString()), int.Parse(UpDownButtonHeight.Value.ToString()));
-            btnSampleButton.Font = (Font)converter.ConvertFromString(btStyle.fontStyle);
+            try
+            {
+                btnSampleButton.Font = (Font)converter.ConvertFromString(btStyle.fontStyle);
+            }
+            catch { }
+
             btnSampleButton.BackColor = ColorTranslator.FromHtml(btStyle.BackColor);
             btnSampleButton.ForeColor = ColorTranslator.FromHtml(btStyle.ForeColor);
 
@@ -50,15 +52,22 @@ namespace QMS_BenhVien
 
         private void btnFontStyle_Click(object sender, EventArgs e)
         {
+
             FontConverter converter = new FontConverter();
             FontDialog fontdlg = new FontDialog();
-            fontdlg.Font = (Font)converter.ConvertFromString(btStyle.fontStyle);
+            try
+            {
+                fontdlg.Font = (Font)converter.ConvertFromString(btStyle.fontStyle);
+            }
+            catch (Exception) { }
             if (fontdlg.ShowDialog() == DialogResult.OK)
             {
                 Font font = fontdlg.Font;
                 fontstr = converter.ConvertToString(font);
                 btnSampleButton.Font = fontdlg.Font;
             }
+
+
         }
 
         private void btnForeColor_Click(object sender, EventArgs e)
@@ -118,7 +127,7 @@ namespace QMS_BenhVien
             xmlDoc.Save(filePath);
             // frm.FrmMain_Load(sender, e);
             Application.Restart();
-            Environment.Exit(0); 
+            Environment.Exit(0);
         }
 
         private void btapply_Click(object sender, EventArgs e)

@@ -17,9 +17,11 @@ using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.Globalization;
 using System.IO;
+using System.IO.Ports;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace QMS_BenhVien
@@ -70,6 +72,9 @@ namespace QMS_BenhVien
         List<ModelSelectItem> dsDichVuDaKham = new List<ModelSelectItem>();
         string _ngaygioinphieu = "";
         bool chuyenTuCongBHYT = false;
+
+        public static SerialPort COM_Printer = new SerialPort();
+        public static List<PrintTicketModel> printTemplates;
 
         public Frmain_ver2()
         {
@@ -256,6 +261,8 @@ namespace QMS_BenhVien
                 int.TryParse(GetConfigByCode(eConfigCode.StartNumber), out startNumber);
                 int.TryParse(GetConfigByCode(eConfigCode.UseWithThirdPattern), out UseWithThirdPattern);
 
+                printTemplates = BLLPrintTemplate.Instance.Gets(connectString).Where(x => x.IsActive).ToList();
+                
                 vienphiId = cfObj.vienphi;
                 laymauId = cfObj.laymau;
                 nhanKqId = cfObj.ketqua;
@@ -440,89 +447,6 @@ namespace QMS_BenhVien
             ButtonControl btn = (ButtonControl)sender;
             ButtonEffect_MouseUp(btn, btn.BackColor, btn.ForeColor, Color.Silver);
         }
-
-        #region tạo phòng khám
-        //private void TaoPhongKham(bool isDangKy)
-        //{
-        //    pndsPK.Controls.Clear();
-        //    var services = BLLService.Instance.Gets_BenhVien(connectString).Where(x => serviceIds.Contains(x.Id) && x.isKetLuan == !isDangKy).ToList();
-        //    // MessageBox.Show(services.Count.ToString());
-        //    if (services.Count > 0)
-        //    {
-        //        int sodong = (int)Math.Ceiling(services.Count / (double)btStyle.ButtonInRow),
-        //        socot = btStyle.ButtonInRow,
-        //        sizeCot = 100 / socot,
-        //        sizeDong = 100 / sodong;
-        //        FontConverter converter = new FontConverter();
-        //        Button btn;
-        //        int pointX = btStyle.Margin, pointY = btStyle.Margin;
-        //        int index = 0;
-        //        for (int i = 0; i < sodong; i++)
-        //        {
-        //            for (int ii = 0; ii < socot; ii++)
-        //            {
-        //                if (index < services.Count)
-        //                {
-        //                    if (ii == 0)
-        //                        pointX = btStyle.Margin;
-        //                    var found = services[index];
-        //                    btn = new Button();
-        //                    btn.Name = found.Id.ToString();
-        //                    //btn.Text = "Khoa: " + found.Khoa + Environment.NewLine + "Phòng: " + found.PhongKham + Environment.NewLine + "BS: " + found.BacSi;
-        //                    btn.Text = found.Code + Environment.NewLine + found.Name;
-        //                    btn.Cursor = System.Windows.Forms.Cursors.Hand;
-        //                    btn.Width = btStyle.Width;
-        //                    btn.Height = btStyle.Height;
-        //                    btn.Location = new Point(pointX, pointY);
-        //                    try
-        //                    {
-        //                        btn.Font = (Font)converter.ConvertFromString(btStyle.fontStyle);
-        //                    }
-        //                    catch (Exception)
-        //                    {
-        //                    }
-        //                    btn.BackColor = ColorTranslator.FromHtml(btStyle.BackColor);
-        //                    btn.ForeColor = ColorTranslator.FromHtml(btStyle.ForeColor);
-
-        //                    btn.Click += new System.EventHandler(this.btService_Click);
-        //                    pointX += btStyle.Width + btStyle.Margin;
-        //                    this.pndsPK.Controls.Add(btn);
-        //                    index++;
-        //                }
-        //            }
-        //            pointY += btStyle.Height + btStyle.Margin;
-        //        }
-        //    }
-        //}
-
-        //private void btService_Click(object sender, EventArgs e)
-        //{
-        //    bool print = false;
-        //    if (!isDK_KetLuan)
-        //    {
-        //        //dky kham thi phai confirm truoc khi in
-        //        if (FrmConfirmbox.ShowDialog(this, "In phiếu", "Không", "Bạn đã kiểm tra đầy đủ thông tin và yêu cầu in phiếu ?") == System.Windows.Forms.DialogResult.Yes)
-        //        {
-        //            print = true;
-        //        }
-        //    }
-        //    else
-        //        print = true;
-        //    if (print)
-        //    {
-        //        //TODO: 
-        //        //1. in phiếu
-        //        //2. gui thong tin cho FPT
-        //        // MessageBox.Show(((System.Windows.Forms.Control)sender).Name);
-        //        int serId = Convert.ToInt32(((System.Windows.Forms.Control)sender).Name);
-        //        //in phiếu với dich vu đã chon va nghiệp vu la phong kham da chon
-        //        PrintTicket(serId, DateTime.Now, (!isDK_KetLuan ? "STT Khám Bệnh" : "STT Kết Luận Bệnh"), (int)eDailyRequireType.KhamBenh);
-        //    }
-        //    TaoPhongKham(!isDK_KetLuan);
-        //}
-        #endregion
-
-
 
         private void txtBHYT_KeyDown(object sender, KeyEventArgs e)
         {
@@ -1805,7 +1729,7 @@ namespace QMS_BenhVien
                         else
                         {
                             //  var rs = BLLDailyRequire.Instance.PrintNewTicket(connectString, serviceId, serObj.StartNumber, 0, now, printType, ServeTime.TimeOfDay, txtname.Text, txtAdd.Text, (!string.IsNullOrEmpty(txtDOB.Text) ? Convert.ToInt32(txtDOB.Text) : 0), txtma.Text, "", "", "");
-                            var rs = BLLHuuNghi.Instance.PrintNewTicket(connectString, serviceId, serObj.StartNumber, 0, now, printType, ServeTime.TimeOfDay, txtname.Text, txtAdd.Text, (!string.IsNullOrEmpty(txtDOB.Text) ? Convert.ToInt32(txtDOB.Text) : 0), (string.IsNullOrEmpty(mabenhnhan) ? txtma.Text : mabenhnhan), "", "", "", "", "", requireType);
+                            var rs = BLLHuuNghi.Instance.PrintNewTicket(connectString, serviceId, serObj.StartNumber, 0, now, printType, ServeTime.TimeOfDay, txtname.Text, txtAdd.Text, (!string.IsNullOrEmpty(txtDOB.Text) ? Convert.ToInt32(txtDOB.Text) : 0), (string.IsNullOrEmpty(mabenhnhan) ? txtma.Text : mabenhnhan), "", "", "", "", "", requireType,"");
                             if (rs.IsSuccess)
                             {
                                 lastTicket = (int)rs.Data;
@@ -1832,7 +1756,7 @@ namespace QMS_BenhVien
                             errorsms = "Dịch vụ số " + serviceId + " đã ngưng cấp số. Xin quý khách vui lòng đến vào buổi giao dịch sau.";
                         else
                         {
-                            var rs = BLLHuuNghi.Instance.PrintNewTicket(connectString, serviceId, startNumber, 0, now, printType, (ServeTime != null ? ServeTime.TimeOfDay : serObj.TimeProcess.TimeOfDay), txtname.Text, txtAdd.Text, Convert.ToInt32(txtDOB.Text), txtma.Text, "", "", "", "", "", requireType);
+                            var rs = BLLHuuNghi.Instance.PrintNewTicket(connectString, serviceId, startNumber, 0, now, printType, (ServeTime != null ? ServeTime.TimeOfDay : serObj.TimeProcess.TimeOfDay), txtname.Text, txtAdd.Text, Convert.ToInt32(txtDOB.Text), txtma.Text, "", "", "", "", "", requireType,"");
                             if (rs.IsSuccess)
                             {
                                 lastTicket = (int)rs.Data;
@@ -1857,12 +1781,12 @@ namespace QMS_BenhVien
                 errorsms = printStr.ToString();
                 try
                 {
-   InPhieuDungDriver(newNumber, lastTicket, tenquay, serObj.Name, txtname.Text, tieude, _ngaygioinphieu);
+                    InPhieuDungDriver(newNumber, lastTicket, tenquay, serObj.Name, txtname.Text, tieude, _ngaygioinphieu);
                 }
                 catch (Exception)
-                { 
+                {
                 }
-             
+
                 bool kq = false;
                 switch (cfObj.appType)
                 {
@@ -2156,6 +2080,115 @@ namespace QMS_BenhVien
             }
         }
         #endregion
+
+
+        private void PrintWithNoBorad(PrintModel printModel)
+        {
+            var now = DateTime.Now;
+
+            checkCOM:
+            if (!COM_Printer.IsOpen)
+            {
+                COM_Printer.Open();
+               // LogWriter.LogWrite(string.Format("func PrintWithNoBorad: Restart COM Máy in {0}", DateTime.Now.ToString("dd/MM/YYYY HH:mm:ss")));
+                goto checkCOM;
+            }
+            var _temp = printTemplates.Where(x => x._ServiceIds.Contains(printModel.ServiceId) && x.IsActive).ToList();
+            
+            if (COM_Printer.IsOpen && _temp.Count > 0)
+            {
+                for (int i = 0; i < _temp.Count; i++)
+                {
+                    var template = _temp[i].PrintTemplate;
+                    template = template.Replace("[canh-giua]", "\x1b\x61\x01|+|");
+                    template = template.Replace("[canh-trai]", "\x1b\x61\x00|+|");
+                    template = template.Replace("[1x1]", "\x1d\x21\x00|+|");
+                    template = template.Replace("[2x1]", "\x1d\x21\x01|+|");
+                    template = template.Replace("[3x1]", "\x1d\x21\x02|+|");
+                    template = template.Replace("[2x2]", "\x1d\x21\x11|+|");
+                    template = template.Replace("[3x3]", "\x1d\x21\x22|+|");
+
+                    template = template.Replace("[STT]", printModel.STT.ToString());
+                    template = template.Replace("[ten-quay]", printModel.TenQuay);
+                    template = template.Replace("[ten-dich-vu]", printModel.TenDichVu);
+                    template = template.Replace("[ghi-chu-dich-vu]", printModel.NoteDV);
+                    template = template.Replace("[ngay]", ("Ngày: " + now.ToString("dd/MM/yyyy")));
+                    template = template.Replace("[gio]", ("Giờ: " + now.ToString("HH:mm")));
+                    template = template.Replace("[dang-goi]", "đang gọi: " + printModel.STTHienTai);
+
+
+                    template = template.Replace("[so-xe]", getStringValue(printModel.SoXe));
+                    template = template.Replace("[phone]", getStringValue(printModel.Phone));
+                    template = template.Replace("[ma-kh]", getStringValue(printModel.MaKH));
+                    template = template.Replace("[ten-kh]", getStringValue(printModel.TenKH));
+                    template = template.Replace("[dia-chi]", getStringValue(printModel.DiaChi));
+                    template = template.Replace("[ma-dv]", getStringValue(printModel.MaDV));
+                    template = template.Replace("[dob]", getIntValue(printModel.DOB));
+
+                    template = template.Replace("[cat-giay]", "\x1b\x69|+|");
+
+                    var arr = template.Split(new string[] { "|+|" }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+                    for (int ii = 0; ii < printTemplates[i].PrintPages; ii++)
+                    {
+                        for (int iii = 0; iii < arr.Length; iii++)
+                        {
+                            // frmMain.COM_Printer.Write(arr[i]);
+                            try
+                            {
+                                BaseCore.Instance.PrintTicketTCVN3(COM_Printer, arr[iii]);
+                            }
+                            catch (Exception ex)
+                            {
+                              //  LogWriter.LogWrite(("COM write error: " + ex.Message));
+                            }
+                            //sleep
+                            Thread.Sleep(50);
+                        }
+                    }
+                }
+            }
+            else
+                errorsms = "Cổng COM máy in hiện tại chưa kết nối. Vui lòng kiểm tra lại COM máy in";
+        }
+
+        private string getStringValue(string value)
+        {
+            return !string.IsNullOrEmpty(value) ? (value + "\n") : "";
+        }
+
+        private string getIntValue(int value)
+        {
+            return value != null && value > 0 ? (value.ToString() + "\n") : "";
+        }
+
+        private void InitCOM_Printer()
+        {
+            try
+            {
+                COM_Printer.PortName = GetConfigByCode(eConfigCode.COM_Print);
+                COM_Printer.BaudRate = 9600;
+                COM_Printer.DataBits = 8;
+                COM_Printer.Parity = Parity.None;
+                COM_Printer.StopBits = StopBits.One;
+
+                try
+                {
+                    COM_Printer.ReadTimeout = 1;
+                    COM_Printer.WriteTimeout = 1;
+                    COM_Printer.Open();
+                    pbPrintStatus.Image = global::QMS_BenhVien.Properties.Resources.iconfinder_printer_remote_30279;
+                    //  COM_Printer.DataReceived += new SerialDataReceivedEventHandler(comPort_DataReceived); 
+                }
+                catch (Exception)
+                {
+                    // MessageBox.Show("Lỗi: không thể kết nối với cổng COM Máy in, Vui lòng thử cấu hình lại kết nối", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show("Lấy thông tin Com Máy in bị lỗi.\n" + ex.Message, "Lỗi Com Máy in");
+            }
+        }
         #endregion
 
         private void timerReset_Tick(object sender, EventArgs e)
