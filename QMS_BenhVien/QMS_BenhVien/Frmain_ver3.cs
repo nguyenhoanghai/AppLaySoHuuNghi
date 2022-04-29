@@ -1,4 +1,5 @@
 ﻿using GPRO.Core.Hai;
+using Microsoft.Win32;
 using Newtonsoft.Json;
 using QMS_System.Data.BLL;
 using QMS_System.Data.BLL.HuuNghi;
@@ -8,6 +9,7 @@ using QMS_System.ThirdApp.Enum;
 using Quobject.SocketIoClientDotNet.Client;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
@@ -69,7 +71,7 @@ namespace QMS_BenhVien
                         });
                     });
 
-                   // socket.Emit("client-send-id", id);
+                    // socket.Emit("client-send-id", id);
                 }
                 catch (Exception ex)
                 {
@@ -112,6 +114,21 @@ namespace QMS_BenhVien
         {
             try
             {
+                RegistryKey registryKey = Registry.CurrentUser.OpenSubKey
+                          ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                var aa=  registryKey.GetValue("QMS_BenhVien" );
+                var bb=  registryKey.GetValueNames( );
+
+
+                if (ConfigurationManager.AppSettings["isAdmin"] != null &&
+                        !string.IsNullOrEmpty(ConfigurationManager.AppSettings["isAdmin"].ToString()) &&
+                       ConfigurationManager.AppSettings["isAdmin"].ToString() == "1")
+                {
+                    btnTemplateEditor.Visible = true;
+                    btnSetting.Visible = true;
+                    btSQLConnect.Visible = true;
+                }
+
                 string filePath = Application.StartupPath + "\\Config.XML";
                 cfObj = QMS_BenhVien.Helper.Helper.Instance.GetAppConfig(filePath);
                 comName = cfObj.COMName;
@@ -133,6 +150,7 @@ namespace QMS_BenhVien
                 nodeServerIP = GetConfigByCode(eConfigCode.NodeServerIP);
 
                 printTemplates = BLLPrintTemplate.Instance.Gets(connectString).Where(x => x.IsActive).ToList();
+                
             }
             catch { }
         }
@@ -338,22 +356,22 @@ namespace QMS_BenhVien
             btKhoa_Ngoai.Location = new Point(30 + (butWith * 2), 10);
 
 
-            btKhoa_Nhi.Width = butWith;
-            btKhoa_Nhi.Height = butHeight;
-            btKhoa_Nhi.Location = new Point(10, 20 + butHeight);
-
-            btKhoa_SPKhoa.Width = butWith;
-            btKhoa_SPKhoa.Height = butHeight;
-            btKhoa_SPKhoa.Location = new Point(20 + butWith, 20 + butHeight);
-
             btKhoa_Yhct.Width = butWith;
             btKhoa_Yhct.Height = butHeight;
-            btKhoa_Yhct.Location = new Point(30 + (butWith * 2), 20 + butHeight);
-
+            btKhoa_Yhct.Location = new Point(10, 20 + butHeight);
 
             btKhoa_Dlieu.Width = butWith;
             btKhoa_Dlieu.Height = butHeight;
-            btKhoa_Dlieu.Location = new Point(10, 30 + (butHeight * 2));
+            btKhoa_Dlieu.Location = new Point(20 + butWith, 20 + butHeight);
+
+            btKhoa_SPKhoa.Width = butWith;
+            btKhoa_SPKhoa.Height = butHeight;
+            btKhoa_SPKhoa.Location = new Point(30 + (butWith * 2), 20 + butHeight);
+
+
+            btKhoa_Mat.Width = butWith;
+            btKhoa_Mat.Height = butHeight;
+            btKhoa_Mat.Location = new Point(10, 30 + (butHeight * 2));
 
             btKhoa_TMH.Width = butWith;
             btKhoa_TMH.Height = butHeight;
@@ -363,17 +381,17 @@ namespace QMS_BenhVien
             btKhoa_RHM.Height = butHeight;
             btKhoa_RHM.Location = new Point(30 + (butWith * 2), 30 + (butHeight * 2));
 
-            btKhoa_Mat.Width = butWith;
-            btKhoa_Mat.Height = butHeight;
-            btKhoa_Mat.Location = new Point(10, 40 + (butHeight * 3));
-
             btKhoa_ThanKinh.Width = butWith;
             btKhoa_ThanKinh.Height = butHeight;
-            btKhoa_ThanKinh.Location = new Point(20 + butWith, 40 + (butHeight * 3));
+            btKhoa_ThanKinh.Location = new Point(10, 40 + (butHeight * 3));
 
             btback_khoa.Width = butWith;
             btback_khoa.Height = butHeight;
-            btback_khoa.Location = new Point(30 + (butWith * 2), 40 + (butHeight * 3));
+            btback_khoa.Location = new Point(20 + butWith, 40 + (butHeight * 3));
+
+            //btback_khoa.Width = butWith;
+            //btback_khoa.Height = butHeight;
+            //btback_khoa.Location = new Point(30 + (butWith * 2), 40 + (butHeight * 3));
         }
 
         private void CheckState()
@@ -606,17 +624,7 @@ namespace QMS_BenhVien
         {
             ButtonEffect_MouseUp(btKhoa_Ngoai, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
         }
-
-        private void btK_Nhi_MouseDown(object sender, MouseEventArgs e)
-        {
-            ButtonEffect_MouseDown(btKhoa_Nhi);
-        }
-
-        private void btK_Nhi_MouseUp(object sender, MouseEventArgs e)
-        {
-            ButtonEffect_MouseUp(btKhoa_Nhi, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
-        }
-
+         
         private void btK_SPKhoa_MouseDown(object sender, MouseEventArgs e)
         {
             ButtonEffect_MouseDown(btKhoa_SPKhoa);
@@ -840,7 +848,7 @@ namespace QMS_BenhVien
         {
             pnDS_PK.Controls.Clear();
             pnDS_PK.Dock = DockStyle.Fill;
-            GenerateButton((int)eKhoa.KhoaNoi, pnDS_PK, FormPanelSate.dsPKham);           
+            GenerateButton((int)eKhoa.KhoaNoi, pnDS_PK, FormPanelSate.dsPKham);
         }
 
         private void btK_Ngoai_Click(object sender, EventArgs e)
@@ -1009,7 +1017,12 @@ namespace QMS_BenhVien
             CheckState();
         }
 
-      
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         #endregion
 
         #region panel khoa CLS events
@@ -1156,7 +1169,7 @@ namespace QMS_BenhVien
                     try
                     {
                         if (counterIds != null)
-                            socket.Emit("qms-system-refresh-lcd",string.Join(",", counterIds));
+                            socket.Emit("qms-system-refresh-lcd", string.Join(",", counterIds));
                     }
                     catch { }
                 }
@@ -1208,12 +1221,20 @@ namespace QMS_BenhVien
 
         private void PrintWithNoBorad(PrintModel printModel)
         {
-            var now = DateTime.Now;
-
+            var now = DateTime.Now; 
             checkCOM:
             if (!COM_Printer.IsOpen)
             {
-                COM_Printer.Open();
+                try
+                {
+                    COM_Printer.Open();
+                }
+                catch (Exception e)
+                {
+                    _showMessage((int)eMessageType.error, "Không thể mở được COM máy in. Vui lòng kiễm tra lại COM máy in" );
+                    goto finish;
+                }
+
                 // LogWriter.LogWrite(string.Format("func PrintWithNoBorad: Restart COM Máy in {0}", DateTime.Now.ToString("dd/MM/YYYY HH:mm:ss")));
                 goto checkCOM;
             }
@@ -1274,6 +1295,8 @@ namespace QMS_BenhVien
             }
             else
                 errorsms = "Cổng COM máy in hiện tại chưa kết nối. Vui lòng kiểm tra lại COM máy in";
+            finish:
+            int a = 1;
         }
 
         private string getStringValue(string value)
@@ -1422,6 +1445,8 @@ namespace QMS_BenhVien
         public const string cls = "cls";
         public const string cls_PK = "cls_PK";
         public const string dsPKham = "dsPKham";
+        public const string dsPThuoc = "dsPThuoc";
+
     }
 
     public enum eKhoa

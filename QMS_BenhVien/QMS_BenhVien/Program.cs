@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Configuration;
 using System.Diagnostics;
-using System.Net.Http;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QMS_BenhVien
@@ -14,7 +12,7 @@ namespace QMS_BenhVien
         /// </summary>
         [STAThread]
         static void Main()
-        { 
+        {
             try
             {
                 //SerialKey serialKey = new SerialKey();
@@ -32,21 +30,47 @@ namespace QMS_BenhVien
                 //if (!string.IsNullOrEmpty(modelCheckKey.message))
                 //    MessageBox.Show(modelCheckKey.message);
 
+                string[] commandLineArgs = Environment.GetCommandLineArgs();
+                if (commandLineArgs.Length == 1 || commandLineArgs[1] != "/new")
+                {
+                    if (SingleInstanceApplication.NotifyExistingInstance(Process.GetCurrentProcess().Id))
+                    {
+                        return;
+                    }
+                }
+
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+                SingleInstanceApplication.Initialize();
                 try
                 {
                     if (ConfigurationManager.AppSettings["showDongBo"].ToString() == "1")
                         Application.Run(new FrmDongBo());
                     else
-
+                    {
                         //  if (BaseCore.Instance.CONNECT_STATUS(Application.StartupPath + "\\DATA.XML"))
                         // Application.Run(new FrmMain());
                         //  Application.Run(new Frmain_ver2());
                         // else
                         //   Application.Run(new frmSQLConnect());
 
-                        Application.Run(new Frmain_ver3());
+                        // Application.Run(new Frmain_ver3());
+                        // Application.Run(new FrmMain_TV2());
+
+                        string appType = "0";
+                        if (ConfigurationManager.AppSettings["AppType"] != null &&
+                            !string.IsNullOrEmpty(ConfigurationManager.AppSettings["AppType"].ToString()))
+                        {
+                            appType = ConfigurationManager.AppSettings["AppType"].ToString();
+                        }
+                        switch (appType)
+                        {
+                            default: Application.Run(new Frmain_ver2()); break;
+                            case "0": Application.Run(new Frmain_ver3()); break;
+                            case "1": Application.Run(new FrmMain_Socket_TV1()); break;
+                            case "2": Application.Run(new FrmMain_Socket_TV2()); break;
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {

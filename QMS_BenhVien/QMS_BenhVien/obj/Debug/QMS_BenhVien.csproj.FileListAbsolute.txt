@@ -411,3 +411,5 @@ E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\bin\Debug\Engin
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\bin\Debug\SocketIoClientDotNet.dll
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\bin\Debug\WebSocket4Net.dll
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmConfig_Ver3.resources
+E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmMain_Socket_TV1.resources
+E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmMain_Socket_TV2.resources

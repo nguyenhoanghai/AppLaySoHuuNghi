@@ -69,7 +69,6 @@
             this.btKhoa_Mat = new QMS_BenhVien.ButtonControl();
             this.btKhoa_Noi = new QMS_BenhVien.ButtonControl();
             this.btKhoa_RHM = new QMS_BenhVien.ButtonControl();
-            this.btKhoa_Nhi = new QMS_BenhVien.ButtonControl();
             this.btKhoa_TMH = new QMS_BenhVien.ButtonControl();
             this.btKhoa_SPKhoa = new QMS_BenhVien.ButtonControl();
             this.btKhoa_Dlieu = new QMS_BenhVien.ButtonControl();
@@ -158,7 +157,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DeepPink;
             this.label3.Location = new System.Drawing.Point(3, 94);
             this.label3.Name = "label3";
@@ -189,10 +188,10 @@
             // 
             this.pnCLS_PK.AutoScroll = true;
             this.pnCLS_PK.Controls.Add(this.buttonControl7);
-            this.pnCLS_PK.Location = new System.Drawing.Point(523, 4);
+            this.pnCLS_PK.Location = new System.Drawing.Point(268, 464);
             this.pnCLS_PK.Margin = new System.Windows.Forms.Padding(4);
             this.pnCLS_PK.Name = "pnCLS_PK";
-            this.pnCLS_PK.Size = new System.Drawing.Size(47, 568);
+            this.pnCLS_PK.Size = new System.Drawing.Size(101, 114);
             this.pnCLS_PK.TabIndex = 50;
             // 
             // buttonControl7
@@ -206,7 +205,7 @@
             this.buttonControl7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonControl7.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonControl7.ForeColor = System.Drawing.Color.Yellow;
-            this.buttonControl7.Location = new System.Drawing.Point(-46, 85);
+            this.buttonControl7.Location = new System.Drawing.Point(-29, 85);
             this.buttonControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonControl7.Name = "buttonControl7";
             this.buttonControl7.Size = new System.Drawing.Size(140, 178);
@@ -217,10 +216,10 @@
             this.pnDS_PK.AutoScroll = true;
             this.pnDS_PK.Controls.Add(this.btBack_DSPK);
             this.pnDS_PK.Controls.Add(this.buttonControl3);
-            this.pnDS_PK.Location = new System.Drawing.Point(343, 4);
+            this.pnDS_PK.Location = new System.Drawing.Point(154, 469);
             this.pnDS_PK.Margin = new System.Windows.Forms.Padding(4);
             this.pnDS_PK.Name = "pnDS_PK";
-            this.pnDS_PK.Size = new System.Drawing.Size(78, 530);
+            this.pnDS_PK.Size = new System.Drawing.Size(78, 112);
             this.pnDS_PK.TabIndex = 49;
             // 
             // btBack_DSPK
@@ -234,7 +233,7 @@
             this.btBack_DSPK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btBack_DSPK.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBack_DSPK.ForeColor = System.Drawing.Color.DimGray;
-            this.btBack_DSPK.Location = new System.Drawing.Point(-222, 235);
+            this.btBack_DSPK.Location = new System.Drawing.Point(-233, 235);
             this.btBack_DSPK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btBack_DSPK.Name = "btBack_DSPK";
             this.btBack_DSPK.Size = new System.Drawing.Size(549, 178);
@@ -252,7 +251,7 @@
             this.buttonControl3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonControl3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonControl3.ForeColor = System.Drawing.Color.Yellow;
-            this.buttonControl3.Location = new System.Drawing.Point(-148, 39);
+            this.buttonControl3.Location = new System.Drawing.Point(-159, 39);
             this.buttonControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonControl3.Name = "buttonControl3";
             this.buttonControl3.Size = new System.Drawing.Size(403, 108);
@@ -264,10 +263,10 @@
             this.pnCLS.Controls.Add(this.btCLS_HinhAnh);
             this.pnCLS.Controls.Add(this.btCLS_TDChucNang);
             this.pnCLS.Controls.Add(this.btCLS_NoiSoi);
-            this.pnCLS.Location = new System.Drawing.Point(578, 4);
+            this.pnCLS.Location = new System.Drawing.Point(696, 464);
             this.pnCLS.Margin = new System.Windows.Forms.Padding(4);
             this.pnCLS.Name = "pnCLS";
-            this.pnCLS.Size = new System.Drawing.Size(225, 575);
+            this.pnCLS.Size = new System.Drawing.Size(118, 117);
             this.pnCLS.TabIndex = 47;
             // 
             // btCLS_back
@@ -281,10 +280,10 @@
             this.btCLS_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCLS_back.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCLS_back.ForeColor = System.Drawing.Color.DimGray;
-            this.btCLS_back.Location = new System.Drawing.Point(121, 300);
+            this.btCLS_back.Location = new System.Drawing.Point(66, 300);
             this.btCLS_back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCLS_back.Name = "btCLS_back";
-            this.btCLS_back.Size = new System.Drawing.Size(540, 178);
+            this.btCLS_back.Size = new System.Drawing.Size(477, 178);
             this.btCLS_back.TabIndex = 46;
             this.btCLS_back.Click += new System.EventHandler(this.btCLS_back_Click);
             // 
@@ -299,10 +298,10 @@
             this.btCLS_HinhAnh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCLS_HinhAnh.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCLS_HinhAnh.ForeColor = System.Drawing.Color.Yellow;
-            this.btCLS_HinhAnh.Location = new System.Drawing.Point(-457, 300);
+            this.btCLS_HinhAnh.Location = new System.Drawing.Point(-428, 300);
             this.btCLS_HinhAnh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCLS_HinhAnh.Name = "btCLS_HinhAnh";
-            this.btCLS_HinhAnh.Size = new System.Drawing.Size(540, 178);
+            this.btCLS_HinhAnh.Size = new System.Drawing.Size(477, 178);
             this.btCLS_HinhAnh.TabIndex = 39;
             this.btCLS_HinhAnh.Click += new System.EventHandler(this.btCLS_HinhAnh_Click);
             this.btCLS_HinhAnh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btCLS_HinhAnh_MouseDown);
@@ -319,10 +318,10 @@
             this.btCLS_TDChucNang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCLS_TDChucNang.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCLS_TDChucNang.ForeColor = System.Drawing.Color.Yellow;
-            this.btCLS_TDChucNang.Location = new System.Drawing.Point(121, 96);
+            this.btCLS_TDChucNang.Location = new System.Drawing.Point(66, 96);
             this.btCLS_TDChucNang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCLS_TDChucNang.Name = "btCLS_TDChucNang";
-            this.btCLS_TDChucNang.Size = new System.Drawing.Size(540, 178);
+            this.btCLS_TDChucNang.Size = new System.Drawing.Size(477, 178);
             this.btCLS_TDChucNang.TabIndex = 38;
             this.btCLS_TDChucNang.Click += new System.EventHandler(this.btCLS_TDChucNang_Click);
             this.btCLS_TDChucNang.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btCLS_TDChucNang_MouseDown);
@@ -339,10 +338,10 @@
             this.btCLS_NoiSoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCLS_NoiSoi.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCLS_NoiSoi.ForeColor = System.Drawing.Color.Yellow;
-            this.btCLS_NoiSoi.Location = new System.Drawing.Point(-457, 96);
+            this.btCLS_NoiSoi.Location = new System.Drawing.Point(-428, 96);
             this.btCLS_NoiSoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCLS_NoiSoi.Name = "btCLS_NoiSoi";
-            this.btCLS_NoiSoi.Size = new System.Drawing.Size(540, 178);
+            this.btCLS_NoiSoi.Size = new System.Drawing.Size(477, 178);
             this.btCLS_NoiSoi.TabIndex = 37;
             this.btCLS_NoiSoi.Click += new System.EventHandler(this.btCLS_NoiSoi_Click);
             this.btCLS_NoiSoi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btCLS_NoiSoi_MouseDown);
@@ -351,10 +350,10 @@
             // pnSTT_Web
             // 
             this.pnSTT_Web.Controls.Add(this.groupBox2);
-            this.pnSTT_Web.Location = new System.Drawing.Point(109, 6);
+            this.pnSTT_Web.Location = new System.Drawing.Point(13, 447);
             this.pnSTT_Web.Margin = new System.Windows.Forms.Padding(4);
             this.pnSTT_Web.Name = "pnSTT_Web";
-            this.pnSTT_Web.Size = new System.Drawing.Size(108, 488);
+            this.pnSTT_Web.Size = new System.Drawing.Size(117, 137);
             this.pnSTT_Web.TabIndex = 46;
             // 
             // groupBox2
@@ -369,7 +368,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(108, 488);
+            this.groupBox2.Size = new System.Drawing.Size(117, 137);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khám";
@@ -384,7 +383,7 @@
             this.panel10.Location = new System.Drawing.Point(4, 422);
             this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(100, 381);
+            this.panel10.Size = new System.Drawing.Size(109, 30);
             this.panel10.TabIndex = 34;
             // 
             // btnPrint_w
@@ -399,10 +398,10 @@
             this.btnPrint_w.Enabled = false;
             this.btnPrint_w.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint_w.ForeColor = System.Drawing.Color.Yellow;
-            this.btnPrint_w.Location = new System.Drawing.Point(-532, 27);
+            this.btnPrint_w.Location = new System.Drawing.Point(-438, 27);
             this.btnPrint_w.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrint_w.Name = "btnPrint_w";
-            this.btnPrint_w.Size = new System.Drawing.Size(549, 178);
+            this.btnPrint_w.Size = new System.Drawing.Size(477, 178);
             this.btnPrint_w.TabIndex = 35;
             this.btnPrint_w.Click += new System.EventHandler(this.btnPrint_w_Click);
             this.btnPrint_w.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnPrint_w_MouseDown);
@@ -419,10 +418,10 @@
             this.btnBack_web.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack_web.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack_web.ForeColor = System.Drawing.Color.DimGray;
-            this.btnBack_web.Location = new System.Drawing.Point(67, 27);
+            this.btnBack_web.Location = new System.Drawing.Point(63, 27);
             this.btnBack_web.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack_web.Name = "btnBack_web";
-            this.btnBack_web.Size = new System.Drawing.Size(549, 178);
+            this.btnBack_web.Size = new System.Drawing.Size(477, 178);
             this.btnBack_web.TabIndex = 34;
             this.btnBack_web.Click += new System.EventHandler(this.btnBack_web_Click);
             // 
@@ -444,14 +443,14 @@
             this.panel11.Location = new System.Drawing.Point(4, 106);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(100, 478);
+            this.panel11.Size = new System.Drawing.Size(109, 478);
             this.panel11.TabIndex = 33;
             // 
             // txtDOB_w
             // 
             this.txtDOB_w.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDOB_w.ForeColor = System.Drawing.Color.Red;
-            this.txtDOB_w.Location = new System.Drawing.Point(253, 78);
+            this.txtDOB_w.Location = new System.Drawing.Point(230, 79);
             this.txtDOB_w.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDOB_w.Name = "txtDOB_w";
             this.txtDOB_w.ReadOnly = true;
@@ -473,15 +472,13 @@
             // 
             // txtName_w
             // 
-            this.txtName_w.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName_w.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName_w.ForeColor = System.Drawing.Color.Red;
-            this.txtName_w.Location = new System.Drawing.Point(253, 18);
+            this.txtName_w.Location = new System.Drawing.Point(230, 20);
             this.txtName_w.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName_w.Name = "txtName_w";
             this.txtName_w.ReadOnly = true;
-            this.txtName_w.Size = new System.Drawing.Size(0, 40);
+            this.txtName_w.Size = new System.Drawing.Size(780, 40);
             this.txtName_w.TabIndex = 40;
             // 
             // label11
@@ -499,15 +496,13 @@
             // 
             // txtInfo_w
             // 
-            this.txtInfo_w.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInfo_w.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInfo_w.ForeColor = System.Drawing.Color.Red;
-            this.txtInfo_w.Location = new System.Drawing.Point(255, 254);
+            this.txtInfo_w.Location = new System.Drawing.Point(232, 256);
             this.txtInfo_w.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInfo_w.Name = "txtInfo_w";
             this.txtInfo_w.ReadOnly = true;
-            this.txtInfo_w.Size = new System.Drawing.Size(0, 40);
+            this.txtInfo_w.Size = new System.Drawing.Size(780, 40);
             this.txtInfo_w.TabIndex = 38;
             // 
             // label7
@@ -525,15 +520,13 @@
             // 
             // txtPKham_w
             // 
-            this.txtPKham_w.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPKham_w.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPKham_w.ForeColor = System.Drawing.Color.Red;
-            this.txtPKham_w.Location = new System.Drawing.Point(253, 194);
+            this.txtPKham_w.Location = new System.Drawing.Point(230, 196);
             this.txtPKham_w.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPKham_w.Name = "txtPKham_w";
             this.txtPKham_w.ReadOnly = true;
-            this.txtPKham_w.Size = new System.Drawing.Size(0, 40);
+            this.txtPKham_w.Size = new System.Drawing.Size(780, 40);
             this.txtPKham_w.TabIndex = 36;
             // 
             // label8
@@ -551,15 +544,13 @@
             // 
             // txtKhoa_w
             // 
-            this.txtKhoa_w.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKhoa_w.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhoa_w.ForeColor = System.Drawing.Color.Red;
-            this.txtKhoa_w.Location = new System.Drawing.Point(253, 134);
+            this.txtKhoa_w.Location = new System.Drawing.Point(230, 136);
             this.txtKhoa_w.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtKhoa_w.Name = "txtKhoa_w";
             this.txtKhoa_w.ReadOnly = true;
-            this.txtKhoa_w.Size = new System.Drawing.Size(0, 40);
+            this.txtKhoa_w.Size = new System.Drawing.Size(780, 40);
             this.txtKhoa_w.TabIndex = 34;
             // 
             // label9
@@ -584,15 +575,15 @@
             this.panel12.Location = new System.Drawing.Point(4, 37);
             this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(100, 69);
+            this.panel12.Size = new System.Drawing.Size(109, 69);
             this.panel12.TabIndex = 32;
             // 
             // btnFindWeb
             // 
-            this.btnFindWeb.Location = new System.Drawing.Point(929, 11);
+            this.btnFindWeb.Location = new System.Drawing.Point(732, 10);
             this.btnFindWeb.Margin = new System.Windows.Forms.Padding(4);
             this.btnFindWeb.Name = "btnFindWeb";
-            this.btnFindWeb.Size = new System.Drawing.Size(280, 42);
+            this.btnFindWeb.Size = new System.Drawing.Size(261, 42);
             this.btnFindWeb.TabIndex = 34;
             this.btnFindWeb.Text = "Tìm thông tin";
             this.btnFindWeb.UseVisualStyleBackColor = true;
@@ -602,10 +593,10 @@
             // 
             this.txtPhone_Web.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone_Web.ForeColor = System.Drawing.Color.Red;
-            this.txtPhone_Web.Location = new System.Drawing.Point(495, 11);
+            this.txtPhone_Web.Location = new System.Drawing.Point(478, 10);
             this.txtPhone_Web.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone_Web.Name = "txtPhone_Web";
-            this.txtPhone_Web.Size = new System.Drawing.Size(408, 40);
+            this.txtPhone_Web.Size = new System.Drawing.Size(247, 40);
             this.txtPhone_Web.TabIndex = 33;
             // 
             // label10
@@ -631,15 +622,14 @@
             this.pnDK_Kham.Controls.Add(this.btKhoa_Mat);
             this.pnDK_Kham.Controls.Add(this.btKhoa_Noi);
             this.pnDK_Kham.Controls.Add(this.btKhoa_RHM);
-            this.pnDK_Kham.Controls.Add(this.btKhoa_Nhi);
             this.pnDK_Kham.Controls.Add(this.btKhoa_TMH);
             this.pnDK_Kham.Controls.Add(this.btKhoa_SPKhoa);
             this.pnDK_Kham.Controls.Add(this.btKhoa_Dlieu);
             this.pnDK_Kham.Controls.Add(this.btKhoa_Yhct);
-            this.pnDK_Kham.Location = new System.Drawing.Point(1149, 6);
+            this.pnDK_Kham.Location = new System.Drawing.Point(5, 6);
             this.pnDK_Kham.Margin = new System.Windows.Forms.Padding(4);
             this.pnDK_Kham.Name = "pnDK_Kham";
-            this.pnDK_Kham.Size = new System.Drawing.Size(95, 568);
+            this.pnDK_Kham.Size = new System.Drawing.Size(147, 418);
             this.pnDK_Kham.TabIndex = 48;
             // 
             // btPhatSo
@@ -653,7 +643,7 @@
             this.btPhatSo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btPhatSo.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPhatSo.ForeColor = System.Drawing.Color.Yellow;
-            this.btPhatSo.Location = new System.Drawing.Point(-572, 17);
+            this.btPhatSo.Location = new System.Drawing.Point(-556, 17);
             this.btPhatSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btPhatSo.Name = "btPhatSo";
             this.btPhatSo.Size = new System.Drawing.Size(403, 178);
@@ -673,7 +663,7 @@
             this.btKhoa_ThanKinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhoa_ThanKinh.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhoa_ThanKinh.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_ThanKinh.Location = new System.Drawing.Point(-151, 341);
+            this.btKhoa_ThanKinh.Location = new System.Drawing.Point(-556, 339);
             this.btKhoa_ThanKinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKhoa_ThanKinh.Name = "btKhoa_ThanKinh";
             this.btKhoa_ThanKinh.Size = new System.Drawing.Size(403, 178);
@@ -693,7 +683,7 @@
             this.btback_khoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btback_khoa.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btback_khoa.ForeColor = System.Drawing.Color.DimGray;
-            this.btback_khoa.Location = new System.Drawing.Point(258, 341);
+            this.btback_khoa.Location = new System.Drawing.Point(-141, 339);
             this.btback_khoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btback_khoa.Name = "btback_khoa";
             this.btback_khoa.Size = new System.Drawing.Size(403, 178);
@@ -711,7 +701,7 @@
             this.btKhoa_Ngoai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhoa_Ngoai.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhoa_Ngoai.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_Ngoai.Location = new System.Drawing.Point(258, 17);
+            this.btKhoa_Ngoai.Location = new System.Drawing.Point(274, 17);
             this.btKhoa_Ngoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKhoa_Ngoai.Name = "btKhoa_Ngoai";
             this.btKhoa_Ngoai.Size = new System.Drawing.Size(403, 178);
@@ -731,7 +721,7 @@
             this.btKhoa_Mat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhoa_Mat.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhoa_Mat.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_Mat.Location = new System.Drawing.Point(258, 233);
+            this.btKhoa_Mat.Location = new System.Drawing.Point(-556, 233);
             this.btKhoa_Mat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKhoa_Mat.Name = "btKhoa_Mat";
             this.btKhoa_Mat.Size = new System.Drawing.Size(403, 178);
@@ -747,11 +737,11 @@
             this.btKhoa_Noi.BorderColor = System.Drawing.Color.Silver;
             this.btKhoa_Noi.BorderRadius = 20;
             this.btKhoa_Noi.BorderThickness = 3;
-            this.btKhoa_Noi.ButtonText = "KHOA NỘI";
+            this.btKhoa_Noi.ButtonText = "KHOA KHÁM BỆNH";
             this.btKhoa_Noi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhoa_Noi.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhoa_Noi.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_Noi.Location = new System.Drawing.Point(-157, 17);
+            this.btKhoa_Noi.Location = new System.Drawing.Point(-141, 17);
             this.btKhoa_Noi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKhoa_Noi.Name = "btKhoa_Noi";
             this.btKhoa_Noi.Size = new System.Drawing.Size(403, 178);
@@ -771,7 +761,7 @@
             this.btKhoa_RHM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhoa_RHM.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhoa_RHM.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_RHM.Location = new System.Drawing.Point(-156, 233);
+            this.btKhoa_RHM.Location = new System.Drawing.Point(274, 233);
             this.btKhoa_RHM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKhoa_RHM.Name = "btKhoa_RHM";
             this.btKhoa_RHM.Size = new System.Drawing.Size(403, 178);
@@ -779,26 +769,6 @@
             this.btKhoa_RHM.Click += new System.EventHandler(this.btK_RHM_Click);
             this.btKhoa_RHM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btK_RHM_MouseDown);
             this.btKhoa_RHM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btK_RHM_MouseUp);
-            // 
-            // btKhoa_Nhi
-            // 
-            this.btKhoa_Nhi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btKhoa_Nhi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btKhoa_Nhi.BorderColor = System.Drawing.Color.Silver;
-            this.btKhoa_Nhi.BorderRadius = 20;
-            this.btKhoa_Nhi.BorderThickness = 3;
-            this.btKhoa_Nhi.ButtonText = "KHOA NHI";
-            this.btKhoa_Nhi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btKhoa_Nhi.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btKhoa_Nhi.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_Nhi.Location = new System.Drawing.Point(-571, 123);
-            this.btKhoa_Nhi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btKhoa_Nhi.Name = "btKhoa_Nhi";
-            this.btKhoa_Nhi.Size = new System.Drawing.Size(403, 178);
-            this.btKhoa_Nhi.TabIndex = 37;
-            this.btKhoa_Nhi.Click += new System.EventHandler(this.btK_Nhi_Click);
-            this.btKhoa_Nhi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btK_Nhi_MouseDown);
-            this.btKhoa_Nhi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btK_Nhi_MouseUp);
             // 
             // btKhoa_TMH
             // 
@@ -811,7 +781,7 @@
             this.btKhoa_TMH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhoa_TMH.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhoa_TMH.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_TMH.Location = new System.Drawing.Point(-572, 335);
+            this.btKhoa_TMH.Location = new System.Drawing.Point(-141, 233);
             this.btKhoa_TMH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKhoa_TMH.Name = "btKhoa_TMH";
             this.btKhoa_TMH.Size = new System.Drawing.Size(403, 178);
@@ -827,11 +797,11 @@
             this.btKhoa_SPKhoa.BorderColor = System.Drawing.Color.Silver;
             this.btKhoa_SPKhoa.BorderRadius = 20;
             this.btKhoa_SPKhoa.BorderThickness = 3;
-            this.btKhoa_SPKhoa.ButtonText = "SẢN - PHỤ KHOA";
+            this.btKhoa_SPKhoa.ButtonText = "KHOA VẬT LÝ TRỊ LIỆU KKB";
             this.btKhoa_SPKhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhoa_SPKhoa.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhoa_SPKhoa.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_SPKhoa.Location = new System.Drawing.Point(-571, 225);
+            this.btKhoa_SPKhoa.Location = new System.Drawing.Point(274, 123);
             this.btKhoa_SPKhoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKhoa_SPKhoa.Name = "btKhoa_SPKhoa";
             this.btKhoa_SPKhoa.Size = new System.Drawing.Size(403, 178);
@@ -847,11 +817,11 @@
             this.btKhoa_Dlieu.BorderColor = System.Drawing.Color.Silver;
             this.btKhoa_Dlieu.BorderRadius = 20;
             this.btKhoa_Dlieu.BorderThickness = 3;
-            this.btKhoa_Dlieu.ButtonText = "KHOA DA LIỄU";
+            this.btKhoa_Dlieu.ButtonText = "KHOA VẬT LÝ TRỊ LIỆU KKA";
             this.btKhoa_Dlieu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhoa_Dlieu.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhoa_Dlieu.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_Dlieu.Location = new System.Drawing.Point(257, 123);
+            this.btKhoa_Dlieu.Location = new System.Drawing.Point(-141, 123);
             this.btKhoa_Dlieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKhoa_Dlieu.Name = "btKhoa_Dlieu";
             this.btKhoa_Dlieu.Size = new System.Drawing.Size(403, 178);
@@ -871,7 +841,7 @@
             this.btKhoa_Yhct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btKhoa_Yhct.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhoa_Yhct.ForeColor = System.Drawing.Color.Yellow;
-            this.btKhoa_Yhct.Location = new System.Drawing.Point(-157, 123);
+            this.btKhoa_Yhct.Location = new System.Drawing.Point(-556, 123);
             this.btKhoa_Yhct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKhoa_Yhct.Name = "btKhoa_Yhct";
             this.btKhoa_Yhct.Size = new System.Drawing.Size(403, 178);
@@ -883,10 +853,10 @@
             // pnSTT_SMS
             // 
             this.pnSTT_SMS.Controls.Add(this.groupBox1);
-            this.pnSTT_SMS.Location = new System.Drawing.Point(227, 8);
+            this.pnSTT_SMS.Location = new System.Drawing.Point(274, 6);
             this.pnSTT_SMS.Margin = new System.Windows.Forms.Padding(4);
             this.pnSTT_SMS.Name = "pnSTT_SMS";
-            this.pnSTT_SMS.Size = new System.Drawing.Size(108, 486);
+            this.pnSTT_SMS.Size = new System.Drawing.Size(965, 450);
             this.pnSTT_SMS.TabIndex = 45;
             // 
             // groupBox1
@@ -901,7 +871,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(108, 486);
+            this.groupBox1.Size = new System.Drawing.Size(965, 450);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khám";
@@ -916,7 +886,7 @@
             this.panel8.Location = new System.Drawing.Point(4, 314);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(100, 379);
+            this.panel8.Size = new System.Drawing.Size(957, 343);
             this.panel8.TabIndex = 34;
             // 
             // btPrint_SMS
@@ -931,10 +901,10 @@
             this.btPrint_SMS.Enabled = false;
             this.btPrint_SMS.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPrint_SMS.ForeColor = System.Drawing.Color.Yellow;
-            this.btPrint_SMS.Location = new System.Drawing.Point(-529, 47);
+            this.btPrint_SMS.Location = new System.Drawing.Point(-11, 47);
             this.btPrint_SMS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btPrint_SMS.Name = "btPrint_SMS";
-            this.btPrint_SMS.Size = new System.Drawing.Size(549, 178);
+            this.btPrint_SMS.Size = new System.Drawing.Size(477, 178);
             this.btPrint_SMS.TabIndex = 35;
             this.btPrint_SMS.Click += new System.EventHandler(this.btPrint_SMS_Click);
             this.btPrint_SMS.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btPrint_SMS_MouseDown);
@@ -951,10 +921,10 @@
             this.btBack_SMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btBack_SMS.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBack_SMS.ForeColor = System.Drawing.Color.DimGray;
-            this.btBack_SMS.Location = new System.Drawing.Point(70, 47);
+            this.btBack_SMS.Location = new System.Drawing.Point(494, 47);
             this.btBack_SMS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btBack_SMS.Name = "btBack_SMS";
-            this.btBack_SMS.Size = new System.Drawing.Size(549, 178);
+            this.btBack_SMS.Size = new System.Drawing.Size(477, 178);
             this.btBack_SMS.TabIndex = 34;
             this.btBack_SMS.Click += new System.EventHandler(this.btBack_SMS_Click);
             // 
@@ -971,20 +941,18 @@
             this.panel7.Location = new System.Drawing.Point(4, 106);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(100, 478);
+            this.panel7.Size = new System.Drawing.Size(957, 478);
             this.panel7.TabIndex = 33;
             // 
             // txtInfo_s
             // 
-            this.txtInfo_s.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInfo_s.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInfo_s.ForeColor = System.Drawing.Color.Red;
-            this.txtInfo_s.Location = new System.Drawing.Point(253, 145);
+            this.txtInfo_s.Location = new System.Drawing.Point(235, 147);
             this.txtInfo_s.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInfo_s.Name = "txtInfo_s";
             this.txtInfo_s.ReadOnly = true;
-            this.txtInfo_s.Size = new System.Drawing.Size(13, 40);
+            this.txtInfo_s.Size = new System.Drawing.Size(775, 40);
             this.txtInfo_s.TabIndex = 38;
             // 
             // label6
@@ -1002,15 +970,13 @@
             // 
             // txtPKham_s
             // 
-            this.txtPKham_s.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPKham_s.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPKham_s.ForeColor = System.Drawing.Color.Red;
-            this.txtPKham_s.Location = new System.Drawing.Point(253, 79);
+            this.txtPKham_s.Location = new System.Drawing.Point(235, 81);
             this.txtPKham_s.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPKham_s.Name = "txtPKham_s";
             this.txtPKham_s.ReadOnly = true;
-            this.txtPKham_s.Size = new System.Drawing.Size(13, 40);
+            this.txtPKham_s.Size = new System.Drawing.Size(775, 40);
             this.txtPKham_s.TabIndex = 36;
             // 
             // label5
@@ -1028,15 +994,13 @@
             // 
             // txtKhoa_s
             // 
-            this.txtKhoa_s.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKhoa_s.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhoa_s.ForeColor = System.Drawing.Color.Red;
-            this.txtKhoa_s.Location = new System.Drawing.Point(253, 18);
+            this.txtKhoa_s.Location = new System.Drawing.Point(235, 20);
             this.txtKhoa_s.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtKhoa_s.Name = "txtKhoa_s";
             this.txtKhoa_s.ReadOnly = true;
-            this.txtKhoa_s.Size = new System.Drawing.Size(13, 40);
+            this.txtKhoa_s.Size = new System.Drawing.Size(775, 40);
             this.txtKhoa_s.TabIndex = 34;
             // 
             // label4
@@ -1061,12 +1025,12 @@
             this.panel5.Location = new System.Drawing.Point(4, 37);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(100, 69);
+            this.panel5.Size = new System.Drawing.Size(957, 69);
             this.panel5.TabIndex = 32;
             // 
             // btnFindSMS
             // 
-            this.btnFindSMS.Location = new System.Drawing.Point(929, 11);
+            this.btnFindSMS.Location = new System.Drawing.Point(722, 11);
             this.btnFindSMS.Margin = new System.Windows.Forms.Padding(4);
             this.btnFindSMS.Name = "btnFindSMS";
             this.btnFindSMS.Size = new System.Drawing.Size(280, 42);
@@ -1079,10 +1043,10 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.Red;
-            this.txtPhone.Location = new System.Drawing.Point(495, 11);
+            this.txtPhone.Location = new System.Drawing.Point(451, 11);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(408, 40);
+            this.txtPhone.Size = new System.Drawing.Size(249, 40);
             this.txtPhone.TabIndex = 33;
             // 
             // lbCLS
@@ -1090,7 +1054,7 @@
             this.lbCLS.AutoSize = true;
             this.lbCLS.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCLS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.lbCLS.Location = new System.Drawing.Point(40, 17);
+            this.lbCLS.Location = new System.Drawing.Point(10, 17);
             this.lbCLS.Margin = new System.Windows.Forms.Padding(0);
             this.lbCLS.Name = "lbCLS";
             this.lbCLS.Size = new System.Drawing.Size(410, 29);
@@ -1109,10 +1073,10 @@
             this.pnMenu.Controls.Add(this.btnBHYT);
             this.pnMenu.Controls.Add(this.btnTK_DV);
             this.pnMenu.Controls.Add(this.btnTK_BHYT);
-            this.pnMenu.Location = new System.Drawing.Point(5, 6);
+            this.pnMenu.Location = new System.Drawing.Point(160, 23);
             this.pnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(96, 434);
+            this.pnMenu.Size = new System.Drawing.Size(94, 258);
             this.pnMenu.TabIndex = 44;
             // 
             // btnSTTSMS
@@ -1126,7 +1090,7 @@
             this.btnSTTSMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSTTSMS.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSTTSMS.ForeColor = System.Drawing.Color.Yellow;
-            this.btnSTTSMS.Location = new System.Drawing.Point(-156, 15);
+            this.btnSTTSMS.Location = new System.Drawing.Point(-157, 15);
             this.btnSTTSMS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSTTSMS.Name = "btnSTTSMS";
             this.btnSTTSMS.Size = new System.Drawing.Size(403, 178);
@@ -1142,11 +1106,11 @@
             this.btnCanLamSan.BorderColor = System.Drawing.Color.Silver;
             this.btnCanLamSan.BorderRadius = 20;
             this.btnCanLamSan.BorderThickness = 3;
-            this.btnCanLamSan.ButtonText = "CẬN LÂM SÀN";
+            this.btnCanLamSan.ButtonText = "CẬN LÂM SÀNG";
             this.btnCanLamSan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCanLamSan.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCanLamSan.ForeColor = System.Drawing.Color.Yellow;
-            this.btnCanLamSan.Location = new System.Drawing.Point(258, 390);
+            this.btnCanLamSan.Location = new System.Drawing.Point(257, 390);
             this.btnCanLamSan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCanLamSan.Name = "btnCanLamSan";
             this.btnCanLamSan.Size = new System.Drawing.Size(403, 178);
@@ -1166,7 +1130,7 @@
             this.btnDK_KB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDK_KB.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDK_KB.ForeColor = System.Drawing.Color.Yellow;
-            this.btnDK_KB.Location = new System.Drawing.Point(-570, 15);
+            this.btnDK_KB.Location = new System.Drawing.Point(-571, 15);
             this.btnDK_KB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDK_KB.Name = "btnDK_KB";
             this.btnDK_KB.Size = new System.Drawing.Size(403, 178);
@@ -1186,7 +1150,7 @@
             this.btnVienPhi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVienPhi.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVienPhi.ForeColor = System.Drawing.Color.Yellow;
-            this.btnVienPhi.Location = new System.Drawing.Point(-156, 390);
+            this.btnVienPhi.Location = new System.Drawing.Point(-157, 390);
             this.btnVienPhi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVienPhi.Name = "btnVienPhi";
             this.btnVienPhi.Size = new System.Drawing.Size(403, 178);
@@ -1206,7 +1170,7 @@
             this.btnSTTWeb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSTTWeb.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSTTWeb.ForeColor = System.Drawing.Color.Yellow;
-            this.btnSTTWeb.Location = new System.Drawing.Point(258, 15);
+            this.btnSTTWeb.Location = new System.Drawing.Point(257, 15);
             this.btnSTTWeb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSTTWeb.Name = "btnSTTWeb";
             this.btnSTTWeb.Size = new System.Drawing.Size(403, 178);
@@ -1226,7 +1190,7 @@
             this.btnPhatThuoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPhatThuoc.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhatThuoc.ForeColor = System.Drawing.Color.Yellow;
-            this.btnPhatThuoc.Location = new System.Drawing.Point(-570, 390);
+            this.btnPhatThuoc.Location = new System.Drawing.Point(-571, 390);
             this.btnPhatThuoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPhatThuoc.Name = "btnPhatThuoc";
             this.btnPhatThuoc.Size = new System.Drawing.Size(403, 178);
@@ -1246,7 +1210,7 @@
             this.btnBHYT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBHYT.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBHYT.ForeColor = System.Drawing.Color.Yellow;
-            this.btnBHYT.Location = new System.Drawing.Point(-570, 203);
+            this.btnBHYT.Location = new System.Drawing.Point(-571, 203);
             this.btnBHYT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBHYT.Name = "btnBHYT";
             this.btnBHYT.Size = new System.Drawing.Size(403, 178);
@@ -1265,7 +1229,7 @@
             this.btnTK_DV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTK_DV.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTK_DV.ForeColor = System.Drawing.Color.Yellow;
-            this.btnTK_DV.Location = new System.Drawing.Point(258, 203);
+            this.btnTK_DV.Location = new System.Drawing.Point(257, 203);
             this.btnTK_DV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTK_DV.Name = "btnTK_DV";
             this.btnTK_DV.Size = new System.Drawing.Size(403, 178);
@@ -1284,7 +1248,7 @@
             this.btnTK_BHYT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTK_BHYT.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTK_BHYT.ForeColor = System.Drawing.Color.Yellow;
-            this.btnTK_BHYT.Location = new System.Drawing.Point(-156, 203);
+            this.btnTK_BHYT.Location = new System.Drawing.Point(-157, 203);
             this.btnTK_BHYT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTK_BHYT.Name = "btnTK_BHYT";
             this.btnTK_BHYT.Size = new System.Drawing.Size(403, 178);
@@ -1309,7 +1273,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Tahoma", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.label1.Location = new System.Drawing.Point(3, 27);
             this.label1.Name = "label1";
@@ -1317,6 +1281,7 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "BỆNH VIỆN TRÀ VINH KÍNH CHÀO QUÝ KHÁCH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
             // 
             // timerReset
@@ -1347,6 +1312,7 @@
             this.btnTemplateEditor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnTemplateEditor.TabIndex = 9;
             this.btnTemplateEditor.TabStop = false;
+            this.btnTemplateEditor.Visible = false;
             this.btnTemplateEditor.Click += new System.EventHandler(this.btnTemplateEditor_Click);
             // 
             // btSQLConnect
@@ -1361,6 +1327,7 @@
             this.btSQLConnect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btSQLConnect.TabIndex = 8;
             this.btSQLConnect.TabStop = false;
+            this.btSQLConnect.Visible = false;
             this.btSQLConnect.Click += new System.EventHandler(this.btSQLConnect_Click);
             // 
             // btnSetting
@@ -1375,6 +1342,7 @@
             this.btnSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSetting.TabIndex = 7;
             this.btnSetting.TabStop = false;
+            this.btnSetting.Visible = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // btnNormalSize
@@ -1410,9 +1378,9 @@
             this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(45, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 18);
+            this.label2.Size = new System.Drawing.Size(387, 18);
             this.label2.TabIndex = 4;
-            this.label2.Text = "GPRO Gọi số - Hệ thống lấy số tự động";
+            this.label2.Text = "GPRO Gọi số - Hệ thống cấp số tự động QMS-482PT";
             // 
             // pbPrintStatus
             // 
@@ -1682,7 +1650,6 @@
         private ButtonControl btKhoa_Mat;
         private ButtonControl btKhoa_Noi;
         private ButtonControl btKhoa_RHM;
-        private ButtonControl btKhoa_Nhi;
         private ButtonControl btKhoa_TMH;
         private ButtonControl btKhoa_SPKhoa;
         private ButtonControl btKhoa_Dlieu;

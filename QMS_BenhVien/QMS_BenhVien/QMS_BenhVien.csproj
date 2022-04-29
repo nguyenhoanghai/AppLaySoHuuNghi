@@ -211,6 +211,18 @@
     <Compile Include="FrmMainCLS.Designer.cs">
       <DependentUpon>FrmMainCLS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMain_Socket_TV1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain_Socket_TV1.Designer.cs">
+      <DependentUpon>FrmMain_Socket_TV1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain_Socket_TV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain_Socket_TV2.Designer.cs">
+      <DependentUpon>FrmMain_Socket_TV2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMessagebox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +245,7 @@
     <Compile Include="Model\DatHenModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleInstanceApplication.cs" />
     <EmbeddedResource Include="bin\Debug\RDLC_Template\Mau1.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -271,6 +284,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainCLS.resx">
       <DependentUpon>FrmMainCLS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain_Socket_TV1.resx">
+      <DependentUpon>FrmMain_Socket_TV1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain_Socket_TV2.resx">
+      <DependentUpon>FrmMain_Socket_TV2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMessagebox.resx">
       <DependentUpon>FrmMessagebox.cs</DependentUpon>
