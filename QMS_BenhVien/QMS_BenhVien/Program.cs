@@ -66,9 +66,12 @@ namespace QMS_BenhVien
                         switch (appType)
                         {
                             default: Application.Run(new Frmain_ver2()); break;
-                            case "0": Application.Run(new Frmain_ver3()); break;
+                            case "0": Application.Run(new Frmain_ver3());  break;
                             case "1": Application.Run(new FrmMain_Socket_TV1()); break;
                             case "2": Application.Run(new FrmMain_Socket_TV2()); break;
+                            case "3":
+                                FrmMain_Socket_TV1.appPhatThuoc = true;
+                                Application.Run(new FrmMain_Socket_TV1()); break;
                         }
                     }
                 }

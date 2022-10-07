@@ -49,7 +49,7 @@ namespace QMS_BenhVien
         FrmMessagebox messagebox;
         PrintModel printModel = null;
         //TODO 
-        bool appPhatThuoc = true;
+       public static bool appPhatThuoc = false;
 
         public FrmMain_Socket_TV1()
         {
