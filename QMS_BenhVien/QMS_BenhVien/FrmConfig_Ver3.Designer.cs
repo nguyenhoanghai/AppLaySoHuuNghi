@@ -48,7 +48,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbPThuocUT = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.cbTieuDuong = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.numWidth = new System.Windows.Forms.TextBox();
+            this.numHeight = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btRefesh)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnsettingnut
@@ -64,7 +72,7 @@
             // chkStartWithWindows
             // 
             this.chkStartWithWindows.AutoSize = true;
-            this.chkStartWithWindows.Location = new System.Drawing.Point(395, 143);
+            this.chkStartWithWindows.Location = new System.Drawing.Point(395, 236);
             this.chkStartWithWindows.Name = "chkStartWithWindows";
             this.chkStartWithWindows.Size = new System.Drawing.Size(189, 21);
             this.chkStartWithWindows.TabIndex = 42;
@@ -83,7 +91,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(405, 182);
+            this.btnClose.Location = new System.Drawing.Point(405, 278);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(108, 32);
             this.btnClose.TabIndex = 40;
@@ -95,7 +103,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSave.Location = new System.Drawing.Point(519, 182);
+            this.btnSave.Location = new System.Drawing.Point(519, 278);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(108, 32);
             this.btnSave.TabIndex = 39;
@@ -141,7 +149,7 @@
             // 
             this.cbphatthuoc.DisplayMember = "Name";
             this.cbphatthuoc.FormattingEnabled = true;
-            this.cbphatthuoc.Location = new System.Drawing.Point(186, 96);
+            this.cbphatthuoc.Location = new System.Drawing.Point(186, 71);
             this.cbphatthuoc.Name = "cbphatthuoc";
             this.cbphatthuoc.Size = new System.Drawing.Size(180, 24);
             this.cbphatthuoc.TabIndex = 58;
@@ -151,7 +159,7 @@
             // 
             this.cbvienphi.DisplayMember = "Name";
             this.cbvienphi.FormattingEnabled = true;
-            this.cbvienphi.Location = new System.Drawing.Point(185, 66);
+            this.cbvienphi.Location = new System.Drawing.Point(185, 41);
             this.cbvienphi.Name = "cbvienphi";
             this.cbvienphi.Size = new System.Drawing.Size(180, 24);
             this.cbvienphi.TabIndex = 57;
@@ -162,7 +170,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(80, 96);
+            this.label9.Location = new System.Drawing.Point(80, 71);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 22);
             this.label9.TabIndex = 56;
@@ -173,7 +181,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Blue;
-            this.label8.Location = new System.Drawing.Point(99, 67);
+            this.label8.Location = new System.Drawing.Point(99, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 22);
             this.label8.TabIndex = 55;
@@ -183,7 +191,7 @@
             // 
             this.cbKhamUT.DisplayMember = "Name";
             this.cbKhamUT.FormattingEnabled = true;
-            this.cbKhamUT.Location = new System.Drawing.Point(186, 36);
+            this.cbKhamUT.Location = new System.Drawing.Point(186, 11);
             this.cbKhamUT.Name = "cbKhamUT";
             this.cbKhamUT.Size = new System.Drawing.Size(180, 24);
             this.cbKhamUT.TabIndex = 60;
@@ -194,7 +202,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(58, 38);
+            this.label2.Location = new System.Drawing.Point(58, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 22);
             this.label2.TabIndex = 59;
@@ -204,7 +212,7 @@
             // 
             this.cbKhamBHYT.DisplayMember = "Name";
             this.cbKhamBHYT.FormattingEnabled = true;
-            this.cbKhamBHYT.Location = new System.Drawing.Point(186, 156);
+            this.cbKhamBHYT.Location = new System.Drawing.Point(186, 131);
             this.cbKhamBHYT.Name = "cbKhamBHYT";
             this.cbKhamBHYT.Size = new System.Drawing.Size(180, 24);
             this.cbKhamBHYT.TabIndex = 62;
@@ -215,7 +223,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(66, 156);
+            this.label3.Location = new System.Drawing.Point(66, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 22);
             this.label3.TabIndex = 61;
@@ -225,7 +233,7 @@
             // 
             this.cbKhamKoBHYT.DisplayMember = "Name";
             this.cbKhamKoBHYT.FormattingEnabled = true;
-            this.cbKhamKoBHYT.Location = new System.Drawing.Point(186, 186);
+            this.cbKhamKoBHYT.Location = new System.Drawing.Point(186, 161);
             this.cbKhamKoBHYT.Name = "cbKhamKoBHYT";
             this.cbKhamKoBHYT.Size = new System.Drawing.Size(180, 24);
             this.cbKhamKoBHYT.TabIndex = 64;
@@ -236,7 +244,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(10, 186);
+            this.label4.Location = new System.Drawing.Point(10, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(170, 22);
             this.label4.TabIndex = 63;
@@ -246,7 +254,7 @@
             // 
             this.cbPThuocUT.DisplayMember = "Name";
             this.cbPThuocUT.FormattingEnabled = true;
-            this.cbPThuocUT.Location = new System.Drawing.Point(185, 126);
+            this.cbPThuocUT.Location = new System.Drawing.Point(185, 101);
             this.cbPThuocUT.Name = "cbPThuocUT";
             this.cbPThuocUT.Size = new System.Drawing.Size(180, 24);
             this.cbPThuocUT.TabIndex = 66;
@@ -257,17 +265,94 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(17, 126);
+            this.label5.Location = new System.Drawing.Point(17, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 22);
             this.label5.TabIndex = 65;
             this.label5.Text = "Phát thuốc ưu tiên";
             // 
+            // cbTieuDuong
+            // 
+            this.cbTieuDuong.DisplayMember = "Name";
+            this.cbTieuDuong.FormattingEnabled = true;
+            this.cbTieuDuong.Location = new System.Drawing.Point(186, 191);
+            this.cbTieuDuong.Name = "cbTieuDuong";
+            this.cbTieuDuong.Size = new System.Drawing.Size(180, 24);
+            this.cbTieuDuong.TabIndex = 68;
+            this.cbTieuDuong.ValueMember = "Id";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Blue;
+            this.label6.Location = new System.Drawing.Point(10, 191);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(167, 22);
+            this.label6.TabIndex = 67;
+            this.label6.Text = "T.Mạch tiểu đường";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.numWidth);
+            this.groupBox2.Controls.Add(this.numHeight);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Location = new System.Drawing.Point(395, 143);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(232, 87);
+            this.groupBox2.TabIndex = 69;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Cỡ giấy in";
+            // 
+            // numWidth
+            // 
+            this.numWidth.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numWidth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.numWidth.Location = new System.Drawing.Point(91, 53);
+            this.numWidth.Name = "numWidth";
+            this.numWidth.Size = new System.Drawing.Size(68, 23);
+            this.numWidth.TabIndex = 38;
+            // 
+            // numHeight
+            // 
+            this.numHeight.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numHeight.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.numHeight.Location = new System.Drawing.Point(91, 25);
+            this.numHeight.Name = "numHeight";
+            this.numHeight.Size = new System.Drawing.Size(68, 23);
+            this.numHeight.TabIndex = 36;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(9, 56);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 17);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Ngang";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(29, 25);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 17);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Cao";
+            // 
             // FrmConfig_Ver3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 231);
+            this.ClientSize = new System.Drawing.Size(646, 326);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.cbTieuDuong);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.cbPThuocUT);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbKhamKoBHYT);
@@ -292,6 +377,8 @@
             this.Text = "Cấu hình hệ thống";
             this.Load += new System.EventHandler(this.FrmConfig_Ver3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btRefesh)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +406,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbPThuocUT;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbTieuDuong;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox numWidth;
+        private System.Windows.Forms.TextBox numHeight;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }

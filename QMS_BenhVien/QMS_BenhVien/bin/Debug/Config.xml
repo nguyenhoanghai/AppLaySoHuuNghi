@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Appsettings>
-  <solien>1</solien>
+  <solien>2</solien>
   <button_style>{"Height":113,"Width":240,"Margin":10,"fontStyle":"Tahoma, 20.25pt","BackColor":"#0000ff","ForeColor":"#ffffff","ButtonInRow":3}</button_style>
   <permissions>0,3,5,8,13</permissions>
   <services>564,539,563,875,871,870,540,549,578,576,575,580,746,799,595,894,777,658,659,660,913,551,908,708,705,709,710,711,703,704,729,931,707,712,782,714,689,692,695,713,702,933,574,786,891</services>
-  <laymau>4</laymau>
-  <trakq>5</trakq>
-  <xquang>6</xquang>
+  <laymau>8</laymau>
+  <trakq>8</trakq>
+  <xquang>8</xquang>
   <sieuam>2</sieuam>
-  <vienphi>2</vienphi>
-  <phatthuoc>6</phatthuoc>
-  <tieptan>1</tieptan>
-  <_height>100</_height>
+  <vienphi>8</vienphi>
+  <phatthuoc>8</phatthuoc>
+  <tieptan>8</tieptan>
+  <_height>1</_height>
   <_width>1,2</_width>
   <imgsource>
   </imgsource>
@@ -19,7 +19,6 @@
   <startwithwindow>0</startwithwindow>
   <timeResetForm>5</timeResetForm>
   <CTRoom>5</CTRoom>
-  <COMName>COM3</COMName>
-  <Phatso>
-  </Phatso>
+  <COMName> www.api.benhvienranghammat.vn:6633</COMName>
+  <Phatso>8</Phatso>
 </Appsettings>

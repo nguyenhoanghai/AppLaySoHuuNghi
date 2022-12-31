@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QMS_BenhVien.RangHamMat;
+using System;
 using System.Configuration;
 using System.Diagnostics;
 using System.Windows.Forms;
@@ -72,14 +73,16 @@ namespace QMS_BenhVien
                             case "3":
                                 FrmMain_Socket_TV1.appPhatThuoc = true;
                                 Application.Run(new FrmMain_Socket_TV1()); break;
+                            case "4": 
+                                Application.Run(new FrmPrintTicket()); break;
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    string errorsms = "Kết nối máy chủ SQL thất bại. Vui lòng kiểm tra lại.";
-                    MessageBox.Show(errorsms + "- " + ex.Message, "Lỗi SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Application.Run(new frmSQLConnect());
+                    //string errorsms = "Kết nối máy chủ SQL thất bại. Vui lòng kiểm tra lại.";
+                    MessageBox.Show(ex.Message + "- " + ex.Message, "Lỗi SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Application.Run(new frmSQLConnect());
                 }
                 Process[] processe;
                 processe = Process.GetProcessesByName("QMS_BenhVien");

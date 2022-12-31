@@ -213,6 +213,16 @@ namespace QMS_BenhVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_Payment_3387295 {
+            get {
+                object obj = ResourceManager.GetObject("if_Payment_3387295", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_refresh22_216527 {
             get {
                 object obj = ResourceManager.GetObject("if_refresh22_216527", resourceCulture);
@@ -236,6 +246,16 @@ namespace QMS_BenhVien.Properties {
         internal static System.Drawing.Bitmap info {
             get {
                 object obj = ResourceManager.GetObject("info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loading_waiting {
+            get {
+                object obj = ResourceManager.GetObject("loading-waiting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

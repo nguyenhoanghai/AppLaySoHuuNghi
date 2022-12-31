@@ -570,9 +570,10 @@ namespace QMS_BenhVien
 
             return new String(stringChars);
         }
-        #endregion
 
-      
+        #endregion
+         
+
         private void FrmMain_TV2_Load(object sender, EventArgs e)
         {
             CheckState();

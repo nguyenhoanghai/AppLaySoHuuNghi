@@ -45,7 +45,8 @@ namespace QMS_BenhVien
             khamDVId = 0,
         khamUTId = 0,
             pThuocUTId = 0,
-            pThuocKoUTId = 0;
+            pThuocKoUTId = 0,
+            tieuduongId = 0;
         FrmMessagebox messagebox;
         PrintModel printModel = null;
         //TODO 
@@ -190,21 +191,19 @@ namespace QMS_BenhVien
                 butHeight = 0;
 
             butWith = ((width - 40) / 2);
-            butHeight = ((height - 40) / 3);
+            butHeight = ((height - 40) / 4);
 
             btnKhamUT.Width = butWith;
             btnKhamUT.Height = butHeight;
             btnKhamUT.Location = new Point(10, 10);
-
             btnBHYT.Width = butWith;
             btnBHYT.Height = butHeight;
             btnBHYT.Location = new Point(20 + butWith, 10);
 
+
             btnKhamDV.Width = butWith;
             btnKhamDV.Height = butHeight;
             btnKhamDV.Location = new Point(10, 20 + butHeight);
-
-
             btnVienPhi.Width = butWith;
             btnVienPhi.Height = butHeight;
             btnVienPhi.Location = new Point(20 + butWith, 20 + butHeight);
@@ -212,10 +211,13 @@ namespace QMS_BenhVien
             btnSTTSMS.Width = butWith;
             btnSTTSMS.Height = butHeight;
             btnSTTSMS.Location = new Point(10, 30 + (butHeight * 2));
-
             btnSTTWeb.Width = butWith;
             btnSTTWeb.Height = butHeight;
             btnSTTWeb.Location = new Point(20 + butWith, 30 + (butHeight * 2));
+
+            btTimmachTieuDuong.Width = butWith;
+            btTimmachTieuDuong.Height = butHeight;
+            btTimmachTieuDuong.Location = new Point(10, 40 + (butHeight * 3));
 
         }
 
@@ -403,6 +405,7 @@ namespace QMS_BenhVien
                     btnTemplateEditor.Visible = true;
                     btnSetting.Visible = true;
                     btSQLConnect.Visible = true;
+
                 }
 
                 string filePath = Application.StartupPath + "\\Config.XML";
@@ -413,7 +416,8 @@ namespace QMS_BenhVien
                 khamDVId = cfObj.ketqua;
                 khamUTId = cfObj.tieptan;
                 pThuocUTId = cfObj.phatthuoc;
-                pThuocKoUTId = cfObj.xquang;
+                pThuocKoUTId = cfObj.xquang;   
+                tieuduongId =  cfObj.PhatSo ;           
 
                 if (!string.IsNullOrEmpty(cfObj.button_style))
                     btStyle = JsonConvert.DeserializeObject<ButtonStyleModel>(cfObj.button_style);
@@ -541,6 +545,29 @@ namespace QMS_BenhVien
         {
             currentPanel = FormPanelSate.dkWeb;
             CheckState();
+        }
+         
+
+        private void btTimmachTieuDuong_Click(object sender, EventArgs e)
+        {
+            //inphieu
+            // có 1 quầy thu phí
+            PrintTicket(tieuduongId, DateTime.Now, "", "", 0, "", "");
+        }
+
+        private void btTimmachTieuDuong_MouseDown(object sender, MouseEventArgs e)
+        {
+            ButtonEffect_MouseDown(btTimmachTieuDuong);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btTimmachTieuDuong_MouseUp(object sender, MouseEventArgs e)
+        {
+            ButtonEffect_MouseUp(btTimmachTieuDuong, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
         }
 
         private void btPhatThuocUT_Click(object sender, EventArgs e)

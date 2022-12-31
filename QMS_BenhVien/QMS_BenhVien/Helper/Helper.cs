@@ -54,6 +54,7 @@ namespace QMS_BenhVien.Helper
                 cf.timeResetForm = Convert.ToInt32(elementsByTagName.Item(0).ChildNodes[16].InnerText);
                 cf.CTRoom = Convert.ToInt32(elementsByTagName.Item(0).ChildNodes[17].InnerText);
                 cf.COMName =  (elementsByTagName.Item(0).ChildNodes[18].InnerText); 
+                cf.phatthuoc = Convert.ToInt32(elementsByTagName.Item(0).ChildNodes[19].InnerText);
             }
             return cf;
         }
@@ -122,6 +123,9 @@ namespace QMS_BenhVien.Helper
         /// </summary>
         [DefaultValue(0)]
         public string COMName { get; set; }
+
+        [DefaultValue(0)]
+        public int PhatSo { get; set; }
     }
 
     public class DMBenhVien

@@ -12,7 +12,7 @@ namespace QMS_BenhVien
     {
         string _path = "", COMName = "";
         QMS_BenhVien.Helper.ConfigModel cfObj = null;
-        int cbVPhiId = 0, cbPThuoc_UTId = 0, cbPThuocId = 0, cbKhamUTId = 0, cbBHYTId = 0, cbKoBHYTId = 0;
+        int cbVPhiId = 0, cbPThuoc_UTId = 0, cbPThuocId = 0, cbKhamUTId = 0, cbBHYTId = 0, cbKoBHYTId = 0, cbTieuduongId = 0;
         public FrmConfig_Ver3()
         {
             InitializeComponent();
@@ -24,6 +24,8 @@ namespace QMS_BenhVien
             cfObj = Helper.Helper.Instance.GetAppConfig(filePath);
             _path = cfObj.anhnen;
             COMName = cfObj.COMName;
+            numWidth.Text = cfObj.giayWidth;
+            numHeight.Text = cfObj.giayHeight;
 
             cbCOMPrint.DisplayMember = "Name";
             cbCOMPrint.ValueMember = "Code";
@@ -35,6 +37,7 @@ namespace QMS_BenhVien
             cbKhamUT.DataSource = null;
             cbKhamBHYT.DataSource = null;
             cbKhamKoBHYT.DataSource = null;
+            cbTieuDuong.DataSource = null;
             var services = BLLService.Instance.GetLookUp(FrmMain.connectString, false);
             for (int i = 0; i < services.Count; i++)
             {
@@ -44,6 +47,7 @@ namespace QMS_BenhVien
                 cbKhamUT.Items.Add(services[i]);
                 cbKhamBHYT.Items.Add(services[i]);
                 cbKhamKoBHYT.Items.Add(services[i]);
+                cbTieuDuong.Items.Add(services[i]);
                 if (services[i].Id == cfObj.vienphi)
                     cbVPhiId = i;
                 if (services[i].Id == cfObj.phatthuoc)
@@ -56,7 +60,8 @@ namespace QMS_BenhVien
                     cbBHYTId = i;
                 if (services[i].Id == cfObj.ketqua)
                     cbKoBHYTId = i;
-
+                if (services[i].Id == cfObj.PhatSo)
+                    cbTieuduongId = i;
             }
 
             cbvienphi.SelectedIndex = cbVPhiId;
@@ -65,6 +70,7 @@ namespace QMS_BenhVien
             cbKhamUT.SelectedIndex = cbKhamUTId;
             cbKhamBHYT.SelectedIndex = cbBHYTId;
             cbKhamKoBHYT.SelectedIndex = cbKoBHYTId;
+            cbTieuDuong.SelectedIndex = cbTieuduongId;
 
             chkStartWithWindows.Checked = cfObj.startwithwindow;
         }
@@ -105,7 +111,7 @@ namespace QMS_BenhVien
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            string[] nodeArr = ("solien,button_style,permissions,services,laymau,trakq,xquang,sieuam,vienphi,phatthuoc,tieptan,_height,_width,imgsource,apptype,startwithwindow,timeResetForm,CTRoom,COMName").Split(',');
+            string[] nodeArr = ("solien,button_style,permissions,services,laymau,trakq,xquang,sieuam,vienphi,phatthuoc,tieptan,_height,_width,imgsource,apptype,startwithwindow,timeResetForm,CTRoom,COMName,Phatso").Split(',');
             string filePath = Application.StartupPath + "\\Config.XML";
             XmlDocument xmlDoc = new XmlDocument();
             XmlNode node = null;
@@ -117,18 +123,22 @@ namespace QMS_BenhVien
                     if (i != 1)
                     {
                         node = xmlDoc.SelectSingleNode("Appsettings/" + nodeArr[i]);
-                        switch (i)
-                        {
-                            case 4: node.InnerText = ((ModelSelectItem)cbKhamBHYT.SelectedItem).Id.ToString(); break;
-                            case 5: node.InnerText = ((ModelSelectItem)cbKhamKoBHYT.SelectedItem).Id.ToString(); break;
-                            case 6: node.InnerText = ((ModelSelectItem)cbphatthuoc.SelectedItem).Id.ToString(); break;
-                            case 8: node.InnerText = ((ModelSelectItem)cbvienphi.SelectedItem).Id.ToString(); break;
-                            case 9: node.InnerText = ((ModelSelectItem)cbPThuocUT.SelectedItem).Id.ToString(); break;
-                            case 10: node.InnerText = ((ModelSelectItem)cbKhamUT.SelectedItem).Id.ToString(); break;
-                            case 13: node.InnerText = _path; break;
-                            case 15: node.InnerText = (chkStartWithWindows.Checked ? "1" : "0"); break;
-                            case 18: node.InnerText = ((ModelSelectItem)cbCOMPrint.SelectedItem).Name; break;
-                        }
+                        if (node != null)
+                            switch (i)
+                            {
+                                case 4: node.InnerText = ((ModelSelectItem)cbKhamBHYT.SelectedItem).Id.ToString(); break;
+                                case 5: node.InnerText = ((ModelSelectItem)cbKhamKoBHYT.SelectedItem).Id.ToString(); break;
+                                case 6: node.InnerText = ((ModelSelectItem)cbphatthuoc.SelectedItem).Id.ToString(); break;
+                                case 8: node.InnerText = ((ModelSelectItem)cbvienphi.SelectedItem).Id.ToString(); break;
+                                case 9: node.InnerText = ((ModelSelectItem)cbPThuocUT.SelectedItem).Id.ToString(); break;
+                                case 10: node.InnerText = ((ModelSelectItem)cbKhamUT.SelectedItem).Id.ToString(); break;
+                                case 11: node.InnerText = numHeight.Text; break;
+                                case 12: node.InnerText = numWidth.Text; break;
+                                case 13: node.InnerText = _path; break;
+                                case 15: node.InnerText = (chkStartWithWindows.Checked ? "1" : "0"); break;
+                                case 18: node.InnerText = (cbCOMPrint.SelectedItem != null ? ((ModelSelectItem)cbCOMPrint.SelectedItem).Name : "COM"); break;
+                                case 19: node.InnerText = ((ModelSelectItem)cbTieuDuong.SelectedItem).Id.ToString(); break;
+                            }
                     }
                 }
             }
@@ -155,14 +165,15 @@ namespace QMS_BenhVien
                         case 8: node.AppendChild(xmlDoc.CreateTextNode(((ModelSelectItem)cbvienphi.SelectedItem).Id.ToString())); break;
                         case 9: node.AppendChild(xmlDoc.CreateTextNode(((ModelSelectItem)cbPThuocUT.SelectedItem).Id.ToString())); break;
                         case 10: node.AppendChild(xmlDoc.CreateTextNode(((ModelSelectItem)cbKhamUT.SelectedItem).Id.ToString())); break;
-                        case 11: node.AppendChild(xmlDoc.CreateTextNode("")); break;
-                        case 12: node.AppendChild(xmlDoc.CreateTextNode("")); break;
+                        case 11: node.AppendChild(xmlDoc.CreateTextNode(numHeight.Text)); break;
+                        case 12: node.AppendChild(xmlDoc.CreateTextNode(numWidth.Text)); break;
                         case 13: node.AppendChild(xmlDoc.CreateTextNode(_path)); break;
                         case 14: node.AppendChild(xmlDoc.CreateTextNode("")); break;
                         case 15: node.AppendChild(xmlDoc.CreateTextNode((chkStartWithWindows.Checked ? "1" : "0"))); ; break;
                         case 16: node.AppendChild(xmlDoc.CreateTextNode("")); ; break;
                         case 17: node.AppendChild(xmlDoc.CreateTextNode("")); ; break;
                         case 18: node.AppendChild(xmlDoc.CreateTextNode(((ModelSelectItem)cbCOMPrint.SelectedItem).Name.ToString())); break;
+                        case 19: node.AppendChild(xmlDoc.CreateTextNode(((ModelSelectItem)cbTieuDuong.SelectedItem).Id.ToString())); break;
                     }
                     xmlNode.AppendChild(node);
                 }
