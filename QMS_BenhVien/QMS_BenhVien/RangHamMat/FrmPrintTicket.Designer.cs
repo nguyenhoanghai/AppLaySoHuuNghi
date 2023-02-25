@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnTitle = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnTemplateEditor = new System.Windows.Forms.PictureBox();
             this.btSQLConnect = new System.Windows.Forms.PictureBox();
             this.btnSetting = new System.Windows.Forms.PictureBox();
             this.btnNormalSize = new System.Windows.Forms.PictureBox();
@@ -44,18 +43,46 @@
             this.btnMaximize = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.timerReset = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnmain1 = new System.Windows.Forms.Panel();
+            this.pnmain2 = new System.Windows.Forms.Panel();
             this.panelStatus = new System.Windows.Forms.Panel();
             this.lbSocketStatus = new System.Windows.Forms.Label();
             this.pbPrintStatus = new System.Windows.Forms.PictureBox();
             this.lbStatus = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelMain3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pnSearchCCCD = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnByCCCD = new System.Windows.Forms.Panel();
+            this.txtCCCD_key = new System.Windows.Forms.TextBox();
+            this.lbCLS = new System.Windows.Forms.Label();
+            this.pnSearchName = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cbNam_key = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbThang_key = new System.Windows.Forms.ComboBox();
+            this.cbNgay_key = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtname_key = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btAddNewForm = new QMS_BenhVien.ButtonControl();
+            this.btClear_cccd = new QMS_BenhVien.ButtonControl();
+            this.btSearchByCCCD = new QMS_BenhVien.ButtonControl();
+            this.pnFilter = new System.Windows.Forms.Panel();
+            this.chkSearchByCCCD = new QMS_BenhVien.CustomControls.CustomCheckbox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.chkByName = new QMS_BenhVien.CustomControls.CustomCheckbox();
             this.pnAddNew = new System.Windows.Forms.Panel();
+            this.btHamEch = new QMS_BenhVien.ButtonControl();
+            this.btTQuat = new QMS_BenhVien.ButtonControl();
+            this.btKTC = new QMS_BenhVien.ButtonControl();
+            this.btRHM = new QMS_BenhVien.ButtonControl();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.btClear_add = new QMS_BenhVien.ButtonControl();
             this.btBackSearchByCCCD = new QMS_BenhVien.ButtonControl();
-            this.btSendAPI = new QMS_BenhVien.ButtonControl();
             this.cbJob = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtThon = new System.Windows.Forms.TextBox();
@@ -71,7 +98,6 @@
             this.cbDanToc = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.txtPlace = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -89,29 +115,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.pnSearchName = new System.Windows.Forms.Panel();
-            this.btClear_name = new QMS_BenhVien.ButtonControl();
-            this.btSearchByCCCDForm = new QMS_BenhVien.ButtonControl();
-            this.btAddNewForm = new QMS_BenhVien.ButtonControl();
-            this.btSearchByName = new QMS_BenhVien.ButtonControl();
-            this.cbNam_key = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbThang_key = new System.Windows.Forms.ComboBox();
-            this.cbNgay_key = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtname_key = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pnSearchCCCD = new System.Windows.Forms.Panel();
-            this.btClear_cccd = new QMS_BenhVien.ButtonControl();
-            this.btSearchByNameForm = new QMS_BenhVien.ButtonControl();
-            this.btSearchByCCCD = new QMS_BenhVien.ButtonControl();
-            this.lbCLS = new System.Windows.Forms.Label();
-            this.txtCCCD_key = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.panel3.SuspendLayout();
+            this.pnTitle.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTemplateEditor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btSQLConnect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormalSize)).BeginInit();
@@ -120,28 +125,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnmain1.SuspendLayout();
+            this.pnmain2.SuspendLayout();
             this.panelStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPrintStatus)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panelMain.SuspendLayout();
+            this.panelMain3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.pnAddNew.SuspendLayout();
-            this.pnSearchName.SuspendLayout();
             this.pnSearchCCCD.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.pnByCCCD.SuspendLayout();
+            this.pnSearchName.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.pnFilter.SuspendLayout();
+            this.pnAddNew.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel3
+            // pnTitle
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1942, 208);
-            this.panel3.TabIndex = 0;
+            this.pnTitle.BackColor = System.Drawing.Color.Transparent;
+            this.pnTitle.Controls.Add(this.label3);
+            this.pnTitle.Controls.Add(this.label1);
+            this.pnTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnTitle.Name = "pnTitle";
+            this.pnTitle.Size = new System.Drawing.Size(1941, 208);
+            this.pnTitle.TabIndex = 0;
             // 
             // label3
             // 
@@ -152,7 +161,7 @@
             this.label3.ForeColor = System.Drawing.Color.DeepPink;
             this.label3.Location = new System.Drawing.Point(3, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1934, 60);
+            this.label3.Size = new System.Drawing.Size(1933, 60);
             this.label3.TabIndex = 19;
             this.label3.Text = "ĐĂNG KÝ LẤY SỐ THỨ TỰ TỰ ĐỘNG";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,7 +183,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel1.Controls.Add(this.btnTemplateEditor);
             this.panel1.Controls.Add(this.btSQLConnect);
             this.panel1.Controls.Add(this.btnSetting);
             this.panel1.Controls.Add(this.btnNormalSize);
@@ -189,31 +197,16 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1942, 46);
+            this.panel1.Size = new System.Drawing.Size(1941, 46);
             this.panel1.TabIndex = 9;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // btnTemplateEditor
-            // 
-            this.btnTemplateEditor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTemplateEditor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTemplateEditor.Image = global::QMS_BenhVien.Properties.Resources.iconfinder_ticket_54267__1_;
-            this.btnTemplateEditor.Location = new System.Drawing.Point(1698, 9);
-            this.btnTemplateEditor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTemplateEditor.Name = "btnTemplateEditor";
-            this.btnTemplateEditor.Size = new System.Drawing.Size(28, 26);
-            this.btnTemplateEditor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnTemplateEditor.TabIndex = 9;
-            this.btnTemplateEditor.TabStop = false;
-            this.btnTemplateEditor.Visible = false;
-            this.btnTemplateEditor.Click += new System.EventHandler(this.btnTemplateEditor_Click);
             // 
             // btSQLConnect
             // 
             this.btSQLConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btSQLConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSQLConnect.Image = global::QMS_BenhVien.Properties.Resources.db;
-            this.btSQLConnect.Location = new System.Drawing.Point(1734, 9);
+            this.btSQLConnect.Location = new System.Drawing.Point(1733, 9);
             this.btSQLConnect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btSQLConnect.Name = "btSQLConnect";
             this.btSQLConnect.Size = new System.Drawing.Size(28, 26);
@@ -280,7 +273,7 @@
             this.btnfullscreen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnfullscreen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnfullscreen.Image = global::QMS_BenhVien.Properties.Resources.fullscreen_icon;
-            this.btnfullscreen.Location = new System.Drawing.Point(1802, 9);
+            this.btnfullscreen.Location = new System.Drawing.Point(1803, 9);
             this.btnfullscreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnfullscreen.Name = "btnfullscreen";
             this.btnfullscreen.Size = new System.Drawing.Size(28, 26);
@@ -294,7 +287,7 @@
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Image = global::QMS_BenhVien.Properties.Resources.minimazar;
-            this.btnMinimize.Location = new System.Drawing.Point(1834, 9);
+            this.btnMinimize.Location = new System.Drawing.Point(1835, 9);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(28, 26);
@@ -308,7 +301,7 @@
             this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaximize.Image = global::QMS_BenhVien.Properties.Resources.maxi;
-            this.btnMaximize.Location = new System.Drawing.Point(1870, 9);
+            this.btnMaximize.Location = new System.Drawing.Point(1869, 9);
             this.btnMaximize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(28, 26);
@@ -323,7 +316,7 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = global::QMS_BenhVien.Properties.Resources.x2;
             this.btnClose.InitialImage = global::QMS_BenhVien.Properties.Resources.cerrar;
-            this.btnClose.Location = new System.Drawing.Point(1906, 9);
+            this.btnClose.Location = new System.Drawing.Point(1907, 9);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(28, 26);
@@ -336,19 +329,30 @@
             // 
             this.timerReset.Interval = 2000;
             // 
-            // panel2
+            // pnmain1
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.panelStatus);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1942, 1088);
-            this.panel2.TabIndex = 10;
+            this.pnmain1.BackColor = System.Drawing.Color.Transparent;
+            this.pnmain1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnmain1.Controls.Add(this.pnmain2);
+            this.pnmain1.Controls.Add(this.pnTitle);
+            this.pnmain1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnmain1.Location = new System.Drawing.Point(0, 0);
+            this.pnmain1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnmain1.Name = "pnmain1";
+            this.pnmain1.Size = new System.Drawing.Size(1941, 1354);
+            this.pnmain1.TabIndex = 10;
+            // 
+            // pnmain2
+            // 
+            this.pnmain2.BackColor = System.Drawing.Color.Transparent;
+            this.pnmain2.Controls.Add(this.panelStatus);
+            this.pnmain2.Controls.Add(this.panelMain3);
+            this.pnmain2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnmain2.Location = new System.Drawing.Point(0, 208);
+            this.pnmain2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnmain2.Name = "pnmain2";
+            this.pnmain2.Size = new System.Drawing.Size(1941, 1146);
+            this.pnmain2.TabIndex = 1;
             // 
             // panelStatus
             // 
@@ -357,10 +361,10 @@
             this.panelStatus.Controls.Add(this.pbPrintStatus);
             this.panelStatus.Controls.Add(this.lbStatus);
             this.panelStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelStatus.Location = new System.Drawing.Point(0, 1051);
+            this.panelStatus.Location = new System.Drawing.Point(0, 1109);
             this.panelStatus.Margin = new System.Windows.Forms.Padding(4);
             this.panelStatus.Name = "panelStatus";
-            this.panelStatus.Size = new System.Drawing.Size(1942, 37);
+            this.panelStatus.Size = new System.Drawing.Size(1941, 37);
             this.panelStatus.TabIndex = 2;
             // 
             // lbSocketStatus
@@ -397,51 +401,404 @@
             this.lbStatus.Text = " status";
             this.lbStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // panel4
+            // panelMain3
             // 
-            this.panel4.Controls.Add(this.panelMain);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 208);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1942, 880);
-            this.panel4.TabIndex = 1;
-            // 
-            // panelMain
-            // 
-            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelMain.Controls.Add(this.groupBox1);
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1942, 842);
-            this.panelMain.TabIndex = 21;
+            this.panelMain3.BackColor = System.Drawing.Color.Transparent;
+            this.panelMain3.Controls.Add(this.groupBox1);
+            this.panelMain3.Controls.Add(this.pnAddNew);
+            this.panelMain3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain3.Location = new System.Drawing.Point(0, 0);
+            this.panelMain3.Margin = new System.Windows.Forms.Padding(4);
+            this.panelMain3.Name = "panelMain3";
+            this.panelMain3.Size = new System.Drawing.Size(1941, 1146);
+            this.panelMain3.TabIndex = 21;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pnAddNew);
-            this.groupBox1.Controls.Add(this.pnSearchName);
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.pnSearchCCCD);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Controls.Add(this.pnFilter);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DeepPink;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1942, 842);
+            this.groupBox1.Size = new System.Drawing.Size(1941, 90);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tra cứu thông tin";
             // 
+            // pnSearchCCCD
+            // 
+            this.pnSearchCCCD.Controls.Add(this.panel5);
+            this.pnSearchCCCD.Controls.Add(this.panel9);
+            this.pnSearchCCCD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnSearchCCCD.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnSearchCCCD.Location = new System.Drawing.Point(4, 167);
+            this.pnSearchCCCD.Margin = new System.Windows.Forms.Padding(4);
+            this.pnSearchCCCD.Name = "pnSearchCCCD";
+            this.pnSearchCCCD.Size = new System.Drawing.Size(1933, 0);
+            this.pnSearchCCCD.TabIndex = 32;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pnByCCCD);
+            this.panel5.Controls.Add(this.pnSearchName);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1933, 0);
+            this.panel5.TabIndex = 53;
+            // 
+            // pnByCCCD
+            // 
+            this.pnByCCCD.Controls.Add(this.txtCCCD_key);
+            this.pnByCCCD.Controls.Add(this.lbCLS);
+            this.pnByCCCD.Location = new System.Drawing.Point(44, 117);
+            this.pnByCCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnByCCCD.Name = "pnByCCCD";
+            this.pnByCCCD.Size = new System.Drawing.Size(1915, 118);
+            this.pnByCCCD.TabIndex = 34;
+            // 
+            // txtCCCD_key
+            // 
+            this.txtCCCD_key.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCCCD_key.Font = new System.Drawing.Font("Tahoma", 65F);
+            this.txtCCCD_key.ForeColor = System.Drawing.Color.Red;
+            this.txtCCCD_key.Location = new System.Drawing.Point(615, 47);
+            this.txtCCCD_key.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCCCD_key.Name = "txtCCCD_key";
+            this.txtCCCD_key.Size = new System.Drawing.Size(1284, 138);
+            this.txtCCCD_key.TabIndex = 33;
+            // 
+            // lbCLS
+            // 
+            this.lbCLS.AutoSize = true;
+            this.lbCLS.Font = new System.Drawing.Font("Tahoma", 32.8F, System.Drawing.FontStyle.Bold);
+            this.lbCLS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.lbCLS.Location = new System.Drawing.Point(9, 84);
+            this.lbCLS.Margin = new System.Windows.Forms.Padding(0);
+            this.lbCLS.Name = "lbCLS";
+            this.lbCLS.Size = new System.Drawing.Size(544, 66);
+            this.lbCLS.TabIndex = 32;
+            this.lbCLS.Text = "Nhập CMND/CCCD";
+            this.lbCLS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pnSearchName
+            // 
+            this.pnSearchName.Controls.Add(this.label26);
+            this.pnSearchName.Controls.Add(this.label24);
+            this.pnSearchName.Controls.Add(this.cbNam_key);
+            this.pnSearchName.Controls.Add(this.label7);
+            this.pnSearchName.Controls.Add(this.label6);
+            this.pnSearchName.Controls.Add(this.cbThang_key);
+            this.pnSearchName.Controls.Add(this.cbNgay_key);
+            this.pnSearchName.Controls.Add(this.label5);
+            this.pnSearchName.Controls.Add(this.txtname_key);
+            this.pnSearchName.Controls.Add(this.label4);
+            this.pnSearchName.Location = new System.Drawing.Point(33, 6);
+            this.pnSearchName.Margin = new System.Windows.Forms.Padding(4);
+            this.pnSearchName.Name = "pnSearchName";
+            this.pnSearchName.Size = new System.Drawing.Size(1904, 105);
+            this.pnSearchName.TabIndex = 33;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(773, 242);
+            this.label26.Margin = new System.Windows.Forms.Padding(0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(48, 48);
+            this.label26.TabIndex = 50;
+            this.label26.Text = "*";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Red;
+            this.label24.Location = new System.Drawing.Point(383, 74);
+            this.label24.Margin = new System.Windows.Forms.Padding(0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(48, 48);
+            this.label24.TabIndex = 49;
+            this.label24.Text = "*";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbNam_key
+            // 
+            this.cbNam_key.DisplayMember = "Name";
+            this.cbNam_key.DropDownHeight = 400;
+            this.cbNam_key.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbNam_key.Font = new System.Drawing.Font("Tahoma", 65F, System.Drawing.FontStyle.Bold);
+            this.cbNam_key.FormattingEnabled = true;
+            this.cbNam_key.IntegralHeight = false;
+            this.cbNam_key.Location = new System.Drawing.Point(1498, 223);
+            this.cbNam_key.Margin = new System.Windows.Forms.Padding(4);
+            this.cbNam_key.Name = "cbNam_key";
+            this.cbNam_key.Size = new System.Drawing.Size(364, 138);
+            this.cbNam_key.TabIndex = 41;
+            this.cbNam_key.Text = "9999";
+            this.cbNam_key.ValueMember = "Id";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.label7.Location = new System.Drawing.Point(1410, 265);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 65);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "/";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.label6.Location = new System.Drawing.Point(1097, 265);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 65);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "/";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbThang_key
+            // 
+            this.cbThang_key.DisplayMember = "Name";
+            this.cbThang_key.DropDownHeight = 400;
+            this.cbThang_key.Font = new System.Drawing.Font("Tahoma", 65F, System.Drawing.FontStyle.Bold);
+            this.cbThang_key.FormattingEnabled = true;
+            this.cbThang_key.IntegralHeight = false;
+            this.cbThang_key.Location = new System.Drawing.Point(1170, 223);
+            this.cbThang_key.Margin = new System.Windows.Forms.Padding(4);
+            this.cbThang_key.Name = "cbThang_key";
+            this.cbThang_key.Size = new System.Drawing.Size(211, 138);
+            this.cbThang_key.TabIndex = 38;
+            this.cbThang_key.Text = "12";
+            this.cbThang_key.ValueMember = "Id";
+            // 
+            // cbNgay_key
+            // 
+            this.cbNgay_key.DisplayMember = "Name";
+            this.cbNgay_key.DropDownHeight = 400;
+            this.cbNgay_key.Font = new System.Drawing.Font("Tahoma", 65F, System.Drawing.FontStyle.Bold);
+            this.cbNgay_key.FormattingEnabled = true;
+            this.cbNgay_key.IntegralHeight = false;
+            this.cbNgay_key.Location = new System.Drawing.Point(856, 223);
+            this.cbNgay_key.Margin = new System.Windows.Forms.Padding(4);
+            this.cbNgay_key.Name = "cbNgay_key";
+            this.cbNgay_key.Size = new System.Drawing.Size(211, 138);
+            this.cbNgay_key.TabIndex = 37;
+            this.cbNgay_key.Text = "99";
+            this.cbNgay_key.ValueMember = "Id";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.label5.Location = new System.Drawing.Point(13, 265);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(721, 65);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Ngày sinh (dd/mm/yyyy)";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtname_key
+            // 
+            this.txtname_key.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtname_key.Font = new System.Drawing.Font("Tahoma", 65F);
+            this.txtname_key.ForeColor = System.Drawing.Color.Red;
+            this.txtname_key.Location = new System.Drawing.Point(460, 42);
+            this.txtname_key.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtname_key.Name = "txtname_key";
+            this.txtname_key.Size = new System.Drawing.Size(1431, 138);
+            this.txtname_key.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.label4.Location = new System.Drawing.Point(13, 74);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(360, 65);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Nhập họ tên";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.btAddNewForm);
+            this.panel9.Controls.Add(this.btClear_cccd);
+            this.panel9.Controls.Add(this.btSearchByCCCD);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, -242);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1933, 242);
+            this.panel9.TabIndex = 57;
+            // 
+            // btAddNewForm
+            // 
+            this.btAddNewForm.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btAddNewForm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btAddNewForm.BorderColor = System.Drawing.Color.Silver;
+            this.btAddNewForm.BorderRadius = 20;
+            this.btAddNewForm.BorderThickness = 3;
+            this.btAddNewForm.ButtonText = "ĐĂNG KÝ MỚI";
+            this.btAddNewForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAddNewForm.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAddNewForm.ForeColor = System.Drawing.Color.Yellow;
+            this.btAddNewForm.Location = new System.Drawing.Point(732, 18);
+            this.btAddNewForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btAddNewForm.Name = "btAddNewForm";
+            this.btAddNewForm.Size = new System.Drawing.Size(403, 178);
+            this.btAddNewForm.TabIndex = 48;
+            this.btAddNewForm.Click += new System.EventHandler(this.btAddNewForm_Click);
+            // 
+            // btClear_cccd
+            // 
+            this.btClear_cccd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btClear_cccd.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.btClear_cccd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btClear_cccd.BorderRadius = 20;
+            this.btClear_cccd.BorderThickness = 3;
+            this.btClear_cccd.ButtonText = "XÓA TRẮNG";
+            this.btClear_cccd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btClear_cccd.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClear_cccd.ForeColor = System.Drawing.Color.Red;
+            this.btClear_cccd.Location = new System.Drawing.Point(1188, 16);
+            this.btClear_cccd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btClear_cccd.Name = "btClear_cccd";
+            this.btClear_cccd.Size = new System.Drawing.Size(403, 178);
+            this.btClear_cccd.TabIndex = 47;
+            this.btClear_cccd.Click += new System.EventHandler(this.btClear_cccd_Click);
+            // 
+            // btSearchByCCCD
+            // 
+            this.btSearchByCCCD.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btSearchByCCCD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btSearchByCCCD.BorderColor = System.Drawing.Color.Silver;
+            this.btSearchByCCCD.BorderRadius = 20;
+            this.btSearchByCCCD.BorderThickness = 3;
+            this.btSearchByCCCD.ButtonText = "TÌM THÔNG TIN";
+            this.btSearchByCCCD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSearchByCCCD.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearchByCCCD.ForeColor = System.Drawing.Color.Yellow;
+            this.btSearchByCCCD.Location = new System.Drawing.Point(275, 16);
+            this.btSearchByCCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btSearchByCCCD.Name = "btSearchByCCCD";
+            this.btSearchByCCCD.Size = new System.Drawing.Size(403, 178);
+            this.btSearchByCCCD.TabIndex = 44;
+            this.btSearchByCCCD.Click += new System.EventHandler(this.btSearchByCCCD_Click);
+            this.btSearchByCCCD.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btSearchByCCCD_MouseDown);
+            this.btSearchByCCCD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btSearchByCCCD_MouseUp);
+            // 
+            // pnFilter
+            // 
+            this.pnFilter.Controls.Add(this.chkSearchByCCCD);
+            this.pnFilter.Controls.Add(this.label22);
+            this.pnFilter.Controls.Add(this.chkByName);
+            this.pnFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnFilter.Location = new System.Drawing.Point(4, 37);
+            this.pnFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnFilter.Name = "pnFilter";
+            this.pnFilter.Size = new System.Drawing.Size(1933, 130);
+            this.pnFilter.TabIndex = 54;
+            // 
+            // chkSearchByCCCD
+            // 
+            this.chkSearchByCCCD.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.chkSearchByCCCD.CheckboxChar = "✓";
+            this.chkSearchByCCCD.CheckboxCharFont = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSearchByCCCD.CheckboxCharForeColor = System.Drawing.Color.Black;
+            this.chkSearchByCCCD.CheckboxCharOffsetX = 30;
+            this.chkSearchByCCCD.CheckboxCharOffsetY = 0;
+            this.chkSearchByCCCD.CheckboxFrameColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.chkSearchByCCCD.CheckboxFrameHightLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.chkSearchByCCCD.CheckboxFrameStrength = 1;
+            this.chkSearchByCCCD.CheckboxSize = 50;
+            this.chkSearchByCCCD.Checked = true;
+            this.chkSearchByCCCD.LabelFont = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSearchByCCCD.LabelForeColor = System.Drawing.Color.DeepPink;
+            this.chkSearchByCCCD.LabelOffsetX = 0;
+            this.chkSearchByCCCD.LabelOffsetY = 0;
+            this.chkSearchByCCCD.LabelText = "CMND/CCCD";
+            this.chkSearchByCCCD.Location = new System.Drawing.Point(483, 25);
+            this.chkSearchByCCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkSearchByCCCD.Name = "chkSearchByCCCD";
+            this.chkSearchByCCCD.Size = new System.Drawing.Size(579, 78);
+            this.chkSearchByCCCD.TabIndex = 51;
+            this.chkSearchByCCCD.Text = "customCheckbox1";
+            this.chkSearchByCCCD.Click += new System.EventHandler(this.customCheckbox1_Click);
+            this.chkSearchByCCCD.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chkSearchByCCCD_MouseDown);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.label22.Location = new System.Drawing.Point(47, 25);
+            this.label22.Margin = new System.Windows.Forms.Padding(0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(402, 64);
+            this.label22.TabIndex = 50;
+            this.label22.Text = "Tra cứu theo: ";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // chkByName
+            // 
+            this.chkByName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkByName.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.chkByName.CheckboxChar = "✓";
+            this.chkByName.CheckboxCharFont = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkByName.CheckboxCharForeColor = System.Drawing.Color.Black;
+            this.chkByName.CheckboxCharOffsetX = 30;
+            this.chkByName.CheckboxCharOffsetY = 0;
+            this.chkByName.CheckboxFrameColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.chkByName.CheckboxFrameHightLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.chkByName.CheckboxFrameStrength = 1;
+            this.chkByName.CheckboxSize = 50;
+            this.chkByName.Checked = false;
+            this.chkByName.LabelFont = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkByName.LabelForeColor = System.Drawing.Color.DeepPink;
+            this.chkByName.LabelOffsetX = 0;
+            this.chkByName.LabelOffsetY = 0;
+            this.chkByName.LabelText = "Họ tên và ngày sinh";
+            this.chkByName.Location = new System.Drawing.Point(1115, 25);
+            this.chkByName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkByName.Name = "chkByName";
+            this.chkByName.Size = new System.Drawing.Size(793, 78);
+            this.chkByName.TabIndex = 52;
+            this.chkByName.Text = "customCheckbox1";
+            this.chkByName.Click += new System.EventHandler(this.chkByName_Click);
+            this.chkByName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chkByName_MouseDown);
+            // 
             // pnAddNew
             // 
+            this.pnAddNew.Controls.Add(this.btHamEch);
+            this.pnAddNew.Controls.Add(this.btTQuat);
+            this.pnAddNew.Controls.Add(this.btKTC);
+            this.pnAddNew.Controls.Add(this.btRHM);
             this.pnAddNew.Controls.Add(this.txtPhone);
             this.pnAddNew.Controls.Add(this.btClear_add);
             this.pnAddNew.Controls.Add(this.btBackSearchByCCCD);
-            this.pnAddNew.Controls.Add(this.btSendAPI);
             this.pnAddNew.Controls.Add(this.cbJob);
             this.pnAddNew.Controls.Add(this.label20);
             this.pnAddNew.Controls.Add(this.txtThon);
@@ -457,7 +814,6 @@
             this.pnAddNew.Controls.Add(this.cbDanToc);
             this.pnAddNew.Controls.Add(this.label21);
             this.pnAddNew.Controls.Add(this.label23);
-            this.pnAddNew.Controls.Add(this.label18);
             this.pnAddNew.Controls.Add(this.txtPlace);
             this.pnAddNew.Controls.Add(this.label19);
             this.pnAddNew.Controls.Add(this.label17);
@@ -475,11 +831,103 @@
             this.pnAddNew.Controls.Add(this.label10);
             this.pnAddNew.Controls.Add(this.txtName);
             this.pnAddNew.Controls.Add(this.label11);
-            this.pnAddNew.Location = new System.Drawing.Point(8, 41);
+            this.pnAddNew.Location = new System.Drawing.Point(5, 127);
             this.pnAddNew.Margin = new System.Windows.Forms.Padding(4);
             this.pnAddNew.Name = "pnAddNew";
-            this.pnAddNew.Size = new System.Drawing.Size(1921, 685);
+            this.pnAddNew.Size = new System.Drawing.Size(1921, 959);
             this.pnAddNew.TabIndex = 42;
+            // 
+            // btHamEch
+            // 
+            this.btHamEch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btHamEch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btHamEch.BorderColor = System.Drawing.Color.Silver;
+            this.btHamEch.BorderRadius = 20;
+            this.btHamEch.BorderThickness = 3;
+            this.btHamEch.ButtonText = "KHÁM KHE HỞ HÀM ẾCH";
+            this.btHamEch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btHamEch.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHamEch.ForeColor = System.Drawing.Color.Yellow;
+            this.btHamEch.Location = new System.Drawing.Point(1377, 631);
+            this.btHamEch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btHamEch.Name = "btHamEch";
+            this.btHamEch.Size = new System.Drawing.Size(387, 144);
+            this.btHamEch.TabIndex = 89;
+            this.btHamEch.Click += new System.EventHandler(this.btHamEch_Click);
+            this.btHamEch.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btHamEch_MouseDown);
+            this.btHamEch.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btHamEch_MouseUp);
+            // 
+            // btTQuat
+            // 
+            this.btTQuat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btTQuat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btTQuat.BorderColor = System.Drawing.Color.Silver;
+            this.btTQuat.BorderRadius = 20;
+            this.btTQuat.BorderThickness = 3;
+            this.btTQuat.ButtonText = "KHÁM NHA KHOA TỔNG QUÁT";
+            this.btTQuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTQuat.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTQuat.ForeColor = System.Drawing.Color.Yellow;
+            this.btTQuat.Location = new System.Drawing.Point(960, 631);
+            this.btTQuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btTQuat.Name = "btTQuat";
+            this.btTQuat.Size = new System.Drawing.Size(387, 144);
+            this.btTQuat.TabIndex = 88;
+            this.btTQuat.Click += new System.EventHandler(this.btTQuat_Click);
+            this.btTQuat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btTQuat_MouseDown);
+            this.btTQuat.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btTQuat_MouseUp);
+            // 
+            // btKTC
+            // 
+            this.btKTC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btKTC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btKTC.BorderColor = System.Drawing.Color.Silver;
+            this.btKTC.BorderRadius = 20;
+            this.btKTC.BorderThickness = 3;
+            this.btKTC.ButtonText = "KHÁM DỊCH VỤ KỸ THUẬT CAO";
+            this.btKTC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btKTC.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btKTC.ForeColor = System.Drawing.Color.Yellow;
+            this.btKTC.Location = new System.Drawing.Point(541, 631);
+            this.btKTC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btKTC.Name = "btKTC";
+            this.btKTC.Size = new System.Drawing.Size(387, 144);
+            this.btKTC.TabIndex = 87;
+            this.btKTC.Click += new System.EventHandler(this.btKTC_Click);
+            this.btKTC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btKTC_MouseDown);
+            this.btKTC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btKTC_MouseUp);
+            // 
+            // btRHM
+            // 
+            this.btRHM.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btRHM.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btRHM.BorderColor = System.Drawing.Color.Silver;
+            this.btRHM.BorderRadius = 20;
+            this.btRHM.BorderThickness = 3;
+            this.btRHM.ButtonText = "KHÁM RĂNG - HÀM MẶT";
+            this.btRHM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btRHM.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRHM.ForeColor = System.Drawing.Color.Yellow;
+            this.btRHM.Location = new System.Drawing.Point(124, 631);
+            this.btRHM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btRHM.Name = "btRHM";
+            this.btRHM.Size = new System.Drawing.Size(387, 144);
+            this.btRHM.TabIndex = 86;
+            this.btRHM.Click += new System.EventHandler(this.btRHM_Click);
+            this.btRHM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btRHM_MouseDown);
+            this.btRHM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btRHM_MouseUp);
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhone.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.txtPhone.ForeColor = System.Drawing.Color.Red;
+            this.txtPhone.Location = new System.Drawing.Point(1657, 170);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(257, 56);
+            this.txtPhone.TabIndex = 85;
             // 
             // btClear_add
             // 
@@ -490,9 +938,9 @@
             this.btClear_add.BorderThickness = 3;
             this.btClear_add.ButtonText = "XÓA TRẮNG";
             this.btClear_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btClear_add.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClear_add.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btClear_add.ForeColor = System.Drawing.Color.Red;
-            this.btClear_add.Location = new System.Drawing.Point(1240, 671);
+            this.btClear_add.Location = new System.Drawing.Point(960, 793);
             this.btClear_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btClear_add.Name = "btClear_add";
             this.btClear_add.Size = new System.Drawing.Size(387, 144);
@@ -506,46 +954,31 @@
             this.btBackSearchByCCCD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.btBackSearchByCCCD.BorderRadius = 20;
             this.btBackSearchByCCCD.BorderThickness = 3;
-            this.btBackSearchByCCCD.ButtonText = "TÌM THEO CCCD/CMND/MÃ ĐỊNH DANH";
+            this.btBackSearchByCCCD.ButtonText = "QUAY LẠI TRA CỨU";
             this.btBackSearchByCCCD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btBackSearchByCCCD.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBackSearchByCCCD.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBackSearchByCCCD.ForeColor = System.Drawing.Color.DimGray;
-            this.btBackSearchByCCCD.Location = new System.Drawing.Point(811, 672);
+            this.btBackSearchByCCCD.Location = new System.Drawing.Point(541, 793);
             this.btBackSearchByCCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btBackSearchByCCCD.Name = "btBackSearchByCCCD";
             this.btBackSearchByCCCD.Size = new System.Drawing.Size(387, 144);
             this.btBackSearchByCCCD.TabIndex = 83;
             this.btBackSearchByCCCD.Click += new System.EventHandler(this.btSearchByCCCDForm_Click);
             // 
-            // btSendAPI
-            // 
-            this.btSendAPI.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btSendAPI.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btSendAPI.BorderColor = System.Drawing.Color.Silver;
-            this.btSendAPI.BorderRadius = 20;
-            this.btSendAPI.BorderThickness = 3;
-            this.btSendAPI.ButtonText = "GỬI YÊU CẦU";
-            this.btSendAPI.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSendAPI.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSendAPI.ForeColor = System.Drawing.Color.Yellow;
-            this.btSendAPI.Location = new System.Drawing.Point(382, 672);
-            this.btSendAPI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btSendAPI.Name = "btSendAPI";
-            this.btSendAPI.Size = new System.Drawing.Size(387, 144);
-            this.btSendAPI.TabIndex = 82;
-            this.btSendAPI.Click += new System.EventHandler(this.btSendAPI_Click);
-            this.btSendAPI.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btSendAPI_MouseDown);
-            this.btSendAPI.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btSendAPI_MouseUp);
-            // 
             // cbJob
             // 
+            this.cbJob.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbJob.DisplayMember = "tennn";
+            this.cbJob.DropDownHeight = 400;
+            this.cbJob.DropDownWidth = 350;
             this.cbJob.Font = new System.Drawing.Font("Tahoma", 24F);
             this.cbJob.FormattingEnabled = true;
-            this.cbJob.Location = new System.Drawing.Point(1657, 326);
+            this.cbJob.IntegralHeight = false;
+            this.cbJob.Location = new System.Drawing.Point(1888, 326);
             this.cbJob.Margin = new System.Windows.Forms.Padding(4);
             this.cbJob.Name = "cbJob";
-            this.cbJob.Size = new System.Drawing.Size(371, 56);
+            this.cbJob.Size = new System.Drawing.Size(26, 56);
             this.cbJob.TabIndex = 81;
             this.cbJob.ValueMember = "mann";
             // 
@@ -554,7 +987,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label20.Location = new System.Drawing.Point(1364, 330);
+            this.label20.Location = new System.Drawing.Point(1611, 330);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(274, 48);
@@ -568,10 +1001,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtThon.Font = new System.Drawing.Font("Tahoma", 24F);
             this.txtThon.ForeColor = System.Drawing.Color.Red;
-            this.txtThon.Location = new System.Drawing.Point(495, 503);
+            this.txtThon.Location = new System.Drawing.Point(509, 503);
             this.txtThon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtThon.Name = "txtThon";
-            this.txtThon.Size = new System.Drawing.Size(1542, 56);
+            this.txtThon.Size = new System.Drawing.Size(1405, 56);
             this.txtThon.TabIndex = 77;
             // 
             // label34
@@ -602,25 +1035,33 @@
             // 
             // cbXa
             // 
+            this.cbXa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbXa.DisplayMember = "tenpxa";
+            this.cbXa.DropDownHeight = 400;
+            this.cbXa.DropDownWidth = 400;
             this.cbXa.Font = new System.Drawing.Font("Tahoma", 24F);
             this.cbXa.FormattingEnabled = true;
-            this.cbXa.Location = new System.Drawing.Point(1661, 411);
+            this.cbXa.IntegralHeight = false;
+            this.cbXa.Location = new System.Drawing.Point(1892, 411);
             this.cbXa.Margin = new System.Windows.Forms.Padding(4);
             this.cbXa.Name = "cbXa";
-            this.cbXa.Size = new System.Drawing.Size(367, 56);
+            this.cbXa.Size = new System.Drawing.Size(22, 56);
             this.cbXa.TabIndex = 72;
             this.cbXa.ValueMember = "maphuongxa";
             // 
             // cbDistrict
             // 
             this.cbDistrict.DisplayMember = "tenquan";
+            this.cbDistrict.DropDownHeight = 400;
+            this.cbDistrict.DropDownWidth = 400;
             this.cbDistrict.Font = new System.Drawing.Font("Tahoma", 24F);
             this.cbDistrict.FormattingEnabled = true;
-            this.cbDistrict.Location = new System.Drawing.Point(984, 411);
+            this.cbDistrict.IntegralHeight = false;
+            this.cbDistrict.Location = new System.Drawing.Point(1047, 411);
             this.cbDistrict.Margin = new System.Windows.Forms.Padding(4);
             this.cbDistrict.Name = "cbDistrict";
-            this.cbDistrict.Size = new System.Drawing.Size(339, 56);
+            this.cbDistrict.Size = new System.Drawing.Size(561, 56);
             this.cbDistrict.TabIndex = 71;
             this.cbDistrict.ValueMember = "maqu";
             this.cbDistrict.SelectedIndexChanged += new System.EventHandler(this.cbDistrict_SelectedIndexChanged);
@@ -630,7 +1071,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label29.Location = new System.Drawing.Point(1387, 422);
+            this.label29.Location = new System.Drawing.Point(1634, 422);
             this.label29.Margin = new System.Windows.Forms.Padding(0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(238, 48);
@@ -643,7 +1084,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label31.Location = new System.Drawing.Point(763, 422);
+            this.label31.Location = new System.Drawing.Point(826, 422);
             this.label31.Margin = new System.Windows.Forms.Padding(0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(197, 48);
@@ -654,12 +1095,15 @@
             // cbProvince
             // 
             this.cbProvince.DisplayMember = "tentt";
+            this.cbProvince.DropDownHeight = 400;
+            this.cbProvince.DropDownWidth = 350;
             this.cbProvince.Font = new System.Drawing.Font("Tahoma", 24F);
             this.cbProvince.FormattingEnabled = true;
+            this.cbProvince.IntegralHeight = false;
             this.cbProvince.Location = new System.Drawing.Point(369, 411);
             this.cbProvince.Margin = new System.Windows.Forms.Padding(4);
             this.cbProvince.Name = "cbProvince";
-            this.cbProvince.Size = new System.Drawing.Size(364, 56);
+            this.cbProvince.Size = new System.Drawing.Size(453, 56);
             this.cbProvince.TabIndex = 66;
             this.cbProvince.ValueMember = "matt";
             this.cbProvince.SelectedIndexChanged += new System.EventHandler(this.cbProvince_SelectedIndexChanged);
@@ -685,19 +1129,22 @@
             this.cbSex.Location = new System.Drawing.Point(369, 326);
             this.cbSex.Margin = new System.Windows.Forms.Padding(4);
             this.cbSex.Name = "cbSex";
-            this.cbSex.Size = new System.Drawing.Size(364, 56);
+            this.cbSex.Size = new System.Drawing.Size(207, 56);
             this.cbSex.TabIndex = 60;
             this.cbSex.ValueMember = "Id";
             // 
             // cbDanToc
             // 
             this.cbDanToc.DisplayMember = "dantoc";
+            this.cbDanToc.DropDownHeight = 400;
+            this.cbDanToc.DropDownWidth = 300;
             this.cbDanToc.Font = new System.Drawing.Font("Tahoma", 24F);
             this.cbDanToc.FormattingEnabled = true;
-            this.cbDanToc.Location = new System.Drawing.Point(984, 326);
+            this.cbDanToc.IntegralHeight = false;
+            this.cbDanToc.Location = new System.Drawing.Point(1047, 326);
             this.cbDanToc.Margin = new System.Windows.Forms.Padding(4);
             this.cbDanToc.Name = "cbDanToc";
-            this.cbDanToc.Size = new System.Drawing.Size(339, 56);
+            this.cbDanToc.Size = new System.Drawing.Size(561, 56);
             this.cbDanToc.TabIndex = 59;
             this.cbDanToc.ValueMember = "madantoc";
             // 
@@ -719,27 +1166,13 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label23.Location = new System.Drawing.Point(787, 330);
+            this.label23.Location = new System.Drawing.Point(850, 330);
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(175, 48);
             this.label23.TabIndex = 53;
             this.label23.Text = "Dân tộc";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label23.Click += new System.EventHandler(this.label23_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(315, 250);
-            this.label18.Margin = new System.Windows.Forms.Padding(0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(48, 48);
-            this.label18.TabIndex = 52;
-            this.label18.Text = "*";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtPlace
             // 
@@ -750,7 +1183,7 @@
             this.txtPlace.Location = new System.Drawing.Point(369, 246);
             this.txtPlace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPlace.Name = "txtPlace";
-            this.txtPlace.Size = new System.Drawing.Size(1542, 56);
+            this.txtPlace.Size = new System.Drawing.Size(1545, 56);
             this.txtPlace.TabIndex = 51;
             // 
             // label19
@@ -784,21 +1217,20 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(975, 23);
+            this.label16.Location = new System.Drawing.Point(1080, 23);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(48, 48);
             this.label16.TabIndex = 48;
             this.label16.Text = "*";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(318, 99);
+            this.label15.Location = new System.Drawing.Point(313, 105);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(48, 48);
@@ -811,7 +1243,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(504, 172);
+            this.label14.Location = new System.Drawing.Point(573, 172);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(48, 48);
@@ -838,31 +1270,33 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCCCD.Font = new System.Drawing.Font("Tahoma", 24F);
             this.txtCCCD.ForeColor = System.Drawing.Color.Red;
-            this.txtCCCD.Location = new System.Drawing.Point(1044, 20);
+            this.txtCCCD.Location = new System.Drawing.Point(1136, 20);
             this.txtCCCD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(1542, 56);
+            this.txtCCCD.Size = new System.Drawing.Size(779, 56);
             this.txtCCCD.TabIndex = 43;
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label12.Location = new System.Drawing.Point(0, 22);
+            this.label12.Location = new System.Drawing.Point(12, 22);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(975, 49);
+            this.label12.Size = new System.Drawing.Size(1068, 49);
             this.label12.TabIndex = 42;
-            this.label12.Text = "Số CMND/CCCD/ hộ chiếu/ số định danh cá nhân";
+            this.label12.Text = "Số CMND/CCCD/hộ chiếu/mã định danh cá nhân";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cbYear
             // 
             this.cbYear.DisplayMember = "Name";
+            this.cbYear.DropDownHeight = 400;
             this.cbYear.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbYear.Font = new System.Drawing.Font("Tahoma", 24F);
             this.cbYear.FormattingEnabled = true;
-            this.cbYear.Location = new System.Drawing.Point(857, 169);
+            this.cbYear.IntegralHeight = false;
+            this.cbYear.Location = new System.Drawing.Point(958, 169);
             this.cbYear.Margin = new System.Windows.Forms.Padding(4);
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(140, 56);
@@ -874,7 +1308,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label8.Location = new System.Drawing.Point(815, 172);
+            this.label8.Location = new System.Drawing.Point(916, 172);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 48);
@@ -887,7 +1321,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label9.Location = new System.Drawing.Point(667, 172);
+            this.label9.Location = new System.Drawing.Point(768, 172);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 48);
@@ -898,9 +1332,11 @@
             // cbMonth
             // 
             this.cbMonth.DisplayMember = "Name";
+            this.cbMonth.DropDownHeight = 400;
             this.cbMonth.Font = new System.Drawing.Font("Tahoma", 24F);
             this.cbMonth.FormattingEnabled = true;
-            this.cbMonth.Location = new System.Drawing.Point(709, 169);
+            this.cbMonth.IntegralHeight = false;
+            this.cbMonth.Location = new System.Drawing.Point(810, 169);
             this.cbMonth.Margin = new System.Windows.Forms.Padding(4);
             this.cbMonth.Name = "cbMonth";
             this.cbMonth.Size = new System.Drawing.Size(84, 56);
@@ -910,9 +1346,11 @@
             // cbDay
             // 
             this.cbDay.DisplayMember = "Name";
+            this.cbDay.DropDownHeight = 400;
             this.cbDay.Font = new System.Drawing.Font("Tahoma", 24F);
             this.cbDay.FormattingEnabled = true;
-            this.cbDay.Location = new System.Drawing.Point(564, 169);
+            this.cbDay.IntegralHeight = false;
+            this.cbDay.Location = new System.Drawing.Point(665, 169);
             this.cbDay.Margin = new System.Windows.Forms.Padding(4);
             this.cbDay.Name = "cbDay";
             this.cbDay.Size = new System.Drawing.Size(84, 56);
@@ -927,9 +1365,9 @@
             this.label10.Location = new System.Drawing.Point(24, 172);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(451, 48);
+            this.label10.Size = new System.Drawing.Size(530, 48);
             this.label10.TabIndex = 36;
-            this.label10.Text = "Ngày tháng năm sinh";
+            this.label10.Text = "Ngày sinh (dd/mm/yyyy)";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtName
@@ -938,10 +1376,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.Font = new System.Drawing.Font("Tahoma", 24F);
             this.txtName.ForeColor = System.Drawing.Color.Red;
-            this.txtName.Location = new System.Drawing.Point(369, 96);
+            this.txtName.Location = new System.Drawing.Point(369, 95);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(1542, 56);
+            this.txtName.Size = new System.Drawing.Size(1545, 56);
             this.txtName.TabIndex = 33;
             // 
             // label11
@@ -949,7 +1387,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label11.Location = new System.Drawing.Point(149, 99);
+            this.label11.Location = new System.Drawing.Point(149, 98);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(153, 48);
@@ -957,329 +1395,22 @@
             this.label11.Text = "Họ tên";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pnSearchName
-            // 
-            this.pnSearchName.Controls.Add(this.btClear_name);
-            this.pnSearchName.Controls.Add(this.btSearchByCCCDForm);
-            this.pnSearchName.Controls.Add(this.btAddNewForm);
-            this.pnSearchName.Controls.Add(this.btSearchByName);
-            this.pnSearchName.Controls.Add(this.cbNam_key);
-            this.pnSearchName.Controls.Add(this.label7);
-            this.pnSearchName.Controls.Add(this.label6);
-            this.pnSearchName.Controls.Add(this.cbThang_key);
-            this.pnSearchName.Controls.Add(this.cbNgay_key);
-            this.pnSearchName.Controls.Add(this.label5);
-            this.pnSearchName.Controls.Add(this.txtname_key);
-            this.pnSearchName.Controls.Add(this.label4);
-            this.pnSearchName.Location = new System.Drawing.Point(29, 734);
-            this.pnSearchName.Margin = new System.Windows.Forms.Padding(4);
-            this.pnSearchName.Name = "pnSearchName";
-            this.pnSearchName.Size = new System.Drawing.Size(475, 105);
-            this.pnSearchName.TabIndex = 33;
-            // 
-            // btClear_name
-            // 
-            this.btClear_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btClear_name.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.btClear_name.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btClear_name.BorderRadius = 20;
-            this.btClear_name.BorderThickness = 3;
-            this.btClear_name.ButtonText = "XÓA TRẮNG";
-            this.btClear_name.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btClear_name.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClear_name.ForeColor = System.Drawing.Color.Red;
-            this.btClear_name.Location = new System.Drawing.Point(648, 564);
-            this.btClear_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btClear_name.Name = "btClear_name";
-            this.btClear_name.Size = new System.Drawing.Size(403, 178);
-            this.btClear_name.TabIndex = 46;
-            this.btClear_name.Click += new System.EventHandler(this.btClear_name_Click);
-            // 
-            // btSearchByCCCDForm
-            // 
-            this.btSearchByCCCDForm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btSearchByCCCDForm.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.btSearchByCCCDForm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btSearchByCCCDForm.BorderRadius = 20;
-            this.btSearchByCCCDForm.BorderThickness = 3;
-            this.btSearchByCCCDForm.ButtonText = "TÌM THEO CCCD/CMND/MÃ ĐỊNH DANH";
-            this.btSearchByCCCDForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSearchByCCCDForm.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearchByCCCDForm.ForeColor = System.Drawing.Color.DimGray;
-            this.btSearchByCCCDForm.Location = new System.Drawing.Point(229, 564);
-            this.btSearchByCCCDForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btSearchByCCCDForm.Name = "btSearchByCCCDForm";
-            this.btSearchByCCCDForm.Size = new System.Drawing.Size(403, 178);
-            this.btSearchByCCCDForm.TabIndex = 45;
-            this.btSearchByCCCDForm.Click += new System.EventHandler(this.btSearchByCCCDForm_Click);
-            // 
-            // btAddNewForm
-            // 
-            this.btAddNewForm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btAddNewForm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btAddNewForm.BorderColor = System.Drawing.Color.Silver;
-            this.btAddNewForm.BorderRadius = 20;
-            this.btAddNewForm.BorderThickness = 3;
-            this.btAddNewForm.ButtonText = "THÊM MỚI BỆNH NHÂN";
-            this.btAddNewForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAddNewForm.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddNewForm.ForeColor = System.Drawing.Color.Yellow;
-            this.btAddNewForm.Location = new System.Drawing.Point(-198, 564);
-            this.btAddNewForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btAddNewForm.Name = "btAddNewForm";
-            this.btAddNewForm.Size = new System.Drawing.Size(403, 178);
-            this.btAddNewForm.TabIndex = 44;
-            this.btAddNewForm.Click += new System.EventHandler(this.btChangeAddNew_Click);
-            this.btAddNewForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btAddNewForm_MouseDown);
-            this.btAddNewForm.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btAddNewForm_MouseUp);
-            // 
-            // btSearchByName
-            // 
-            this.btSearchByName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btSearchByName.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btSearchByName.BorderColor = System.Drawing.Color.Silver;
-            this.btSearchByName.BorderRadius = 20;
-            this.btSearchByName.BorderThickness = 3;
-            this.btSearchByName.ButtonText = "TÌM THÔNG TIN";
-            this.btSearchByName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSearchByName.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearchByName.ForeColor = System.Drawing.Color.Yellow;
-            this.btSearchByName.Location = new System.Drawing.Point(-622, 564);
-            this.btSearchByName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btSearchByName.Name = "btSearchByName";
-            this.btSearchByName.Size = new System.Drawing.Size(403, 178);
-            this.btSearchByName.TabIndex = 43;
-            this.btSearchByName.Click += new System.EventHandler(this.btSearchByName_Click);
-            this.btSearchByName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btSearchByName_MouseDown);
-            this.btSearchByName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btSearchByName_MouseUp);
-            // 
-            // cbNam_key
-            // 
-            this.cbNam_key.DisplayMember = "Name";
-            this.cbNam_key.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cbNam_key.Font = new System.Drawing.Font("Tahoma", 65F, System.Drawing.FontStyle.Bold);
-            this.cbNam_key.FormattingEnabled = true;
-            this.cbNam_key.Location = new System.Drawing.Point(1041, 215);
-            this.cbNam_key.Margin = new System.Windows.Forms.Padding(4);
-            this.cbNam_key.Name = "cbNam_key";
-            this.cbNam_key.Size = new System.Drawing.Size(364, 138);
-            this.cbNam_key.TabIndex = 41;
-            this.cbNam_key.Text = "9999";
-            this.cbNam_key.ValueMember = "Id";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label7.Location = new System.Drawing.Point(953, 257);
-            this.label7.Margin = new System.Windows.Forms.Padding(0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 65);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "/";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label6.Location = new System.Drawing.Point(640, 257);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 65);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "/";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cbThang_key
-            // 
-            this.cbThang_key.DisplayMember = "Name";
-            this.cbThang_key.Font = new System.Drawing.Font("Tahoma", 65F, System.Drawing.FontStyle.Bold);
-            this.cbThang_key.FormattingEnabled = true;
-            this.cbThang_key.Location = new System.Drawing.Point(713, 215);
-            this.cbThang_key.Margin = new System.Windows.Forms.Padding(4);
-            this.cbThang_key.Name = "cbThang_key";
-            this.cbThang_key.Size = new System.Drawing.Size(211, 138);
-            this.cbThang_key.TabIndex = 38;
-            this.cbThang_key.Text = "12";
-            this.cbThang_key.ValueMember = "Id";
-            // 
-            // cbNgay_key
-            // 
-            this.cbNgay_key.DisplayMember = "Name";
-            this.cbNgay_key.Font = new System.Drawing.Font("Tahoma", 65F, System.Drawing.FontStyle.Bold);
-            this.cbNgay_key.FormattingEnabled = true;
-            this.cbNgay_key.Location = new System.Drawing.Point(399, 215);
-            this.cbNgay_key.Margin = new System.Windows.Forms.Padding(4);
-            this.cbNgay_key.Name = "cbNgay_key";
-            this.cbNgay_key.Size = new System.Drawing.Size(211, 138);
-            this.cbNgay_key.TabIndex = 37;
-            this.cbNgay_key.Text = "99";
-            this.cbNgay_key.ValueMember = "Id";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label5.Location = new System.Drawing.Point(11, 257);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(297, 65);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Ngày sinh";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtname_key
-            // 
-            this.txtname_key.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtname_key.Font = new System.Drawing.Font("Tahoma", 65F);
-            this.txtname_key.ForeColor = System.Drawing.Color.Red;
-            this.txtname_key.Location = new System.Drawing.Point(399, 42);
-            this.txtname_key.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtname_key.Name = "txtname_key";
-            this.txtname_key.Size = new System.Drawing.Size(63, 138);
-            this.txtname_key.TabIndex = 33;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label4.Location = new System.Drawing.Point(13, 74);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(360, 65);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Nhập họ tên";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pnSearchCCCD
-            // 
-            this.pnSearchCCCD.Controls.Add(this.btClear_cccd);
-            this.pnSearchCCCD.Controls.Add(this.btSearchByNameForm);
-            this.pnSearchCCCD.Controls.Add(this.btSearchByCCCD);
-            this.pnSearchCCCD.Controls.Add(this.lbCLS);
-            this.pnSearchCCCD.Controls.Add(this.txtCCCD_key);
-            this.pnSearchCCCD.Location = new System.Drawing.Point(928, 734);
-            this.pnSearchCCCD.Margin = new System.Windows.Forms.Padding(4);
-            this.pnSearchCCCD.Name = "pnSearchCCCD";
-            this.pnSearchCCCD.Size = new System.Drawing.Size(581, 96);
-            this.pnSearchCCCD.TabIndex = 32;
-            // 
-            // btClear_cccd
-            // 
-            this.btClear_cccd.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btClear_cccd.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.btClear_cccd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btClear_cccd.BorderRadius = 20;
-            this.btClear_cccd.BorderThickness = 3;
-            this.btClear_cccd.ButtonText = "XÓA TRẮNG";
-            this.btClear_cccd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btClear_cccd.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClear_cccd.ForeColor = System.Drawing.Color.Red;
-            this.btClear_cccd.Location = new System.Drawing.Point(534, 444);
-            this.btClear_cccd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btClear_cccd.Name = "btClear_cccd";
-            this.btClear_cccd.Size = new System.Drawing.Size(403, 178);
-            this.btClear_cccd.TabIndex = 47;
-            this.btClear_cccd.Click += new System.EventHandler(this.btClear_cccd_Click);
-            // 
-            // btSearchByNameForm
-            // 
-            this.btSearchByNameForm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btSearchByNameForm.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.btSearchByNameForm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btSearchByNameForm.BorderRadius = 20;
-            this.btSearchByNameForm.BorderThickness = 3;
-            this.btSearchByNameForm.ButtonText = "TÌM THEO HỌ TÊN - NGÀY SINH";
-            this.btSearchByNameForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSearchByNameForm.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearchByNameForm.ForeColor = System.Drawing.Color.DimGray;
-            this.btSearchByNameForm.Location = new System.Drawing.Point(105, 446);
-            this.btSearchByNameForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btSearchByNameForm.Name = "btSearchByNameForm";
-            this.btSearchByNameForm.Size = new System.Drawing.Size(403, 178);
-            this.btSearchByNameForm.TabIndex = 46;
-            this.btSearchByNameForm.Click += new System.EventHandler(this.btChangeSearchByName_Click);
-            // 
-            // btSearchByCCCD
-            // 
-            this.btSearchByCCCD.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btSearchByCCCD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btSearchByCCCD.BorderColor = System.Drawing.Color.Silver;
-            this.btSearchByCCCD.BorderRadius = 20;
-            this.btSearchByCCCD.BorderThickness = 3;
-            this.btSearchByCCCD.ButtonText = "TÌM THÔNG TIN";
-            this.btSearchByCCCD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSearchByCCCD.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearchByCCCD.ForeColor = System.Drawing.Color.Yellow;
-            this.btSearchByCCCD.Location = new System.Drawing.Point(-319, 444);
-            this.btSearchByCCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btSearchByCCCD.Name = "btSearchByCCCD";
-            this.btSearchByCCCD.Size = new System.Drawing.Size(403, 178);
-            this.btSearchByCCCD.TabIndex = 44;
-            this.btSearchByCCCD.Click += new System.EventHandler(this.btSearchByCCCD_Click);
-            this.btSearchByCCCD.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btSearchByCCCD_MouseDown);
-            this.btSearchByCCCD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btSearchByCCCD_MouseUp);
-            // 
-            // lbCLS
-            // 
-            this.lbCLS.AutoSize = true;
-            this.lbCLS.Font = new System.Drawing.Font("Tahoma", 32.8F, System.Drawing.FontStyle.Bold);
-            this.lbCLS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.lbCLS.Location = new System.Drawing.Point(37, 81);
-            this.lbCLS.Margin = new System.Windows.Forms.Padding(0);
-            this.lbCLS.Name = "lbCLS";
-            this.lbCLS.Size = new System.Drawing.Size(494, 66);
-            this.lbCLS.TabIndex = 32;
-            this.lbCLS.Text = "Nhập cmnd/cccd";
-            this.lbCLS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtCCCD_key
-            // 
-            this.txtCCCD_key.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCCCD_key.Font = new System.Drawing.Font("Tahoma", 65F);
-            this.txtCCCD_key.ForeColor = System.Drawing.Color.Red;
-            this.txtCCCD_key.Location = new System.Drawing.Point(569, 42);
-            this.txtCCCD_key.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCCCD_key.Name = "txtCCCD_key";
-            this.txtCCCD_key.Size = new System.Drawing.Size(0, 138);
-            this.txtCCCD_key.TabIndex = 33;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhone.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.txtPhone.ForeColor = System.Drawing.Color.Red;
-            this.txtPhone.Location = new System.Drawing.Point(1654, 169);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(257, 56);
-            this.txtPhone.TabIndex = 85;
-            // 
             // FrmPrintTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1942, 1088);
+            this.ClientSize = new System.Drawing.Size(1941, 1354);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnmain1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmPrintTicket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrintTicket";
             this.Load += new System.EventHandler(this.FrmPrintTicket_Load);
-            this.panel3.ResumeLayout(false);
+            this.pnTitle.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTemplateEditor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btSQLConnect)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormalSize)).EndInit();
@@ -1288,30 +1419,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.pnmain1.ResumeLayout(false);
+            this.pnmain2.ResumeLayout(false);
             this.panelStatus.ResumeLayout(false);
             this.panelStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPrintStatus)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panelMain.ResumeLayout(false);
+            this.panelMain3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.pnAddNew.ResumeLayout(false);
-            this.pnAddNew.PerformLayout();
+            this.pnSearchCCCD.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.pnByCCCD.ResumeLayout(false);
+            this.pnByCCCD.PerformLayout();
             this.pnSearchName.ResumeLayout(false);
             this.pnSearchName.PerformLayout();
-            this.pnSearchCCCD.ResumeLayout(false);
-            this.pnSearchCCCD.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.pnFilter.ResumeLayout(false);
+            this.pnFilter.PerformLayout();
+            this.pnAddNew.ResumeLayout(false);
+            this.pnAddNew.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnTitle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox btnTemplateEditor;
         private System.Windows.Forms.PictureBox btSQLConnect;
         private System.Windows.Forms.PictureBox btnSetting;
         private System.Windows.Forms.PictureBox btnNormalSize;
@@ -1322,13 +1457,13 @@
         private System.Windows.Forms.PictureBox btnMaximize;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Timer timerReset;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnmain1;
         private System.Windows.Forms.Panel panelStatus;
         private System.Windows.Forms.Label lbSocketStatus;
         private System.Windows.Forms.PictureBox pbPrintStatus;
         private System.Windows.Forms.Label lbStatus;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel pnmain2;
+        private System.Windows.Forms.Panel panelMain3;
         private System.Windows.Forms.GroupBox groupBox1;
         private ButtonControl btSearchCCCD;
         private System.Windows.Forms.Panel pnSearchCCCD;
@@ -1373,7 +1508,6 @@
         private System.Windows.Forms.ComboBox cbDanToc;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtPlace;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label17;
@@ -1383,16 +1517,24 @@
         private System.Windows.Forms.Label label20;
         private ButtonControl btChangeSearchByName;
         private ButtonControl btChangeAddNew;
-        private ButtonControl btAddNewForm;
-        private ButtonControl btSearchByName;
-        private ButtonControl btSearchByCCCDForm;
-        private ButtonControl btSearchByNameForm;
         private ButtonControl btSearchByCCCD;
         private ButtonControl btBackSearchByCCCD;
-        private ButtonControl btSendAPI;
         private ButtonControl btClear_cccd;
-        private ButtonControl btClear_name;
         private ButtonControl btClear_add;
         private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Label label22;
+        private CustomControls.CustomCheckbox chkSearchByCCCD;
+        private CustomControls.CustomCheckbox chkByName;
+        private System.Windows.Forms.Panel pnFilter;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnByCCCD;
+        private ButtonControl btAddNewForm;
+        private System.Windows.Forms.Panel panel9;
+        private ButtonControl btHamEch;
+        private ButtonControl btTQuat;
+        private ButtonControl btKTC;
+        private ButtonControl btRHM;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label24;
     }
 }

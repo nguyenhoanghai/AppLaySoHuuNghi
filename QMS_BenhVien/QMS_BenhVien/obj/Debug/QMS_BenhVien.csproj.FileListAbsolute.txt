@@ -262,7 +262,6 @@ C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\ru\DevExpress.Offi
 C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.FrmSettingVP.resources
 C:\Users\DoNguyen\Desktop\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_System.ThirdApp.dll
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
-E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.AssemblyReference.cache
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.ButtonControl.resources
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Form1.resources
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Frmain_ver2.resources
@@ -287,8 +286,6 @@ E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_B
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.RangHamMat.FrmSearchResult.resources
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.GenerateResource.cache
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.exe.licenses
-E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\RdlCompile.cache
-E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\RdlCompile.compiled
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.CoreCompileInputs.cache
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\bin\Debug\bin\Debug\RDLC_Template\Mau1.rdlc
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\bin\Debug\QMS_BenhVien.exe.config
@@ -388,3 +385,7 @@ E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\bin\Debug\SqlSe
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.RangHamMat.FrmSetting.resources
+E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.csproj.AssemblyReference.cache
+E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\RdlCompile.cache
+E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\RdlCompile.compiled
+E:\Hai_GPRO\Git QMS\App LaySo Huu Nghi\QMS_BenhVien\QMS_BenhVien\obj\Debug\QMS_BenhVien.Form2.resources

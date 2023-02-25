@@ -18,7 +18,7 @@ namespace QMS_BenhVien.RangHamMat
     {
         QMS_BenhVien.Helper.ConfigModel cfObj = null;
         string _path = "";
-        int cbKhamUTId = 0 ;
+        int _cbTTKhuAId = 0, _cbKhuCId = 0;
         public FrmSetting()
         {
             InitializeComponent();
@@ -28,23 +28,28 @@ namespace QMS_BenhVien.RangHamMat
         {
             string filePath = Application.StartupPath + "\\Config.XML";
             cfObj = Helper.Helper.Instance.GetAppConfig(filePath);
-            _path = cfObj.anhnen; 
+            _path = cfObj.anhnen;
             numWidth.Text = cfObj.giayWidth;
-            numHeight.Text = cfObj.giayHeight;
-           numSolien.Value = cfObj.solien;
+            numHeight.Text = cfObj.giayHeight; 
             txtAPI.Text = cfObj.COMName;
-               
-            cbKhamUT.DataSource = null; 
+
+            cbTTKhuA.DataSource = null;
+            cbKhuC.DataSource = null;
             var services = BLLService.Instance.GetLookUp(FrmMain.connectString, false);
             for (int i = 0; i < services.Count; i++)
-            { 
-                cbKhamUT.Items.Add(services[i]);  
+            {
+                cbTTKhuA.Items.Add(services[i]);
                 if (services[i].Id == cfObj.tieptan)
-                    cbKhamUTId = i; 
-            } 
-            cbKhamUT.SelectedIndex = cbKhamUTId; 
+                    _cbTTKhuAId = i;
+
+                cbKhuC.Items.Add(services[i]);
+                if (services[i].Id == cfObj.phatthuoc)
+                    _cbKhuCId = i;
+            }
+            cbTTKhuA.SelectedIndex = _cbTTKhuAId;
+            cbKhuC.SelectedIndex = _cbKhuCId;
             chkStartWithWindows.Checked = cfObj.startwithwindow;
-        } 
+        }
 
         private void btnChangePicture_Click(object sender, EventArgs e)
         {
@@ -76,15 +81,15 @@ namespace QMS_BenhVien.RangHamMat
                         node = xmlDoc.SelectSingleNode("Appsettings/" + nodeArr[i]);
                         if (node != null)
                             switch (i)
-                            {
-                                case 0: node.InnerText = numSolien.Value.ToString(); break; 
-                                case 10: node.InnerText = ((ModelSelectItem)cbKhamUT.SelectedItem).Id.ToString(); break;
+                            { 
+                                case 9: node.InnerText = ((ModelSelectItem)cbKhuC.SelectedItem).Id.ToString(); break;
+                                case 10: node.InnerText = ((ModelSelectItem)cbTTKhuA.SelectedItem).Id.ToString(); break;
                                 case 11: node.InnerText = numHeight.Text; break;
                                 case 12: node.InnerText = numWidth.Text; break;
                                 case 13: node.InnerText = _path; break;
                                 case 15: node.InnerText = (chkStartWithWindows.Checked ? "1" : "0"); break;
                                 case 18: node.InnerText = txtAPI.Text; break;
-                               // case 19: node.InnerText = ((ModelSelectItem)cbTieuDuong.SelectedItem).Id.ToString(); break;
+                                    // case 19: node.InnerText = ((ModelSelectItem)cbTieuDuong.SelectedItem).Id.ToString(); break;
                             }
                     }
                 }
@@ -101,7 +106,7 @@ namespace QMS_BenhVien.RangHamMat
                     node = xmlDoc.CreateElement(nodeArr[i]);
                     switch (i)
                     {
-                        case 0: node.AppendChild(xmlDoc.CreateTextNode(numSolien.Value.ToString())); break;
+                        case 0: node.AppendChild(xmlDoc.CreateTextNode("")); break;
                         case 1: node.AppendChild(xmlDoc.CreateTextNode("")); break;
                         case 2: node.AppendChild(xmlDoc.CreateTextNode("")); break;
                         case 3: node.AppendChild(xmlDoc.CreateTextNode("")); break;
@@ -110,8 +115,8 @@ namespace QMS_BenhVien.RangHamMat
                         case 6: node.AppendChild(xmlDoc.CreateTextNode("")); break;
                         case 7: node.AppendChild(xmlDoc.CreateTextNode("")); break;
                         case 8: node.AppendChild(xmlDoc.CreateTextNode("")); break;
-                        case 9: node.AppendChild(xmlDoc.CreateTextNode("")); break;
-                        case 10: node.AppendChild(xmlDoc.CreateTextNode(((ModelSelectItem)cbKhamUT.SelectedItem).Id.ToString())); break;
+                        case 9: node.AppendChild(xmlDoc.CreateTextNode(((ModelSelectItem)cbKhuC.SelectedItem).Id.ToString())); break;
+                        case 10: node.AppendChild(xmlDoc.CreateTextNode(((ModelSelectItem)cbTTKhuA.SelectedItem).Id.ToString())); break;
                         case 11: node.AppendChild(xmlDoc.CreateTextNode(numHeight.Text)); break;
                         case 12: node.AppendChild(xmlDoc.CreateTextNode(numWidth.Text)); break;
                         case 13: node.AppendChild(xmlDoc.CreateTextNode(_path)); break;
@@ -149,10 +154,6 @@ namespace QMS_BenhVien.RangHamMat
             Application.Restart();
             Environment.Exit(0);
         }
-
-        private void txtAPI_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+         
     }
 }

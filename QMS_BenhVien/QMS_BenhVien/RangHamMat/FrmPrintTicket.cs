@@ -51,10 +51,11 @@ namespace QMS_BenhVien.RangHamMat
            CheckTimeBeforePrintTicket = 0;
         static LoadingFunc loadingFunc = new LoadingFunc();
         Thread threadCallAPI, threadAddNew;
-       static SearchModel searchModel = null;
+        static SearchModel searchModel = null;
         BenhNhanModel benhNhanModel = null;
         public static double giayHeight = 1, giayWidth = 1;
-       public int solien = 1, serviceId = 0;
+        public int serKhuAId = 0, addNewType = 0, serKhuCId = 0;
+
         public FrmPrintTicket()
         {
             InitializeComponent();
@@ -147,24 +148,26 @@ namespace QMS_BenhVien.RangHamMat
             {
                 case FormPrintTicketState.searchCCCD:
                     pnAddNew.Visible = false;
-                    pnSearchName.Visible = false;
+                    groupBox1.Visible = true;
+                    groupBox1.Dock = DockStyle.Fill;
 
-                    pnSearchCCCD.Visible = true;
-                    pnSearchCCCD.Dock = DockStyle.Fill;
-
-                    // mainPanelRefresh(); 
-                    break;
-
-                case FormPrintTicketState.searchName:
-                    pnAddNew.Visible = false;
-                    pnSearchCCCD.Visible = false;
-                    pnSearchName.Visible = true;
-                    pnSearchName.Dock = DockStyle.Fill;
-                    txtCCCD_key.Focus();
+                    if (chkSearchByCCCD.Checked)
+                    {
+                        pnByCCCD.Visible = true;
+                        chkByName.Checked = false;
+                        pnByCCCD.Dock = DockStyle.Fill;
+                        pnSearchName.Visible = false;
+                    }
+                    if (chkByName.Checked)
+                    {
+                        chkSearchByCCCD.Checked = false;
+                        pnSearchName.Visible = true;
+                        pnSearchName.Dock = DockStyle.Fill;
+                        pnByCCCD.Visible = false;
+                    }
                     break;
                 case FormPrintTicketState.addNew:
-                    pnSearchCCCD.Visible = false;
-                    pnSearchName.Visible = false;
+                    groupBox1.Visible = false;
                     pnAddNew.Visible = true;
                     pnAddNew.Dock = DockStyle.Fill;
                     break;
@@ -179,15 +182,16 @@ namespace QMS_BenhVien.RangHamMat
                        !string.IsNullOrEmpty(ConfigurationManager.AppSettings["isAdmin"].ToString()) &&
                       ConfigurationManager.AppSettings["isAdmin"].ToString() == "1")
             {
-                btnTemplateEditor.Visible = true;
                 btnSetting.Visible = true;
                 btSQLConnect.Visible = true;
             }
+            groupBox1.Dock = DockStyle.Fill;
             CheckState();
-            GetConfig(); 
+            GetConfig();
             CallAPI();
-            GenerateDate();           
+            GenerateDate();
             btnMaximize_Click(sender, e);
+            // customCheckbox1.OnLoad();
         }
 
         #region Config
@@ -198,14 +202,14 @@ namespace QMS_BenhVien.RangHamMat
             {
                 RegistryKey registryKey = Registry.CurrentUser.OpenSubKey
                           ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-                 
+
                 string filePath = Application.StartupPath + "\\Config.XML";
                 cfObj = QMS_BenhVien.Helper.Helper.Instance.GetAppConfig(filePath);
                 apiAddress = cfObj.COMName.Trim();
-                serviceId = cfObj.tieptan;
+                serKhuAId = cfObj.tieptan;
+                serKhuCId = cfObj.phatthuoc;
                 giayHeight = Convert.ToDouble(cfObj.giayHeight);
                 giayWidth = Convert.ToDouble(cfObj.giayWidth);
-                solien = cfObj.solien;
 
                 lib_Services = BLLService.Instance.GetsForMain(connectString);
                 //services = BLLService.Instance.Gets(connectString);
@@ -215,6 +219,7 @@ namespace QMS_BenhVien.RangHamMat
                 int.TryParse(GetConfigByCode(eConfigCode.PrintTicketReturnCurrentNumberOrServiceCode), out printTicketReturnCurrentNumberOrServiceCode);
                 int.TryParse(GetConfigByCode(eConfigCode.StartNumber), out startNumber);
                 int.TryParse(GetConfigByCode(eConfigCode.UseWithThirdPattern), out UseWithThirdPattern);
+                printTemplates = BLLPrintTemplate.Instance.Gets(connectString).Where(x => x.IsActive).ToList();
             }
             catch { }
         }
@@ -233,6 +238,11 @@ namespace QMS_BenhVien.RangHamMat
 
         #region AddNew
         private void btSendAPI_Click(object sender, EventArgs e)
+        {
+            AddNewBN();
+        }
+
+        private void AddNewBN()
         {
             if (CheckValid())
             {
@@ -258,26 +268,65 @@ namespace QMS_BenhVien.RangHamMat
                 FrmLoading frmLoading = new FrmLoading();
                 frmLoading.ShowDialog();
             }
-
         }
 
         private async void AddNewAsync()
         {
             var client = APIClient.Instance.InitAPI(apiAddress);
-            string usr = "tblbenhnhanadd?jsonBNObject=" + JsonConvert.SerializeObject(benhNhanModel);
-            var response = await client.GetStringAsync(usr);
-            var maBN = JsonConvert.DeserializeObject<string>(response);
-            closeForm("FrmLoading");
-            threadAddNew.Abort();
-            if (!string.IsNullOrEmpty(maBN))
+            // tim theo cccd trước
+            searchModel = new SearchModel();
+            searchModel.IsCCCD = true;
+            searchModel.CCCD = txtCCCD.Text; 
+            string query = "tblbenhnhandksearch?jsonSearchModel=" + JsonConvert.SerializeObject(searchModel);
+            string response = await client.GetStringAsync(query);
+            var searchRecords = JsonConvert.DeserializeObject<List<BenhNhanModel>>(response);
+            if (searchRecords != null && searchRecords.Count > 0)
             {
-                PrintTicket(serviceId, benhNhanModel.hoten.ToUpper(), benhNhanModel.thon, Convert.ToInt32(benhNhanModel.namsinh), maBN, benhNhanModel.dienthoai);
-                benhNhanModel = null;
+                closeForm("FrmLoading");
+                threadAddNew.Abort();
+                _showMessage((int)eMessageType.error, "Số CCCD/CMND/Mã định danh này đã được đăng ký trên hệ thống. Vui lòng nhấn nút QUAY LẠI TRA CỨU để tra cứu thông tin.");
             }
             else
             {
-                _showMessage((int)eMessageType.error, "Gửi thông tin thất bại. Vui lòng kiểm tra lại thông tin.");
+                query = "tblbenhnhanadd?jsonBNObject=" + JsonConvert.SerializeObject(benhNhanModel);
+                response = await client.GetStringAsync(query);
+                var maBN = JsonConvert.DeserializeObject<string>(response);
+                closeForm("FrmLoading");
+                threadAddNew.Abort();
+
+                if (!string.IsNullOrEmpty(maBN))
+                {
+                    switch (addNewType)
+                    {
+                        case 1:
+                            PrintTicket(serKhuAId, benhNhanModel.hoten.ToUpper(), benhNhanModel.thon, Convert.ToInt32(benhNhanModel.namsinh), maBN, benhNhanModel.dienthoai);
+                            benhNhanModel = null; break;
+                        case 2:
+                            InPhieuDungDriver(0, 0, benhNhanModel.ngaysinh, maBN, benhNhanModel.hoten, "Quý Khách vui lòng di chuyển đến quầy tiếp tân tầng 2 khu A. Xin cảm ơn.!", DateTime.Now.ToString("dd/MM/yyyy HH:mm"), 1, -1);
+                            _showMessage((int)eMessageType.info, "Quý Khách vui lòng di chuyển đến quầy tiếp tân tầng 2 khu A. Xin cảm ơn.!");
+                            break;
+                        case 3:
+                            InPhieuDungDriver(0, 0, benhNhanModel.ngaysinh, maBN, benhNhanModel.hoten, "Quý Khách vui lòng di chuyển đến quầy tiếp tân khu B. Xin cảm ơn.!", DateTime.Now.ToString("dd/MM/yyyy HH:mm"), 1, -1);
+                            _showMessage((int)eMessageType.info, "Quý Khách vui lòng di chuyển đến quầy tiếp tân khu B. Xin cảm ơn.!");
+                            break;
+                        case 4:
+                            InPhieuDungDriver(0, 0, benhNhanModel.ngaysinh, maBN, benhNhanModel.hoten, "Quý Khách vui lòng di chuyển đến quầy tiếp tân tầng 4 khu A. Xin cảm ơn.!", DateTime.Now.ToString("dd/MM/yyyy HH:mm"), 1, -1);
+                            _showMessage((int)eMessageType.info, "Quý Khách vui lòng di chuyển đến quầy tiếp tân tầng 4 khu A. Xin cảm ơn.!");
+                            break;
+                    }
+                }
+                else
+                {
+                    _showMessage((int)eMessageType.error, "Gửi thông tin thất bại. Vui lòng kiểm tra lại thông tin.");
+                }
             }
+
+        }
+
+        bool isNumber(string value)
+        {
+            int number = 0;
+            return int.TryParse(value, out number);
         }
 
         private bool CheckValid()
@@ -293,17 +342,17 @@ namespace QMS_BenhVien.RangHamMat
                 _showMessage((int)eMessageType.error, "Vui lòng nhập họ tên.");
                 flag = false;
             }
-            else if (cbDay.SelectedItem == null)
+            else if (string.IsNullOrEmpty(cbDay.Text) || !isNumber(cbDay.Text))
             {
                 _showMessage((int)eMessageType.error, "Vui lòng chọn ngày sinh.");
                 flag = false;
             }
-            else if (cbMonth.SelectedItem == null)
+            else if (string.IsNullOrEmpty(cbMonth.Text) || !isNumber(cbMonth.Text))
             {
                 _showMessage((int)eMessageType.error, "Vui lòng chọn tháng sinh.");
                 flag = false;
             }
-            else if (cbYear.SelectedItem == null)
+            else if (string.IsNullOrEmpty(cbYear.Text) || !isNumber(cbYear.Text))
             {
                 _showMessage((int)eMessageType.error, "Vui lòng chọn năm sinh.");
                 flag = false;
@@ -313,11 +362,12 @@ namespace QMS_BenhVien.RangHamMat
                 _showMessage((int)eMessageType.error, "Vui lòng nhập số điện thoại.");
                 flag = false;
             }
-            else if (string.IsNullOrEmpty(txtPlace.Text))
+            else if (txtPhone.Text.Trim().Length < 10)
             {
-                _showMessage((int)eMessageType.error, "Vui lòng nhập nơi làm việc.");
+                _showMessage((int)eMessageType.error, "Vui lòng nhập đúng số điện thoại.");
                 flag = false;
             }
+
             else if (string.IsNullOrEmpty(txtThon.Text))
             {
                 _showMessage((int)eMessageType.error, "Vui lòng nhập số nhà, thôn, phố.");
@@ -373,60 +423,76 @@ namespace QMS_BenhVien.RangHamMat
             CheckState();
         }
 
-        private void btChangeSearchByName_Click(object sender, EventArgs e)
-        {
-            currentPanel = FormPrintTicketState.searchName;
-            CheckState();
-        }
-
         private void btChangeAddNew_Click(object sender, EventArgs e)
         {
             currentPanel = FormPrintTicketState.addNew;
             CheckState();
         }
 
-        #region Search BN
-        private void btSearchByName_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtname_key.Text))
-            {
-                string aaa = BaseCore.Instance.ConvertVN(txtname_key.Text);
-
-                aaa = aaa.Replace(" ", "").ToUpper();
-
-                  searchModel = new SearchModel();
-                searchModel.IsCCCD = false;
-                searchModel.FullName = BaseCore.Instance.ConvertVN(txtname_key.Text).Replace(" ", "").ToUpper();//  txtname_key.Text;
-                searchModel.DateOfBirth = cbNgay_key.Text + "/" + cbThang_key.Text + "/" + cbNam_key.Text;
-                threadCallAPI = new Thread(this.SearchBN);
-                threadCallAPI.IsBackground = true;
-                threadCallAPI.Start();
-                FrmLoading frmLoading = new FrmLoading();
-                frmLoading.ShowDialog();
-            }
-            else
-            {
-                _showMessage((int)eMessageType.error, "Vui lòng nhập họ tên bệnh nhân cần tìm.");
-            }
-        }
-
+        #region Search BN 
         private void btSearchByCCCD_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtCCCD_key.Text))
+            //search by name
+            if (chkByName.Checked)
             {
-                searchModel = new SearchModel();
-                searchModel.DateOfBirth = string.Empty; searchModel.DateOfBirth = string.Empty;
-                searchModel.IsCCCD = true;
-                searchModel.CCCD = txtCCCD_key.Text;
-                threadCallAPI = new Thread(this.SearchBN);
-                threadCallAPI.IsBackground = true;
-                threadCallAPI.Start();
-                FrmLoading frmLoading = new FrmLoading();
-                frmLoading.ShowDialog();
+                if (!string.IsNullOrEmpty(txtname_key.Text))
+                {
+                    string aaa = BaseCore.Instance.ConvertVN(txtname_key.Text);
+
+                    aaa = aaa.Replace(" ", "").ToUpper();
+                    bool flag = true;
+                    if (string.IsNullOrEmpty(cbNgay_key.Text) || !isNumber(cbNgay_key.Text))
+                    {
+                        _showMessage((int)eMessageType.error, "Vui lòng chọn ngày sinh.");
+                        flag = false;
+                    }
+                    else if (string.IsNullOrEmpty(cbThang_key.Text) || !isNumber(cbThang_key.Text))
+                    {
+                        _showMessage((int)eMessageType.error, "Vui lòng chọn tháng sinh.");
+                        flag = false;
+                    }
+                    else if (string.IsNullOrEmpty(cbNam_key.Text) || !isNumber(cbNam_key.Text))
+                    {
+                        _showMessage((int)eMessageType.error, "Vui lòng chọn năm sinh.");
+                        flag = false;
+                    }
+
+                    if (flag)
+                    {
+                        searchModel = new SearchModel();
+                        searchModel.IsCCCD = false;
+                        searchModel.FullName = BaseCore.Instance.ConvertVN(txtname_key.Text).Replace(" ", "").ToUpper();//  txtname_key.Text;
+                        searchModel.DateOfBirth = cbNgay_key.Text + "/" + cbThang_key.Text + "/" + cbNam_key.Text;
+                        threadCallAPI = new Thread(this.SearchBN);
+                        threadCallAPI.IsBackground = true;
+                        threadCallAPI.Start();
+                        FrmLoading frmLoading = new FrmLoading();
+                        frmLoading.ShowDialog();
+                    }
+                }
+                else
+                {
+                    _showMessage((int)eMessageType.error, "Vui lòng nhập họ tên bệnh nhân cần tìm.");
+                }
             }
-            else
+            else  //search by cccd
             {
-                _showMessage((int)eMessageType.error, "Vui lòng nhập số CMND/CCCD/Mã định danh cần tìm.");
+                if (!string.IsNullOrEmpty(txtCCCD_key.Text))
+                {
+                    searchModel = new SearchModel();
+                    searchModel.DateOfBirth = string.Empty; searchModel.DateOfBirth = string.Empty;
+                    searchModel.IsCCCD = true;
+                    searchModel.CCCD = txtCCCD_key.Text;
+                    threadCallAPI = new Thread(this.SearchBN);
+                    threadCallAPI.IsBackground = true;
+                    threadCallAPI.Start();
+                    FrmLoading frmLoading = new FrmLoading();
+                    frmLoading.ShowDialog();
+                }
+                else
+                {
+                    _showMessage((int)eMessageType.error, "Vui lòng nhập số CMND/CCCD/Mã định danh cần tìm.");
+                }
             }
 
             //InPhieuDungDriver(9999, 9998, "Tiep benh", "Tiep benh", "Nguyen van A", "BV RHM", "01/01/0001 01:01");
@@ -554,16 +620,6 @@ namespace QMS_BenhVien.RangHamMat
             button.ForeColor = _foreColor;
         }
 
-        private void btSearchByName_MouseDown(object sender, MouseEventArgs e)
-        {
-            ButtonEffect_MouseDown(btSearchByName);
-        }
-
-        private void btSearchByName_MouseUp(object sender, MouseEventArgs e)
-        {
-            ButtonEffect_MouseUp(btSearchByName, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
-        }
-
 
         private void btSearchByCCCD_MouseDown(object sender, MouseEventArgs e)
         {
@@ -575,9 +631,24 @@ namespace QMS_BenhVien.RangHamMat
             ButtonEffect_MouseUp(btSearchByCCCD, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
         }
 
-        private void btSendAPI_MouseDown(object sender, MouseEventArgs e)
+        private void btRHM_MouseDown(object sender, MouseEventArgs e)
         {
-            ButtonEffect_MouseDown(btSendAPI);
+            ButtonEffect_MouseDown(btRHM);
+        }
+
+        private void btKTC_MouseDown(object sender, MouseEventArgs e)
+        {
+            ButtonEffect_MouseDown(btKTC);
+        }
+
+        private void btHamEch_MouseDown(object sender, MouseEventArgs e)
+        {
+            ButtonEffect_MouseDown(btHamEch);
+        }
+
+        private void btTQuat_MouseDown(object sender, MouseEventArgs e)
+        {
+            ButtonEffect_MouseDown(btTQuat);
         }
 
 
@@ -593,14 +664,27 @@ namespace QMS_BenhVien.RangHamMat
 
 
 
-        private void btSendAPI_MouseUp(object sender, MouseEventArgs e)
+        private void btRHM_MouseUp(object sender, MouseEventArgs e)
         {
-            ButtonEffect_MouseUp(btSendAPI, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
+            ButtonEffect_MouseUp(btRHM, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
+        }
+
+        private void btKTC_MouseUp(object sender, MouseEventArgs e)
+        {
+            ButtonEffect_MouseUp(btKTC, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
+        }
+        private void btTQuat_MouseUp(object sender, MouseEventArgs e)
+        {
+            ButtonEffect_MouseUp(btTQuat, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
+        }
+        private void btHamEch_MouseUp(object sender, MouseEventArgs e)
+        {
+            ButtonEffect_MouseUp(btHamEch, Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200))))), Color.Yellow, Color.Silver);
         }
         #endregion
 
         #region In Phiếu
-         
+
         public void PrintTicket(int serviceId, string tenBN, string diaChi, int namSinh, string maBN, string soDienThoai)
         {
             int lastTicket = 0,
@@ -613,7 +697,7 @@ namespace QMS_BenhVien.RangHamMat
             DateTime now = DateTime.Now;
             var printModel = new PrintModel();
             List<int> counterIds = null;
-            
+
 
             //lay stt kham benh
             switch (printType)
@@ -725,16 +809,17 @@ namespace QMS_BenhVien.RangHamMat
 
                 errorsms = printStr.ToString();
                 try
-                { 
-                    InPhieuDungDriver(printModel.STT, printModel.STTHienTai, printModel.TenQuay, maBN, printModel.TenKH, ("Bệnh viện Răng hàm mặt TW").ToUpper(), now.ToString("dd/MM/yyyy HH:mm"));
-                   }
+                {
+                    var template = printTemplates.FirstOrDefault(x => x._ServiceIds.Contains(serviceId));
+                    InPhieuDungDriver(printModel.STT, printModel.STTHienTai, printModel.TenQuay, maBN, printModel.TenKH, ("Bệnh viện Răng hàm mặt TW").ToUpper(), now.ToString("dd/MM/yyyy HH:mm"), template != null ? template.PrintPages : 1, serviceId);
+                }
                 catch (Exception ex)
                 {
                 }
             }
         }
-           
-        private void InPhieuDungDriver(int newNum, int oldNum, string tenquay, string tendichvu, string hoten, string tieude, string ngaygio)
+
+        private void InPhieuDungDriver(int newNum, int oldNum, string tenquay, string tendichvu, string hoten, string tieude, string ngaygio, int solien, int serviceId)
         {
             LocalReport localReport = new LocalReport();
             try
@@ -742,15 +827,24 @@ namespace QMS_BenhVien.RangHamMat
                 //link cài report viewer cho máy client
                 //https://www.microsoft.com/en-us/download/details.aspx?id=6442
 
-                string fullPath = ""; 
+                string fullPath = "";
                 fullPath = Application.StartupPath + "\\RDLC_Template\\rhmReport.rdlc";
+                if (serviceId == serKhuCId)
+                    fullPath = Application.StartupPath + "\\RDLC_Template\\rhmReport_khuC.rdlc";
+
+                if (serviceId == -1) // in phiếu rỗng
+                    fullPath = Application.StartupPath + "\\RDLC_Template\\rhmReport_null.rdlc";
+
                 // MessageBox.Show(fullPath);
                 localReport.ReportPath = fullPath;
 
-                ReportParameter[] reportParameters = new ReportParameter[5]; 
+                ReportParameter[] reportParameters = new ReportParameter[5];
                 reportParameters[0] = new ReportParameter("TenDV", tendichvu.ToUpper());
                 reportParameters[1] = new ReportParameter("TieuDe", tieude.ToUpper());
-                reportParameters[2] = new ReportParameter("Stt", newNum.ToString());
+                if (serviceId == -1)
+                    reportParameters[2] = new ReportParameter("Stt", tenquay);
+                else
+                    reportParameters[2] = new ReportParameter("Stt", newNum.ToString());
                 reportParameters[3] = new ReportParameter("TenBN", hoten.ToUpper());
                 reportParameters[4] = new ReportParameter("NgayGio", ngaygio.ToUpper());
 
@@ -770,23 +864,19 @@ namespace QMS_BenhVien.RangHamMat
                 throw ex;
             }
         }
-         
+
         #region Printer
         private static List<Stream> m_streams;
 
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btClear_cccd_Click(object sender, EventArgs e)
         {
             txtCCCD_key.Text = "";
+            txtname_key.Text = "";
+            if (chkByName.Checked)
+                txtname_key.Focus();
+            else
+                txtCCCD_key.Focus();
         }
 
         private void btClear_name_Click(object sender, EventArgs e)
@@ -805,6 +895,110 @@ namespace QMS_BenhVien.RangHamMat
             txtPhone.Text = "";
             txtPlace.Text = "";
             txtThon.Text = "";
+        }
+
+        private void customCheckbox1_Click(object sender, EventArgs e)
+        {
+            //if (chkSearchByCCCD.Checked)
+            //{
+            //    pnByCCCD.Visible = true;
+            //    chkByName.Checked = false;
+            //    pnByCCCD.Dock = DockStyle.Fill;
+            //    pnSearchName.Visible = false;
+            //    txtname_key.Focus();
+            //}
+            //else
+            //{
+            //    //if (!chkByName.Checked)
+            //    //    chkSearchByCCCD.Checked = true;
+            //    pnByCCCD.Visible = false;
+            //}
+        }
+
+        private void chkByName_Click(object sender, EventArgs e)
+        {
+            //if (chkByName.Checked)
+            //{
+            //    chkSearchByCCCD.Checked = false;
+            //    pnSearchName.Visible = true;
+            //    pnSearchName.Dock = DockStyle.Fill;
+            //    txtCCCD_key.Focus();
+            //    pnByCCCD.Visible = false;
+            //}
+            //else
+            //{
+            //    //if (!chkSearchByCCCD.Checked)
+            //    //    chkByName.Checked = true;
+            //    pnSearchName.Visible = false;
+            //}
+
+        }
+
+        private void btAddNewForm_Click(object sender, EventArgs e)
+        {
+            currentPanel = FormPrintTicketState.addNew;
+            CheckState();
+        }
+
+        private void btRHM_Click(object sender, EventArgs e)
+        {
+            addNewType = 1; //in so khu a tt
+            AddNewBN();
+        }
+
+        private void btKTC_Click(object sender, EventArgs e)
+        {
+            addNewType = 2; //in so khu b tt
+            AddNewBN();
+        }
+
+        private void btTQuat_Click(object sender, EventArgs e)
+        {
+            addNewType = 3; //in so khu b tt
+            AddNewBN();
+        }
+
+        private void chkSearchByCCCD_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (chkSearchByCCCD.Checked)
+            {
+                pnByCCCD.Visible = true;
+                chkByName.Checked = false;
+                pnByCCCD.Dock = DockStyle.Fill;
+                pnSearchName.Visible = false;
+                txtname_key.Focus();
+            }
+            else
+            {
+                //if (!chkByName.Checked)
+                //    chkSearchByCCCD.Checked = true;
+                pnByCCCD.Visible = false;
+            }
+        }
+
+        private void chkByName_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (chkByName.Checked)
+            {
+                chkSearchByCCCD.Checked = false;
+                pnSearchName.Visible = true;
+                pnSearchName.Dock = DockStyle.Fill;
+                txtCCCD_key.Focus();
+                pnByCCCD.Visible = false;
+            }
+            else
+            {
+                //if (!chkSearchByCCCD.Checked)
+                //    chkByName.Checked = true;
+                pnSearchName.Visible = false;
+            }
+        }
+         
+
+        private void btHamEch_Click(object sender, EventArgs e)
+        {
+            addNewType = 4; //in so khu b tt
+            AddNewBN();
         }
 
         private static int m_currentPageIndex = 0;
