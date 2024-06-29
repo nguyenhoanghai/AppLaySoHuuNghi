@@ -342,9 +342,6 @@
     </Compile>
     <Compile Include="SingleInstanceApplication.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Content Include="bin\Debug\RDLC_Template\Mau1.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -358,9 +355,6 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="bin\Debug\RDLC_Template\rhmReport_null.rdlc" />
-    <EmbeddedResource Include="bin\Debug\RDLC_Template\rhmReport_khuC.rdlc" />
-    <EmbeddedResource Include="bin\Debug\RDLC_Template\rhmReport.rdlc" />
     <EmbeddedResource Include="ButtonControl.resx">
       <DependentUpon>ButtonControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -442,11 +436,6 @@
       <DependentUpon>FrmSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RangHamMat\rhm_report.rdlc" />
-    <None Include="bin\Debug\GPRO_QMS_KIOS" />
-    <None Include="bin\Debug\QMS_BenhVien.exe.config" />
-    <None Include="bin\Debug\QMS_BenhVien.vshost.exe.config" />
-    <None Include="bin\Debug\QMS_BenhVien.vshost.exe.manifest" />
-    <None Include="bin\Release\QMS_BenhVien.exe.config" />
     <None Include="Connected Services\HISReference\HISService.wsdl" />
     <None Include="Connected Services\HISReference\HISService.xsd">
       <SubType>Designer</SubType>
@@ -503,10 +492,7 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Debug\de\" />
-    <Folder Include="bin\Debug\es\" />
-    <Folder Include="bin\Debug\ja\" />
-    <Folder Include="bin\Debug\ru\" />
+    <Folder Include="bin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loading-waiting.gif" />
@@ -546,192 +532,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="bin\Debug\API_KetNoi.dll" />
-    <Content Include="bin\Debug\Config.xml" />
-    <Content Include="bin\Debug\DATA.XML" />
-    <Content Include="bin\Debug\DevExpress.Data.v18.1.dll" />
-    <Content Include="bin\Debug\DevExpress.Images.v18.1.dll" />
-    <Content Include="bin\Debug\DevExpress.Printing.v18.1.Core.dll" />
-    <Content Include="bin\Debug\DevExpress.Utils.v18.1.dll" />
-    <Content Include="bin\Debug\DevExpress.Xpo.v18.1.dll" />
-    <Content Include="bin\Debug\DevExpress.XtraBars.v18.1.dll" />
-    <Content Include="bin\Debug\DevExpress.XtraEditors.v18.1.dll" />
-    <Content Include="bin\Debug\DevExpress.XtraGrid.v18.1.dll" />
-    <Content Include="bin\Debug\DevExpress.XtraLayout.v18.1.dll" />
-    <Content Include="bin\Debug\DevExpress.XtraPrinting.v18.1.dll" />
-    <Content Include="bin\Debug\DM_BV.XML" />
-    <Content Include="bin\Debug\EngineIoClientDotNet.dll" />
-    <Content Include="bin\Debug\EntityFramework.dll" />
-    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
-    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
-    <Content Include="bin\Debug\EntityFramework.xml" />
-    <Content Include="bin\Debug\GPRO.Core.dll" />
-    <Content Include="bin\Debug\GPRO.Core.Hai.dll" />
-    <Content Include="bin\Debug\GPRO.Ultilities.dll" />
-    <Content Include="bin\Debug\JSON.XML" />
-    <Content Include="bin\Debug\JSON_CLS.XML" />
-    <Content Include="bin\Debug\Microsoft.ReportViewer.Common.dll" />
-    <Content Include="bin\Debug\Microsoft.ReportViewer.WinForms.dll" />
-    <Content Include="bin\Debug\Microsoft.ReportViewer.WinForms.xml" />
-    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
-    <Content Include="bin\Debug\Newtonsoft.Json.pdb" />
-    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
-    <Content Include="bin\Debug\NuGet.Client.dll" />
-    <Content Include="bin\Debug\NuGet.Client.xml" />
-    <Content Include="bin\Debug\NuGet.Common.dll" />
-    <Content Include="bin\Debug\NuGet.Common.xml" />
-    <Content Include="bin\Debug\NuGet.ContentModel.dll" />
-    <Content Include="bin\Debug\NuGet.ContentModel.xml" />
-    <Content Include="bin\Debug\NuGet.Frameworks.dll" />
-    <Content Include="bin\Debug\NuGet.Frameworks.xml" />
-    <Content Include="bin\Debug\NuGet.Packaging.Core.dll" />
-    <Content Include="bin\Debug\NuGet.Packaging.Core.Types.dll" />
-    <Content Include="bin\Debug\NuGet.Packaging.Core.Types.xml" />
-    <Content Include="bin\Debug\NuGet.Packaging.Core.xml" />
-    <Content Include="bin\Debug\NuGet.Packaging.dll" />
-    <Content Include="bin\Debug\NuGet.Packaging.xml" />
-    <Content Include="bin\Debug\NuGet.Repositories.dll" />
-    <Content Include="bin\Debug\NuGet.Repositories.xml" />
-    <Content Include="bin\Debug\NuGet.RuntimeModel.dll" />
-    <Content Include="bin\Debug\NuGet.RuntimeModel.xml" />
-    <Content Include="bin\Debug\NuGet.Versioning.dll" />
-    <Content Include="bin\Debug\NuGet.Versioning.xml" />
-    <Content Include="bin\Debug\QMS_BenhVien.exe" />
-    <Content Include="bin\Debug\QMS_BenhVien.pdb" />
-    <Content Include="bin\Debug\QMS_BenhVien.vshost.exe" />
-    <Content Include="bin\Debug\QMS_System.Data.dll" />
-    <Content Include="bin\Debug\QMS_System.ThirdApp.dll" />
-    <Content Include="bin\Debug\Read me.txt" />
-    <Content Include="bin\Debug\ReportViewer.exe" />
-    <Content Include="bin\Debug\SocketIoClientDotNet.dll" />
-    <Content Include="bin\Debug\SystemGPRO.Serial.dll" />
-    <Content Include="bin\Debug\WebSocket4Net.dll" />
-    <Content Include="bin\Release\DevExpress.Data.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.Data.v18.1.xml" />
-    <Content Include="bin\Release\DevExpress.Images.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.Office.v18.1.Core.dll" />
-    <Content Include="bin\Release\DevExpress.Office.v18.1.Core.xml" />
-    <Content Include="bin\Release\DevExpress.Pdf.v18.1.Core.dll" />
-    <Content Include="bin\Release\DevExpress.Pdf.v18.1.Core.xml" />
-    <Content Include="bin\Release\DevExpress.Printing.v18.1.Core.dll" />
-    <Content Include="bin\Release\DevExpress.Printing.v18.1.Core.xml" />
-    <Content Include="bin\Release\DevExpress.RichEdit.v18.1.Core.dll" />
-    <Content Include="bin\Release\DevExpress.RichEdit.v18.1.Core.xml" />
-    <Content Include="bin\Release\DevExpress.Sparkline.v18.1.Core.dll" />
-    <Content Include="bin\Release\DevExpress.Sparkline.v18.1.Core.xml" />
-    <Content Include="bin\Release\DevExpress.Utils.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.Utils.v18.1.xml" />
-    <Content Include="bin\Release\DevExpress.Xpo.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.Xpo.v18.1.xml" />
-    <Content Include="bin\Release\DevExpress.XtraBars.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.XtraBars.v18.1.xml" />
-    <Content Include="bin\Release\DevExpress.XtraEditors.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.XtraEditors.v18.1.xml" />
-    <Content Include="bin\Release\DevExpress.XtraGrid.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.XtraGrid.v18.1.xml" />
-    <Content Include="bin\Release\DevExpress.XtraLayout.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.XtraLayout.v18.1.xml" />
-    <Content Include="bin\Release\DevExpress.XtraPrinting.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.XtraPrinting.v18.1.xml" />
-    <Content Include="bin\Release\DevExpress.XtraTreeList.v18.1.dll" />
-    <Content Include="bin\Release\DevExpress.XtraTreeList.v18.1.xml" />
-    <Content Include="bin\Release\de\DevExpress.Data.v18.1.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.Office.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.Pdf.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.Printing.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.RichEdit.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.Sparkline.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.Utils.v18.1.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.Xpo.v18.1.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.XtraBars.v18.1.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.XtraEditors.v18.1.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.XtraGrid.v18.1.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.XtraLayout.v18.1.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.XtraPrinting.v18.1.resources.dll" />
-    <Content Include="bin\Release\de\DevExpress.XtraTreeList.v18.1.resources.dll" />
-    <Content Include="bin\Release\EngineIoClientDotNet.dll" />
-    <Content Include="bin\Release\EntityFramework.dll" />
-    <Content Include="bin\Release\EntityFramework.SqlServer.dll" />
-    <Content Include="bin\Release\EntityFramework.SqlServer.xml" />
-    <Content Include="bin\Release\EntityFramework.xml" />
-    <Content Include="bin\Release\es\DevExpress.Data.v18.1.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.Office.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.Pdf.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.Printing.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.RichEdit.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.Sparkline.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.Utils.v18.1.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.Xpo.v18.1.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.XtraBars.v18.1.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.XtraEditors.v18.1.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.XtraGrid.v18.1.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.XtraLayout.v18.1.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.XtraPrinting.v18.1.resources.dll" />
-    <Content Include="bin\Release\es\DevExpress.XtraTreeList.v18.1.resources.dll" />
-    <Content Include="bin\Release\GPRO.Core.dll" />
-    <Content Include="bin\Release\GPRO.Core.Hai.dll" />
-    <Content Include="bin\Release\GPRO.Ultilities.dll" />
-    <Content Include="bin\Release\ja\DevExpress.Data.v18.1.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.Office.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.Pdf.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.Printing.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.RichEdit.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.Sparkline.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.Utils.v18.1.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.Xpo.v18.1.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.XtraBars.v18.1.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.XtraEditors.v18.1.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.XtraGrid.v18.1.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.XtraLayout.v18.1.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.XtraPrinting.v18.1.resources.dll" />
-    <Content Include="bin\Release\ja\DevExpress.XtraTreeList.v18.1.resources.dll" />
-    <Content Include="bin\Release\Microsoft.ReportViewer.Common.dll" />
-    <Content Include="bin\Release\Microsoft.ReportViewer.WinForms.dll" />
-    <Content Include="bin\Release\Microsoft.ReportViewer.WinForms.xml" />
-    <Content Include="bin\Release\Newtonsoft.Json.dll" />
-    <Content Include="bin\Release\Newtonsoft.Json.pdb" />
-    <Content Include="bin\Release\Newtonsoft.Json.xml" />
-    <Content Include="bin\Release\NuGet.Client.dll" />
-    <Content Include="bin\Release\NuGet.Client.xml" />
-    <Content Include="bin\Release\NuGet.Common.dll" />
-    <Content Include="bin\Release\NuGet.Common.xml" />
-    <Content Include="bin\Release\NuGet.ContentModel.dll" />
-    <Content Include="bin\Release\NuGet.ContentModel.xml" />
-    <Content Include="bin\Release\NuGet.Frameworks.dll" />
-    <Content Include="bin\Release\NuGet.Frameworks.xml" />
-    <Content Include="bin\Release\NuGet.Packaging.Core.dll" />
-    <Content Include="bin\Release\NuGet.Packaging.Core.Types.dll" />
-    <Content Include="bin\Release\NuGet.Packaging.Core.Types.xml" />
-    <Content Include="bin\Release\NuGet.Packaging.Core.xml" />
-    <Content Include="bin\Release\NuGet.Packaging.dll" />
-    <Content Include="bin\Release\NuGet.Packaging.xml" />
-    <Content Include="bin\Release\NuGet.Repositories.dll" />
-    <Content Include="bin\Release\NuGet.Repositories.xml" />
-    <Content Include="bin\Release\NuGet.RuntimeModel.dll" />
-    <Content Include="bin\Release\NuGet.RuntimeModel.xml" />
-    <Content Include="bin\Release\NuGet.Versioning.dll" />
-    <Content Include="bin\Release\NuGet.Versioning.xml" />
-    <Content Include="bin\Release\QMS_BenhVien.exe" />
-    <Content Include="bin\Release\QMS_BenhVien.pdb" />
-    <Content Include="bin\Release\QMS_System.Data.dll" />
-    <Content Include="bin\Release\QMS_System.ThirdApp.dll" />
-    <Content Include="bin\Release\ru\DevExpress.Data.v18.1.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.Office.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.Pdf.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.Printing.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.RichEdit.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.Sparkline.v18.1.Core.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.Utils.v18.1.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.Xpo.v18.1.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.XtraBars.v18.1.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.XtraEditors.v18.1.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.XtraGrid.v18.1.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.XtraLayout.v18.1.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.XtraPrinting.v18.1.resources.dll" />
-    <Content Include="bin\Release\ru\DevExpress.XtraTreeList.v18.1.resources.dll" />
-    <Content Include="bin\Release\SocketIoClientDotNet.dll" />
-    <Content Include="bin\Release\SystemGPRO.Serial.dll" />
-    <Content Include="bin\Release\WebSocket4Net.dll" />
     <Content Include="icon.ico" />
     <Content Include="Q.ico" />
     <None Include="Resources\save 20.png" />

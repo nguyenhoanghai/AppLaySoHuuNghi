@@ -782,6 +782,7 @@ namespace QMS_BenhVien
                                 printModel.DOB = namSinh;
                                 printModel.DiaChi = diaChi;
                                 printModel.MaDV = "";
+                                printModel.GioPVDK = rs.str1;
                                 printModel.Phone = soDienThoai;
                                 printModel.ServiceId = (serObj != null ? serObj.Id : 0);
                             }
@@ -825,6 +826,7 @@ namespace QMS_BenhVien
                                 printModel.DiaChi = diaChi;
                                 printModel.MaDV = "";
                                 printModel.Phone = soDienThoai;
+                                printModel.GioPVDK = rs.str1;
                                 printModel.ServiceId = (serObj != null ? serObj.Id : 0);
                             }
                             else
@@ -939,6 +941,7 @@ namespace QMS_BenhVien
                     template = template.Replace("[ngay]", ("Ngày: " + now.ToString("dd/MM/yyyy")));
                     template = template.Replace("[gio]", ("Giờ: " + now.ToString("HH:mm")));
                     template = template.Replace("[dang-goi]", "đang gọi: " + printModel.STTHienTai);
+                    template = template.Replace("[gio-phuc-vu]", "Giờ phục vụ dự kiến: " + printModel.GioPVDK);
 
 
                     template = template.Replace("[so-xe]", getStringValue(printModel.SoXe));

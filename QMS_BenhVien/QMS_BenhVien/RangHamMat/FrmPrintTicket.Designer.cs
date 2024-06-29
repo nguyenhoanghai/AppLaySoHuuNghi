@@ -339,7 +339,7 @@
             this.pnmain1.Location = new System.Drawing.Point(0, 0);
             this.pnmain1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnmain1.Name = "pnmain1";
-            this.pnmain1.Size = new System.Drawing.Size(1941, 1354);
+            this.pnmain1.Size = new System.Drawing.Size(1941, 1102);
             this.pnmain1.TabIndex = 10;
             // 
             // pnmain2
@@ -351,7 +351,7 @@
             this.pnmain2.Location = new System.Drawing.Point(0, 208);
             this.pnmain2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnmain2.Name = "pnmain2";
-            this.pnmain2.Size = new System.Drawing.Size(1941, 1146);
+            this.pnmain2.Size = new System.Drawing.Size(1941, 894);
             this.pnmain2.TabIndex = 1;
             // 
             // panelStatus
@@ -361,7 +361,7 @@
             this.panelStatus.Controls.Add(this.pbPrintStatus);
             this.panelStatus.Controls.Add(this.lbStatus);
             this.panelStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelStatus.Location = new System.Drawing.Point(0, 1109);
+            this.panelStatus.Location = new System.Drawing.Point(0, 857);
             this.panelStatus.Margin = new System.Windows.Forms.Padding(4);
             this.panelStatus.Name = "panelStatus";
             this.panelStatus.Size = new System.Drawing.Size(1941, 37);
@@ -410,7 +410,7 @@
             this.panelMain3.Location = new System.Drawing.Point(0, 0);
             this.panelMain3.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain3.Name = "panelMain3";
-            this.panelMain3.Size = new System.Drawing.Size(1941, 1146);
+            this.panelMain3.Size = new System.Drawing.Size(1941, 894);
             this.panelMain3.TabIndex = 21;
             // 
             // groupBox1
@@ -1399,7 +1399,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1941, 1354);
+            this.ClientSize = new System.Drawing.Size(1941, 1102);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnmain1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

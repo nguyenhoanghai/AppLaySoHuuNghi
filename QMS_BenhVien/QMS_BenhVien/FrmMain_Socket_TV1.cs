@@ -50,7 +50,7 @@ namespace QMS_BenhVien
         FrmMessagebox messagebox;
         PrintModel printModel = null;
         //TODO 
-       public static bool appPhatThuoc = false;
+        public static bool appPhatThuoc = true;
 
         public FrmMain_Socket_TV1()
         {
@@ -416,14 +416,16 @@ namespace QMS_BenhVien
                 khamDVId = cfObj.ketqua;
                 khamUTId = cfObj.tieptan;
                 pThuocUTId = cfObj.phatthuoc;
-                pThuocKoUTId = cfObj.xquang;   
-                tieuduongId =  cfObj.PhatSo ;           
+                pThuocKoUTId = cfObj.xquang;
+                tieuduongId = cfObj.PhatSo;
 
                 if (!string.IsNullOrEmpty(cfObj.button_style))
                     btStyle = JsonConvert.DeserializeObject<ButtonStyleModel>(cfObj.button_style);
 
                 lib_Services = BLLService.Instance.GetsForMain(connectString);
                 services = BLLService.Instance.Gets(connectString);
+                 
+
                 configs = BLLConfig.Instance.Gets(connectString, true);
                 int.TryParse(GetConfigByCode(eConfigCode.PrintType), out printType);
                 int.TryParse(GetConfigByCode(eConfigCode.CheckTimeBeforePrintTicket), out CheckTimeBeforePrintTicket);
@@ -472,7 +474,7 @@ namespace QMS_BenhVien
                         socket.On(Socket.EVENT_DISCONNECT, () =>
                         {
                             SetText("Thiết bị mất kết nối máy chủ.");
-                            panelStatus.BackColor = Color.Red;                          
+                            panelStatus.BackColor = Color.Red;
                         });
                     });
 
@@ -504,8 +506,8 @@ namespace QMS_BenhVien
                 lbSocketStatus.Text = text + " | IPAddress: " + BaseCore.Instance.GetLocalIPAddress();
                 if (text != "Thiết bị mất kết nối máy chủ.")
                 {
- panelStatus.BackColor = Color.Blue;
-                } 
+                    panelStatus.BackColor = Color.Blue;
+                }
                 else
                     panelStatus.BackColor = Color.Red;
             }
@@ -546,7 +548,7 @@ namespace QMS_BenhVien
             currentPanel = FormPanelSate.dkWeb;
             CheckState();
         }
-         
+
 
         private void btTimmachTieuDuong_Click(object sender, EventArgs e)
         {
@@ -583,36 +585,12 @@ namespace QMS_BenhVien
         #region panel stt sms events
         private void btnFindSMS_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btPrint_SMS_Click(object sender, EventArgs e)
-        {
-            if (printModel != null)
-                PrintWithNoBorad(printModel);
-        }
-
-        private void btBack_SMS_Click(object sender, EventArgs e)
-        {
-            printModel = null;
-            currentPanel = FormPanelSate.mainMenu;
-            txtPhone.Text = "";
-            txtKhoa_s.Text = "";
-            txtPKham_s.Text = "";
-            txtInfo_s.Text = "";
-            btPrint_SMS.Enabled = false;
-            CheckState();
-        }
-        #endregion
-
-        #region panel stt web events         
-        private void btnFindWeb_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtPhone_Web.Text))
+            if (!string.IsNullOrEmpty(txtPhone.Text))
             {
-                btnPrint_w.Enabled = false;
+                btPrint_SMS.Enabled = false;
                 printModel = null;
-                var tickets = BLLHuuNghi.Instance.FindTickets(connectString, txtPhone_Web.Text);
+                /*
+                var tickets = BLLHuuNghi.Instance.FindTickets(connectString, txtPhone_Web.Text);             
                 if (tickets.Count > 0)
                 {
                     btnPrint_w.Enabled = true;
@@ -625,7 +603,104 @@ namespace QMS_BenhVien
                     printModel = tickets[0];
                 }
                 else
+                    _showMessage((int)eMessageType.error, "Không tìm thấy thông tin đăng ký với số điện thoại : " + txtPhone_Web.Text); 
+                */
+
+                var resp = BLLRegisterOnline.Instance.Find_Kios(connectString, txtPhone.Text, DateTime.Now.ToString("d/M/yyyy"), 8);
+                if (resp.IsSuccess)
+                {
+                    btPrint_SMS.Enabled = true;
+                    _phone = resp.Data_2;
+                    _name = resp.Data_1;
+                    _ticket = (int)resp.Data;
+
+                    txtInfo_s.Text = "số phiếu: " + _ticket;
+                }
+                else
+                {
                     _showMessage((int)eMessageType.error, "Không tìm thấy thông tin đăng ký với số điện thoại : " + txtPhone_Web.Text);
+                    //_showMessage((int)eMessageType.error, resp.Errors[0].Message);
+                }
+            }
+            else
+            {
+                _showMessage((int)eMessageType.error, "Vui lòng nhập số điện thoại đăng ký.");
+                txtPhone.Focus();
+            }
+        }
+
+        private void btPrint_SMS_Click(object sender, EventArgs e)
+        {
+            var resp = BLLRegisterOnline.Instance.PrintTicket(connectString, _phone, _name, 8, _ticket);
+            if (resp.IsSuccess)
+            {
+                PrintWithNoBorad((PrintModel)resp.Data);
+                try
+                {
+                    var counterIds = (List<int>)resp.Data_4;
+                    if (counterIds != null)
+                        socket.Emit("qms-system-refresh-lcd", string.Join(",", counterIds));
+                }
+                catch { }
+            }
+            else
+            {
+                _showMessage((int)eMessageType.error, resp.Errors[0].Message);
+            }
+        }
+
+        private void btBack_SMS_Click(object sender, EventArgs e)
+        {
+            printModel = null;
+            currentPanel = FormPanelSate.mainMenu;
+            txtPhone.Text = ""; 
+            txtInfo_s.Text = "";
+            btPrint_SMS.Enabled = false;
+            CheckState();
+            _ticket = 0; _phone = ""; _name = ""; 
+        }
+        #endregion
+
+        #region panel stt web events         
+        private void btnFindWeb_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPhone_Web.Text))
+            {
+                btnPrint_w.Enabled = false;
+                printModel = null;
+                /*
+                var tickets = BLLHuuNghi.Instance.FindTickets(connectString, txtPhone_Web.Text);             
+                if (tickets.Count > 0)
+                {
+                    btnPrint_w.Enabled = true;
+                    var ser = services.FirstOrDefault(x => x.Id == tickets[0].ServiceId);
+                    txtKhoa_w.Text = GetKhoa(ser.ServiceType);
+                    txtPKham_w.Text = tickets[0].TenDichVu;
+                    txtInfo_w.Text = "số phiếu: " + tickets[0].STT + " | Giờ hẹn: " + tickets[0].SoXe;
+                    txtDOB_w.Text = tickets[0].DOB.ToString();
+                    txtName_w.Text = tickets[0].TenKH;
+                    printModel = tickets[0];
+                }
+                else
+                    _showMessage((int)eMessageType.error, "Không tìm thấy thông tin đăng ký với số điện thoại : " + txtPhone_Web.Text); 
+                */
+
+                var resp = BLLRegisterOnline.Instance.Find_Kios(connectString, txtPhone_Web.Text, DateTime.Now.ToString("d/M/yyyy"), 8);
+                if (resp.IsSuccess)
+                {
+                    btnPrint_w.Enabled = true;
+                    _phone = resp.Data_2;
+                    _name = resp.Data_1;
+                    _ticket = (int)resp.Data;
+
+                    txtName_w.Text = _name;
+                    txtInfo_w.Text = "số phiếu: " + _ticket  ;
+                }
+                else
+                {
+                    _showMessage((int)eMessageType.error, "Không tìm thấy thông tin đăng ký với số điện thoại : " + txtPhone_Web.Text);  
+                   // _showMessage((int)eMessageType.error, resp.Errors[0].Message);  
+                }
             }
             else
             {
@@ -634,23 +709,43 @@ namespace QMS_BenhVien
             }
         }
 
+        string _phone = "", _name = "";
+        int _ticket = 0;
+
         private void btnPrint_w_Click(object sender, EventArgs e)
         {
-            if (printModel != null)
-                PrintWithNoBorad(printModel);
+            // if (printModel != null)
+            //     PrintWithNoBorad(printModel);
+
+            var resp = BLLRegisterOnline.Instance.PrintTicket(connectString, _phone, _name, 8, _ticket);
+            if (resp.IsSuccess)
+            {
+                PrintWithNoBorad((PrintModel)resp.Data);
+                try
+                {
+                  var counterIds = (List<int>)resp.Data_4;
+                    if (counterIds != null)
+                        socket.Emit("qms-system-refresh-lcd", string.Join(",", counterIds));
+                }
+                catch { }
+            }
+            else
+            {
+                _showMessage((int)eMessageType.error, resp.Errors[0].Message);
+            }
         }
 
         private void btnBack_web_Click(object sender, EventArgs e)
         {
             printModel = null;
             currentPanel = FormPanelSate.mainMenu;
-            txtPhone_Web.Text = "";
-            txtKhoa_w.Text = "";
-            txtPKham_w.Text = "";
+            txtPhone_Web.Text = ""; 
             txtInfo_w.Text = "";
-            txtName_w.Text = "";
-            txtDOB_w.Text = "";
+            txtName_w.Text = ""; 
             btnPrint_w.Enabled = false;
+            _phone = "";
+            _name = "";
+            _ticket = 0;
             CheckState();
         }
 
@@ -714,7 +809,7 @@ namespace QMS_BenhVien
                             errorsms = "Dịch vụ số " + serviceId + " đã ngưng cấp số. Xin quý khách vui lòng đến vào buổi giao dịch sau.";
                         else
                         {
-                            var rs = BLLHuuNghi.Instance.PrintNewTicket(connectString, serviceId, serObj.StartNumber, 0, now, printType, ServeTime.TimeOfDay, tenBN, diaChi, namSinh, maBN, "", "", "", "", "", (int)eDailyRequireType.KhamBenh, soDienThoai);
+                            var rs = BLLHuuNghi.Instance.PrintNewTicket(connectString, serviceId, serObj.StartNumber, 0, now, printType, null, tenBN, diaChi, namSinh, maBN, "", "", "", "", "", (int)eDailyRequireType.KhamBenh, soDienThoai);
                             if (rs.IsSuccess)
                             {
                                 lastTicket = (int)rs.Data;
@@ -735,6 +830,7 @@ namespace QMS_BenhVien
                                 printModel.DiaChi = diaChi;
                                 printModel.MaDV = "";
                                 printModel.Phone = soDienThoai;
+                                printModel.GioPVDK = rs.str1;
                                 printModel.ServiceId = (serObj != null ? serObj.Id : 0);
                             }
                             else
@@ -778,6 +874,7 @@ namespace QMS_BenhVien
                                 printModel.MaDV = "";
                                 printModel.Phone = soDienThoai;
                                 printModel.ServiceId = (serObj != null ? serObj.Id : 0);
+                                printModel.GioPVDK = rs.str1;
                             }
                             else
                                 errorsms = rs.Errors[0].Message;
@@ -855,85 +952,93 @@ namespace QMS_BenhVien
 
         private void PrintWithNoBorad(PrintModel printModel)
         {
-            var now = DateTime.Now;
-            checkCOM:
-            if (!COM_Printer.IsOpen)
+            //MessageBox.Show("PrintWithNoBorad"  );
+            if (COM_Printer != null)
             {
-                try
+                var now = DateTime.Now;
+                checkCOM:
+                if (!COM_Printer.IsOpen)
                 {
-                    COM_Printer.Open();
-                }
-                catch (Exception e)
-                {
-                    _showMessage((int)eMessageType.error, "Không thể mở được COM máy in. Vui lòng kiễm tra lại COM máy in");
-                    goto finish;
-                }
-
-                // LogWriter.LogWrite(string.Format("func PrintWithNoBorad: Restart COM Máy in {0}", DateTime.Now.ToString("dd/MM/YYYY HH:mm:ss")));
-                goto checkCOM;
-            }
-            var _temp = printTemplates.Where(x => x._ServiceIds.Contains(printModel.ServiceId) && x.IsActive).ToList();
-            //TODO Test
-            //MessageBox.Show("số mẫu:" + _temp.Count);
-            if (COM_Printer.IsOpen && _temp.Count > 0)
-            {
-                for (int i = 0; i < _temp.Count; i++)
-                {
-                    //TODO Test
-                    //MessageBox.Show(_temp[i].PrintTemplate);
-                    var template = _temp[i].PrintTemplate; 
-                    template = template.Replace("[canh-giua]", "\x1b\x61\x01|+|");
-                    template = template.Replace("[canh-trai]", "\x1b\x61\x00|+|");
-                    template = template.Replace("[1x1]", "\x1d\x21\x00|+|");
-                    template = template.Replace("[2x1]", "\x1d\x21\x01|+|");
-                    template = template.Replace("[3x1]", "\x1d\x21\x02|+|");
-                    template = template.Replace("[2x2]", "\x1d\x21\x11|+|");
-                    template = template.Replace("[3x3]", "\x1d\x21\x22|+|");
-
-                    template = template.Replace("[STT]", printModel.STT.ToString());
-                    template = template.Replace("[ten-quay]", printModel.TenQuay);
-                    template = template.Replace("[ten-dich-vu]", printModel.TenDichVu);
-                    template = template.Replace("[ghi-chu-dich-vu]", printModel.NoteDV);
-                    template = template.Replace("[ngay]", ("Ngày: " + now.ToString("dd/MM/yyyy")));
-                    template = template.Replace("[gio]", ("Giờ: " + now.ToString("HH:mm")));
-                    template = template.Replace("[dang-goi]", "đang gọi: " + printModel.STTHienTai);
-
-
-                    template = template.Replace("[so-xe]", getStringValue(printModel.SoXe));
-                    template = template.Replace("[phone]", getStringValue(printModel.Phone));
-                    template = template.Replace("[ma-kh]", getStringValue(printModel.MaKH));
-                    template = template.Replace("[ten-kh]", getStringValue(printModel.TenKH));
-                    template = template.Replace("[dia-chi]", getStringValue(printModel.DiaChi));
-                    template = template.Replace("[ma-dv]", getStringValue(printModel.MaDV));
-                    template = template.Replace("[dob]", getIntValue(printModel.DOB));
-
-                    template = template.Replace("[cat-giay]", "\x1b\x69|+|");
-
-                    var arr = template.Split(new string[] { "|+|" }, StringSplitOptions.RemoveEmptyEntries).ToArray();
-                    for (int ii = 0; ii < _temp[i].PrintPages; ii++)
+                    try
                     {
-                        for (int iii = 0; iii < arr.Length; iii++)
-                        {
-                            // frmMain.COM_Printer.Write(arr[i]);
-                            try
-                            {
-                                BaseCore.Instance.PrintTicketTCVN3(COM_Printer, arr[iii]);
-                            }
-                            catch (Exception ex)
-                            {
-                                //  LogWriter.LogWrite(("COM write error: " + ex.Message));
-                            }
+                        COM_Printer.Open();
+                    }
+                    catch (Exception ex)
+                    {
+                        _showMessage((int)eMessageType.error, "Không thể mở được COM máy in. Vui lòng kiễm tra lại COM máy in");
+                        goto finish;
+                    }
 
-                            //sleep
-                            Thread.Sleep(50);
+                    // LogWriter.LogWrite(string.Format("func PrintWithNoBorad: Restart COM Máy in {0}", DateTime.Now.ToString("dd/MM/YYYY HH:mm:ss")));
+                    goto checkCOM;
+                }
+
+
+                var _temp = printTemplates.Where(x => x._ServiceIds.Contains(printModel.ServiceId) && x.IsActive).ToList();
+                //TODO Test
+                //MessageBox.Show("số mẫu:" + _temp.Count);
+                if (COM_Printer.IsOpen && _temp.Count > 0)
+                {
+                    for (int i = 0; i < _temp.Count; i++)
+                    {
+                        //TODO Test
+                        //MessageBox.Show(_temp[i].PrintTemplate);
+                        var template = _temp[i].PrintTemplate;
+                        template = template.Replace("[canh-giua]", "\x1b\x61\x01|+|");
+                        template = template.Replace("[canh-trai]", "\x1b\x61\x00|+|");
+                        template = template.Replace("[1x1]", "\x1d\x21\x00|+|");
+                        template = template.Replace("[2x1]", "\x1d\x21\x01|+|");
+                        template = template.Replace("[3x1]", "\x1d\x21\x02|+|");
+                        template = template.Replace("[2x2]", "\x1d\x21\x11|+|");
+                        template = template.Replace("[3x3]", "\x1d\x21\x22|+|");
+
+                        template = template.Replace("[STT]", printModel.STT.ToString());
+                        template = template.Replace("[ten-quay]", printModel.TenQuay);
+                        template = template.Replace("[ten-dich-vu]", printModel.TenDichVu);
+                        template = template.Replace("[ghi-chu-dich-vu]", printModel.NoteDV);
+                        template = template.Replace("[ngay]", ("Ngày: " + now.ToString("dd/MM/yyyy")));
+                        template = template.Replace("[gio]", ("Giờ: " + now.ToString("HH:mm")));
+                        template = template.Replace("[dang-goi]", "đang gọi: " + printModel.STTHienTai);
+                        template = template.Replace("[gio-phuc-vu]", "Giờ phục vụ dự kiến: " + printModel.GioPVDK);
+
+                        template = template.Replace("[so-xe]", getStringValue(printModel.SoXe));
+                        template = template.Replace("[phone]", getStringValue(printModel.Phone));
+                        template = template.Replace("[ma-kh]", getStringValue(printModel.MaKH));
+                        template = template.Replace("[ten-kh]", getStringValue(printModel.TenKH));
+                        template = template.Replace("[dia-chi]", getStringValue(printModel.DiaChi));
+                        template = template.Replace("[ma-dv]", getStringValue(printModel.MaDV));
+                        template = template.Replace("[dob]", getIntValue(printModel.DOB));
+
+                        template = template.Replace("[cat-giay]", "\x1b\x69|+|");
+
+                        var arr = template.Split(new string[] { "|+|" }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+                        for (int ii = 0; ii < _temp[i].PrintPages; ii++)
+                        {
+                            for (int iii = 0; iii < arr.Length; iii++)
+                            {
+                                // frmMain.COM_Printer.Write(arr[i]);
+                                try
+                                {
+                                    BaseCore.Instance.PrintTicketTCVN3(COM_Printer, arr[iii]);
+                                }
+                                catch (Exception ex)
+                                {
+                                    //  LogWriter.LogWrite(("COM write error: " + ex.Message));
+                                }
+
+                                //sleep
+                                Thread.Sleep(50);
+                            }
                         }
                     }
                 }
+                else
+                    errorsms = "Cổng COM máy in hiện tại chưa kết nối. Vui lòng kiểm tra lại COM máy in";
+                finish:
+                int a = 1;
             }
             else
                 errorsms = "Cổng COM máy in hiện tại chưa kết nối. Vui lòng kiểm tra lại COM máy in";
-            finish:
-            int a = 1;
         }
 
         private string getStringValue(string value)

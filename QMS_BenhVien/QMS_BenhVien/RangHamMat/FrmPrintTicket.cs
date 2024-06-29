@@ -248,7 +248,7 @@ namespace QMS_BenhVien.RangHamMat
             {
                 benhNhanModel = new BenhNhanModel();
                 benhNhanModel.socmnd = txtCCCD.Text;
-                benhNhanModel.hoten = txtName.Text;
+                benhNhanModel.hoten = txtName.Text.ToUpper();
                 benhNhanModel.ngaysinh = cbDay.Text + "/" + cbMonth.Text + "/" + cbYear.Text;
                 benhNhanModel.dienthoai = txtPhone.Text;
                 benhNhanModel.cholam = txtPlace.Text;

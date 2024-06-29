@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <String_Connect>
   <SQLServer id="1">
-    <Server_Name>b2UVXw9G09GkGtRdL+PZvXEum0OXPnsBio4mSb96VQk=</Server_Name>
-    <Database>VIsQQvnkXFTjW8Ft66GtCyOyZBqwLzYwW0UVzzUDu7w=</Database>
-    <User>opiunEUH8EOPBxcUxIZiXHVZZYtXt9HiGNV09dUGxjU=</User>
-    <Password>opiunEUH8EOPBxcUxIZiXHVZZYtXt9HiGNV09dUGxjU=</Password>
+    <Server_Name>HqgBJ4VjlK8pGJllNa6PhaNjHUHVeWVe03ph0PS6QSE=</Server_Name>
+    <Database>XtzdgKvJiIPdENX6JH5Qq/n+4Doi1txTXYIHlLxSygsykwFqrpDIkT0B/hxCFzWl</Database>
+    <User>ZXhwutftOGY2GQGN7xFCdA==</User>
+    <Password>NomDlMHxbLJ6BQAq+bc3SDEajT/G4TjxY5iV8p6kvbY=</Password>
     <Window_Authenticate>False</Window_Authenticate>
   </SQLServer>
 </String_Connect>

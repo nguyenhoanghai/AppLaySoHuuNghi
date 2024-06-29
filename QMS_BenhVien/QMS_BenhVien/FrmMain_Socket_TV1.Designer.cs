@@ -42,11 +42,7 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.lbCLS = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtKhoa_s = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPKham_s = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnTemplateEditor = new System.Windows.Forms.PictureBox();
             this.btSQLConnect = new System.Windows.Forms.PictureBox();
@@ -68,16 +64,10 @@
             this.btnPrint_w = new QMS_BenhVien.ButtonControl();
             this.btnBack_web = new QMS_BenhVien.ButtonControl();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.txtDOB_w = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtName_w = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtInfo_w = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPKham_w = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtKhoa_w = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnFindWeb = new System.Windows.Forms.Button();
             this.txtPhone_Web = new System.Windows.Forms.TextBox();
@@ -133,7 +123,7 @@
             this.txtInfo_s.Enabled = false;
             this.txtInfo_s.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInfo_s.ForeColor = System.Drawing.Color.Red;
-            this.txtInfo_s.Location = new System.Drawing.Point(235, 146);
+            this.txtInfo_s.Location = new System.Drawing.Point(241, 66);
             this.txtInfo_s.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInfo_s.Name = "txtInfo_s";
             this.txtInfo_s.ReadOnly = true;
@@ -338,40 +328,15 @@
             this.panel5.Location = new System.Drawing.Point(4, 37);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(116, 69);
+            this.panel5.Size = new System.Drawing.Size(846, 69);
             this.panel5.TabIndex = 32;
-            // 
-            // txtKhoa_s
-            // 
-            this.txtKhoa_s.Enabled = false;
-            this.txtKhoa_s.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhoa_s.ForeColor = System.Drawing.Color.Red;
-            this.txtKhoa_s.Location = new System.Drawing.Point(235, 20);
-            this.txtKhoa_s.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtKhoa_s.Name = "txtKhoa_s";
-            this.txtKhoa_s.ReadOnly = true;
-            this.txtKhoa_s.Size = new System.Drawing.Size(775, 40);
-            this.txtKhoa_s.TabIndex = 34;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label4.Location = new System.Drawing.Point(75, 27);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 29);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Khoa khám";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label6.Location = new System.Drawing.Point(15, 154);
+            this.label6.Location = new System.Drawing.Point(21, 74);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(200, 29);
@@ -379,45 +344,16 @@
             this.label6.Text = "Thông tin phiếu";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtPKham_s
-            // 
-            this.txtPKham_s.Enabled = false;
-            this.txtPKham_s.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPKham_s.ForeColor = System.Drawing.Color.Red;
-            this.txtPKham_s.Location = new System.Drawing.Point(235, 81);
-            this.txtPKham_s.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPKham_s.Name = "txtPKham_s";
-            this.txtPKham_s.ReadOnly = true;
-            this.txtPKham_s.Size = new System.Drawing.Size(775, 40);
-            this.txtPKham_s.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label5.Location = new System.Drawing.Point(59, 87);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 29);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Phòng khám";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.txtInfo_s);
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.txtPKham_s);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.txtKhoa_s);
-            this.panel7.Controls.Add(this.label4);
             this.panel7.Location = new System.Drawing.Point(4, 106);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(116, 478);
+            this.panel7.Size = new System.Drawing.Size(846, 478);
             this.panel7.TabIndex = 33;
             // 
             // btnTemplateEditor
@@ -626,7 +562,7 @@
             this.pnSTT_Web.Location = new System.Drawing.Point(143, 21);
             this.pnSTT_Web.Margin = new System.Windows.Forms.Padding(4);
             this.pnSTT_Web.Name = "pnSTT_Web";
-            this.pnSTT_Web.Size = new System.Drawing.Size(534, 519);
+            this.pnSTT_Web.Size = new System.Drawing.Size(176, 263);
             this.pnSTT_Web.TabIndex = 46;
             // 
             // groupBox2
@@ -641,7 +577,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(534, 519);
+            this.groupBox2.Size = new System.Drawing.Size(176, 263);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khám";
@@ -656,7 +592,7 @@
             this.panel10.Location = new System.Drawing.Point(4, 422);
             this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(526, 412);
+            this.panel10.Size = new System.Drawing.Size(168, 156);
             this.panel10.TabIndex = 34;
             // 
             // btnPrint_w
@@ -671,7 +607,7 @@
             this.btnPrint_w.Enabled = false;
             this.btnPrint_w.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint_w.ForeColor = System.Drawing.Color.Yellow;
-            this.btnPrint_w.Location = new System.Drawing.Point(-229, 27);
+            this.btnPrint_w.Location = new System.Drawing.Point(-408, 27);
             this.btnPrint_w.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrint_w.Name = "btnPrint_w";
             this.btnPrint_w.Size = new System.Drawing.Size(477, 178);
@@ -691,7 +627,7 @@
             this.btnBack_web.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack_web.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack_web.ForeColor = System.Drawing.Color.DimGray;
-            this.btnBack_web.Location = new System.Drawing.Point(272, 27);
+            this.btnBack_web.Location = new System.Drawing.Point(93, 27);
             this.btnBack_web.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack_web.Name = "btnBack_web";
             this.btnBack_web.Size = new System.Drawing.Size(477, 178);
@@ -703,46 +639,15 @@
             this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.BackColor = System.Drawing.Color.Transparent;
-            this.panel11.Controls.Add(this.txtDOB_w);
-            this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.txtName_w);
             this.panel11.Controls.Add(this.label11);
             this.panel11.Controls.Add(this.txtInfo_w);
             this.panel11.Controls.Add(this.label7);
-            this.panel11.Controls.Add(this.txtPKham_w);
-            this.panel11.Controls.Add(this.label8);
-            this.panel11.Controls.Add(this.txtKhoa_w);
-            this.panel11.Controls.Add(this.label9);
             this.panel11.Location = new System.Drawing.Point(4, 106);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(526, 478);
+            this.panel11.Size = new System.Drawing.Size(168, 478);
             this.panel11.TabIndex = 33;
-            // 
-            // txtDOB_w
-            // 
-            this.txtDOB_w.Enabled = false;
-            this.txtDOB_w.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDOB_w.ForeColor = System.Drawing.Color.Red;
-            this.txtDOB_w.Location = new System.Drawing.Point(229, 79);
-            this.txtDOB_w.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDOB_w.Name = "txtDOB_w";
-            this.txtDOB_w.ReadOnly = true;
-            this.txtDOB_w.Size = new System.Drawing.Size(116, 40);
-            this.txtDOB_w.TabIndex = 42;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label12.Location = new System.Drawing.Point(96, 86);
-            this.label12.Margin = new System.Windows.Forms.Padding(0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 29);
-            this.label12.TabIndex = 41;
-            this.label12.Text = "Năm sinh";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtName_w
             // 
@@ -774,7 +679,7 @@
             this.txtInfo_w.Enabled = false;
             this.txtInfo_w.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInfo_w.ForeColor = System.Drawing.Color.Red;
-            this.txtInfo_w.Location = new System.Drawing.Point(232, 256);
+            this.txtInfo_w.Location = new System.Drawing.Point(229, 92);
             this.txtInfo_w.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInfo_w.Name = "txtInfo_w";
             this.txtInfo_w.ReadOnly = true;
@@ -786,63 +691,13 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label7.Location = new System.Drawing.Point(15, 262);
+            this.label7.Location = new System.Drawing.Point(12, 98);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(200, 29);
             this.label7.TabIndex = 37;
             this.label7.Text = "Thông tin phiếu";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtPKham_w
-            // 
-            this.txtPKham_w.Enabled = false;
-            this.txtPKham_w.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPKham_w.ForeColor = System.Drawing.Color.Red;
-            this.txtPKham_w.Location = new System.Drawing.Point(229, 196);
-            this.txtPKham_w.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPKham_w.Name = "txtPKham_w";
-            this.txtPKham_w.ReadOnly = true;
-            this.txtPKham_w.Size = new System.Drawing.Size(780, 40);
-            this.txtPKham_w.TabIndex = 36;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label8.Location = new System.Drawing.Point(59, 203);
-            this.label8.Margin = new System.Windows.Forms.Padding(0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(162, 29);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "Phòng khám";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtKhoa_w
-            // 
-            this.txtKhoa_w.Enabled = false;
-            this.txtKhoa_w.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhoa_w.ForeColor = System.Drawing.Color.Red;
-            this.txtKhoa_w.Location = new System.Drawing.Point(229, 135);
-            this.txtKhoa_w.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtKhoa_w.Name = "txtKhoa_w";
-            this.txtKhoa_w.ReadOnly = true;
-            this.txtKhoa_w.Size = new System.Drawing.Size(780, 40);
-            this.txtKhoa_w.TabIndex = 34;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.label9.Location = new System.Drawing.Point(75, 143);
-            this.label9.Margin = new System.Windows.Forms.Padding(0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 29);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Khoa khám";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel12
             // 
@@ -853,7 +708,7 @@
             this.panel12.Location = new System.Drawing.Point(4, 37);
             this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(526, 69);
+            this.panel12.Size = new System.Drawing.Size(168, 69);
             this.panel12.TabIndex = 32;
             // 
             // btnFindWeb
@@ -893,10 +748,10 @@
             // pnSTT_SMS
             // 
             this.pnSTT_SMS.Controls.Add(this.groupBox1);
-            this.pnSTT_SMS.Location = new System.Drawing.Point(9, 567);
+            this.pnSTT_SMS.Location = new System.Drawing.Point(341, 52);
             this.pnSTT_SMS.Margin = new System.Windows.Forms.Padding(4);
             this.pnSTT_SMS.Name = "pnSTT_SMS";
-            this.pnSTT_SMS.Size = new System.Drawing.Size(124, 146);
+            this.pnSTT_SMS.Size = new System.Drawing.Size(854, 549);
             this.pnSTT_SMS.TabIndex = 45;
             // 
             // groupBox1
@@ -911,7 +766,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(124, 146);
+            this.groupBox1.Size = new System.Drawing.Size(854, 549);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khám";
@@ -926,7 +781,7 @@
             this.panel8.Location = new System.Drawing.Point(4, 314);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(116, 39);
+            this.panel8.Size = new System.Drawing.Size(846, 442);
             this.panel8.TabIndex = 34;
             // 
             // btPrint_SMS
@@ -941,7 +796,7 @@
             this.btPrint_SMS.Enabled = false;
             this.btPrint_SMS.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPrint_SMS.ForeColor = System.Drawing.Color.Yellow;
-            this.btPrint_SMS.Location = new System.Drawing.Point(-431, 47);
+            this.btPrint_SMS.Location = new System.Drawing.Point(-66, 47);
             this.btPrint_SMS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btPrint_SMS.Name = "btPrint_SMS";
             this.btPrint_SMS.Size = new System.Drawing.Size(477, 178);
@@ -961,7 +816,7 @@
             this.btBack_SMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btBack_SMS.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBack_SMS.ForeColor = System.Drawing.Color.DimGray;
-            this.btBack_SMS.Location = new System.Drawing.Point(75, 47);
+            this.btBack_SMS.Location = new System.Drawing.Point(440, 47);
             this.btBack_SMS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btBack_SMS.Name = "btBack_SMS";
             this.btBack_SMS.Size = new System.Drawing.Size(477, 178);
@@ -1177,11 +1032,7 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lbCLS;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtKhoa_s;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPKham_s;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox btnTemplateEditor;
         private System.Windows.Forms.PictureBox btSQLConnect;
@@ -1200,16 +1051,10 @@
         private ButtonControl btnPrint_w;
         private ButtonControl btnBack_web;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox txtDOB_w;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtName_w;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtInfo_w;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPKham_w;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtKhoa_w;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button btnFindWeb;
         private System.Windows.Forms.TextBox txtPhone_Web;
